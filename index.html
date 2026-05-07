@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solidarity — Ensemble on bâtit | One Africa Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand: #1D6A4A;
+    --brand-dark: #0d3d26;
+    --brand-light: #6EE7A8;
+    --gold: #d4a017;
+    --white: #ffffff;
+    --off-white: #f7f9f7;
+    --text: #111;
+    --text-muted: #666;
+    --radius: 20px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--off-white);
+    color: var(--text);
+    overflow-x: hidden;
+    transition: direction 0.3s;
+  }
+
+  body.arabic { font-family: 'Noto Sans Arabic', sans-serif; }
+
+  /* ── LANG SWITCHER ── */
+  .lang-switcher {
+    position: fixed;
+    top: 16px;
+    right: 48px;
+    z-index: 200;
+    display: flex;
+    gap: 6px;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(8px);
+    border-radius: 50px;
+    padding: 4px;
+  }
+
+  .lang-btn {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    background: transparent;
+    color: rgba(255,255,255,0.6);
+    transition: all 0.2s;
+  }
+  .lang-btn.active { background: var(--brand-light); color: var(--brand-dark); }
+  .lang-btn:hover { color: #fff; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 48px;
+    background: rgba(13, 61, 38, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo-icon { width: 36px; height: 36px; background: var(--brand-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+  .nav-logo-text { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--white); }
+
+  .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--white); }
+  .nav-cta { background: var(--brand-light) !important; color: var(--brand-dark) !important; padding: 10px 22px !important; border-radius: 50px !important; font-weight: 700 !important; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--brand-dark);
+    display: flex; align-items: center;
+    position: relative; overflow: hidden;
+    padding: 120px 48px 80px;
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(29,106,74,0.4) 0%, transparent 60%),
+                radial-gradient(ellipse 50% 80% at 10% 80%, rgba(110,231,168,0.1) 0%, transparent 50%);
+  }
+
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .hero-content { position: relative; z-index: 2; max-width: 620px; }
+
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(110,231,168,0.15); border: 1px solid rgba(110,231,168,0.3);
+    color: var(--brand-light); padding: 6px 16px; border-radius: 50px;
+    font-size: 13px; font-weight: 600; margin-bottom: 24px;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 7vw, 80px); font-weight: 900;
+    color: var(--white); line-height: 1.05; margin-bottom: 24px;
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+  .hero h1 span { color: var(--brand-light); display: block; }
+
+  .hero-sub {
+    font-size: 18px; color: rgba(255,255,255,0.65); line-height: 1.7;
+    margin-bottom: 40px; max-width: 480px;
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
+
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; animation: fadeUp 0.6s 0.3s ease both; }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--brand-light); color: var(--brand-dark);
+    padding: 16px 32px; border-radius: 50px; font-weight: 700; font-size: 15px;
+    text-decoration: none; transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 8px 24px rgba(110,231,168,0.3);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(110,231,168,0.4); }
+
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.1); color: var(--white);
+    padding: 16px 32px; border-radius: 50px; font-weight: 600; font-size: 15px;
+    text-decoration: none; border: 1px solid rgba(255,255,255,0.2); transition: background 0.2s;
+  }
+  .btn-secondary:hover { background: rgba(255,255,255,0.15); }
+
+  .hero-phone { position: absolute; right: 8%; bottom: 0; width: 340px; animation: fadeUp 0.8s 0.4s ease both; }
+
+  .phone-mock {
+    width: 280px; background: #0f1f15; border-radius: 40px; padding: 16px;
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
+    margin: 0 auto;
+  }
+
+  .phone-screen { background: linear-gradient(160deg, #0d3d26, #1D6A4A); border-radius: 28px; overflow: hidden; padding: 20px 16px; min-height: 560px; }
+  .phone-topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+  .phone-greeting { color: rgba(255,255,255,0.6); font-size: 11px; }
+  .phone-name { color: #fff; font-size: 16px; font-weight: 800; }
+  .phone-avatar { width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 12px; }
+  .phone-card { background: linear-gradient(135deg, #061f12, #1D6A4A); border-radius: 18px; padding: 16px; margin-bottom: 12px; }
+  .phone-card-label { color: rgba(255,255,255,0.6); font-size: 10px; margin-bottom: 4px; }
+  .phone-card-amount { color: #fff; font-size: 28px; font-weight: 800; }
+  .phone-card-sub { color: rgba(255,255,255,0.5); font-size: 10px; margin-top: 4px; }
+  .phone-stats { display: flex; gap: 8px; margin-bottom: 12px; }
+  .phone-stat { flex: 1; background: rgba(255,255,255,0.08); border-radius: 12px; padding: 10px 8px; text-align: center; }
+  .phone-stat-val { color: #6EE7A8; font-size: 16px; font-weight: 800; }
+  .phone-stat-label { color: rgba(255,255,255,0.5); font-size: 9px; margin-top: 2px; }
+  .phone-group { background: rgba(255,255,255,0.08); border-radius: 12px; padding: 10px 12px; display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .phone-group-icon { width: 32px; height: 32px; border-radius: 10px; background: rgba(110,231,168,0.2); display: flex; align-items: center; justify-content: center; font-size: 14px; }
+  .phone-group-name { color: #fff; font-size: 12px; font-weight: 700; }
+  .phone-group-meta { color: rgba(255,255,255,0.4); font-size: 10px; }
+  .phone-group-amount { color: #6EE7A8; font-size: 12px; font-weight: 800; margin-left: auto; }
+  .phone-cta { background: #6EE7A8; border-radius: 12px; padding: 12px; text-align: center; color: #0d3d26; font-weight: 800; font-size: 12px; margin-top: 8px; }
+
+  /* ── STATS BAR ── */
+  .stats-bar { background: var(--brand); padding: 32px 48px; display: flex; justify-content: center; gap: 80px; flex-wrap: wrap; }
+  .stats-bar-item { text-align: center; }
+  .stats-bar-num { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 900; color: var(--white); display: block; }
+  .stats-bar-label { color: rgba(255,255,255,0.6); font-size: 13px; font-weight: 500; }
+
+  /* ── SECTIONS ── */
+  section { padding: 100px 48px; }
+  .section-tag { display: inline-block; background: rgba(29,106,74,0.1); color: var(--brand); padding: 6px 16px; border-radius: 50px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(36px, 5vw, 56px); font-weight: 900; line-height: 1.1; margin-bottom: 16px; color: var(--brand-dark); }
+  .section-sub { font-size: 18px; color: var(--text-muted); line-height: 1.7; max-width: 560px; margin-bottom: 60px; }
+
+  /* ── HOW ── */
+  .how-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+  .how-card { background: var(--white); border-radius: var(--radius); padding: 32px; border: 1px solid rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; position: relative; overflow: hidden; }
+  .how-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--brand); }
+  .how-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(0,0,0,0.1); }
+  .how-num { width: 40px; height: 40px; border-radius: 12px; background: rgba(29,106,74,0.1); color: var(--brand); font-weight: 800; font-size: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+  .how-emoji { font-size: 32px; margin-bottom: 12px; display: block; }
+  .how-title { font-size: 18px; font-weight: 700; color: var(--brand-dark); margin-bottom: 10px; }
+  .how-desc { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+
+  /* ── FEATURES ── */
+  .features-section { background: var(--brand-dark); }
+  .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.08); border-radius: var(--radius); overflow: hidden; }
+  .feature-item { background: rgba(255,255,255,0.04); padding: 36px 28px; transition: background 0.3s; }
+  .feature-item:hover { background: rgba(255,255,255,0.08); }
+  .feature-icon { font-size: 36px; margin-bottom: 14px; display: block; }
+  .feature-title { font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+  .feature-desc { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.7; }
+
+  /* ── COUNTRIES ── */
+  .countries-section { background: var(--white); text-align: center; }
+  .countries-grid { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
+  .country-pill { display: flex; align-items: center; gap: 10px; background: var(--off-white); border: 1.5px solid rgba(0,0,0,0.08); border-radius: 50px; padding: 12px 20px; font-size: 14px; font-weight: 600; color: var(--brand-dark); transition: border-color 0.2s, transform 0.2s; }
+  .country-pill:hover { border-color: var(--brand); transform: scale(1.04); }
+  .country-flag { font-size: 24px; }
+
+  /* ── TRG ── */
+  .trg-section { background: linear-gradient(135deg, #7a5c0d, #d4a017); color: white; text-align: center; }
+  .trg-section .section-title { color: var(--white); }
+  .trg-section .section-sub { color: rgba(255,255,255,0.75); margin: 0 auto 48px; }
+  .trg-cards { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+  .trg-card { background: rgba(255,255,255,0.1); border-radius: 18px; padding: 24px 28px; text-align: center; border: 1px solid rgba(255,255,255,0.2); min-width: 160px; transition: transform 0.2s; }
+  .trg-card:hover { transform: translateY(-4px); }
+  .trg-card-emoji { font-size: 36px; margin-bottom: 12px; display: block; }
+  .trg-card-amount { font-size: 24px; font-weight: 800; color: var(--white); }
+  .trg-card-label { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 4px; }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials-section { background: var(--white); }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  .testimonial-card { background: var(--off-white); border-radius: var(--radius); padding: 28px; border: 1px solid rgba(0,0,0,0.06); }
+  .testimonial-stars { color: var(--gold); font-size: 14px; margin-bottom: 12px; }
+  .testimonial-text { font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-bottom: 16px; font-style: italic; }
+  .testimonial-author { display: flex; align-items: center; gap: 12px; }
+  .testimonial-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--brand); display: flex; align-items: center; justify-content: center; color: var(--white); font-weight: 800; }
+  .testimonial-name { font-weight: 700; font-size: 14px; }
+  .testimonial-role { font-size: 12px; color: var(--text-muted); }
+
+  /* ── DOWNLOAD ── */
+  .download-section { background: var(--off-white); text-align: center; }
+  .download-btns { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; }
+  .store-btn { display: flex; align-items: center; gap: 12px; background: var(--brand-dark); color: var(--white); padding: 14px 28px; border-radius: 14px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+  .store-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+  .store-btn-icon { font-size: 32px; }
+  .store-btn-sub { font-size: 10px; color: rgba(255,255,255,0.6); }
+  .store-btn-label { font-size: 16px; font-weight: 700; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--brand-dark); padding: 60px 48px 32px; color: rgba(255,255,255,0.6); }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+  .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+  .footer-logo-icon { width: 36px; height: 36px; background: rgba(110,231,168,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+  .footer-logo-text { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--white); }
+  .footer-desc { font-size: 14px; line-height: 1.7; max-width: 280px; }
+  .footer-col h4 { color: var(--white); font-size: 14px; font-weight: 700; margin-bottom: 16px; }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 10px; }
+  .footer-col ul li a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+  .footer-col ul li a:hover { color: var(--white); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+  .footer-one-africa { color: var(--brand-light); font-weight: 600; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+
+  @media (max-width: 900px) {
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+    .lang-switcher { right: 20px; }
+    .hero { padding: 100px 20px 60px; }
+    .hero-phone { display: none; }
+    section { padding: 60px 20px; }
+    .stats-bar { padding: 24px 20px; gap: 40px; }
+    .features-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- LANGUAGE SWITCHER -->
+<div class="lang-switcher">
+  <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+  <button class="lang-btn" onclick="setLang('en')">EN</button>
+  <button class="lang-btn" onclick="setLang('ar')">AR</button>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">🌿</div>
+    <span class="nav-logo-text">Solidarity</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#how" data-fr="Comment ça marche" data-en="How it works" data-ar="كيف يعمل">Comment ça marche</a></li>
+    <li><a href="#features" data-fr="Fonctionnalités" data-en="Features" data-ar="المميزات">Fonctionnalités</a></li>
+    <li><a href="#countries" data-fr="Pays" data-en="Countries" data-ar="الدول">Pays</a></li>
+    <li><a href="#trg" data-fr="Teranga Coin" data-en="Teranga Coin" data-ar="تيرانجا كوين">Teranga Coin</a></li>
+    <li><a href="#download" class="nav-cta" data-fr="Télécharger" data-en="Download" data-ar="تحميل">Télécharger</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-tag">🌍 <span data-fr="Disponible en Afrique de l'Ouest" data-en="Available in West Africa" data-ar="متاح في غرب أفريقيا">Disponible en Afrique de l'Ouest</span></div>
+    <h1 data-fr="Ensemble,<span>on bâtit.</span>" data-en="Together,<span>we build.</span>" data-ar="معاً،<span>نبني.</span>">Ensemble,<span>on bâtit.</span></h1>
+    <p class="hero-sub" data-fr="Solidarity est la plateforme de solidarité communautaire pour l'Afrique de l'Ouest. Cotisez, votez, aidez — ensemble, construisons un avenir meilleur." data-en="Solidarity is the community solidarity platform for West Africa. Contribute, vote, help — together, let's build a better future." data-ar="سوليداريتي هي منصة التضامن المجتمعي لغرب أفريقيا. ساهم، صوّت، ساعد — معاً نبني مستقبلاً أفضل.">Solidarity est la plateforme de solidarité communautaire pour l'Afrique de l'Ouest. Cotisez, votez, aidez — ensemble, construisons un avenir meilleur.</p>
+    <div class="hero-actions">
+      <a href="#download" class="btn-primary">📱 <span data-fr="Télécharger l'app" data-en="Download the app" data-ar="تحميل التطبيق">Télécharger l'app</span></a>
+      <a href="#how" class="btn-secondary"><span data-fr="Comment ça marche →" data-en="How it works →" data-ar="كيف يعمل ←">Comment ça marche →</span></a>
+    </div>
+  </div>
+
+  <div class="hero-phone">
+    <div class="phone-mock">
+      <div class="phone-screen">
+        <div class="phone-topbar">
+          <div>
+            <div class="phone-greeting">Bonjour 👋</div>
+            <div class="phone-name">Aliou Diallo</div>
+          </div>
+          <div class="phone-avatar">A</div>
+        </div>
+        <div class="phone-card">
+          <div class="phone-card-label">Ma cagnotte totale</div>
+          <div class="phone-card-amount">18 200 <span style="font-size:14px;opacity:0.6">FCFA</span></div>
+          <div class="phone-card-sub">Ce mois: 3 000 FCFA · 🔥 47 jours</div>
+        </div>
+        <div class="phone-stats">
+          <div class="phone-stat"><div class="phone-stat-val">3</div><div class="phone-stat-label">Groupes</div></div>
+          <div class="phone-stat"><div class="phone-stat-val">47</div><div class="phone-stat-label">Membres</div></div>
+          <div class="phone-stat"><div class="phone-stat-val" style="color:#d4a017">24.5</div><div class="phone-stat-label">TRG 🪙</div></div>
+        </div>
+        <div class="phone-group">
+          <div class="phone-group-icon">🕌</div>
+          <div><div class="phone-group-name">Mosquée Médina</div><div class="phone-group-meta">24 membres</div></div>
+          <div class="phone-group-amount">72 000</div>
+        </div>
+        <div class="phone-group">
+          <div class="phone-group-icon">👨‍👩‍👧‍👦</div>
+          <div><div class="phone-group-name">Famille Diallo</div><div class="phone-group-meta">12 membres</div></div>
+          <div class="phone-group-amount">33 600</div>
+        </div>
+        <div class="phone-cta">💚 Cotiser maintenant</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-bar-item">
+    <span class="stats-bar-num">6</span>
+    <span class="stats-bar-label" data-fr="Pays couverts" data-en="Countries covered" data-ar="الدول المشمولة">Pays couverts</span>
+  </div>
+  <div class="stats-bar-item">
+    <span class="stats-bar-num">100%</span>
+    <span class="stats-bar-label" data-fr="Transparent" data-en="Transparent" data-ar="شفاف">Transparent</span>
+  </div>
+  <div class="stats-bar-item">
+    <span class="stats-bar-num">6%</span>
+    <span class="stats-bar-label" data-fr="Commission seulement" data-en="Commission only" data-ar="عمولة فقط">Commission seulement</span>
+  </div>
+  <div class="stats-bar-item">
+    <span class="stats-bar-num">∞</span>
+    <span class="stats-bar-label" data-fr="Solidarité" data-en="Solidarity" data-ar="تضامن">Solidarité</span>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section id="how" style="background: var(--off-white);">
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <div class="section-tag" data-fr="Comment ça marche" data-en="How it works" data-ar="كيف يعمل">Comment ça marche</div>
+    <h2 class="section-title" data-fr="Simple comme<br>bonjour." data-en="Simple as<br>hello." data-ar="بسيط<br>جداً.">Simple comme<br>bonjour.</h2>
+    <p class="section-sub" data-fr="En 4 étapes, rejoignez une communauté solidaire et commencez à construire ensemble." data-en="In 4 steps, join a solidarity community and start building together." data-ar="في 4 خطوات، انضم إلى مجتمع متضامن وابدأ البناء معاً.">En 4 étapes, rejoignez une communauté solidaire et commencez à construire ensemble.</p>
+
+    <div class="how-grid">
+      <div class="how-card">
+        <span class="how-emoji">📱</span>
+        <div class="how-num">01</div>
+        <div class="how-title" data-fr="Inscrivez-vous" data-en="Sign up" data-ar="سجّل">Inscrivez-vous</div>
+        <div class="how-desc" data-fr="Créez votre compte avec votre numéro de téléphone. Vérifiez votre identité et choisissez votre pays." data-en="Create your account with your phone number. Verify your identity and choose your country." data-ar="أنشئ حسابك برقم هاتفك. تحقق من هويتك واختر بلدك.">Créez votre compte avec votre numéro de téléphone.</div>
+      </div>
+      <div class="how-card">
+        <span class="how-emoji">👥</span>
+        <div class="how-num">02</div>
+        <div class="how-title" data-fr="Rejoignez un groupe" data-en="Join a group" data-ar="انضم لمجموعة">Rejoignez un groupe</div>
+        <div class="how-desc" data-fr="Créez ou rejoignez un groupe (famille, mosquée, quartier) avec un code d'invitation." data-en="Create or join a group (family, mosque, neighborhood) with an invitation code." data-ar="أنشئ مجموعة أو انضم إليها بكود دعوة.">Créez ou rejoignez un groupe avec un code d'invitation.</div>
+      </div>
+      <div class="how-card">
+        <span class="how-emoji">💚</span>
+        <div class="how-num">03</div>
+        <div class="how-title" data-fr="Cotisez ensemble" data-en="Contribute together" data-ar="ساهموا معاً">Cotisez ensemble</div>
+        <div class="how-desc" data-fr="Choisissez votre plan et payez via Wave ou Orange Money." data-en="Choose your plan and pay via Wave or Orange Money." data-ar="اختر خطتك وادفع عبر Wave أو Orange Money.">Choisissez votre plan et payez via Wave ou Orange Money.</div>
+      </div>
+      <div class="how-card">
+        <span class="how-emoji">🗳️</span>
+        <div class="how-num">04</div>
+        <div class="how-title" data-fr="Votez et aidez" data-en="Vote and help" data-ar="صوّتوا وساعدوا">Votez et aidez</div>
+        <div class="how-desc" data-fr="Quand un membre a besoin d'aide, le groupe vote. La majorité décide. L'argent est versé automatiquement." data-en="When a member needs help, the group votes. Majority decides. Money is sent automatically." data-ar="عندما يحتاج عضو للمساعدة، تصوت المجموعة. يقرر الأغلبية. يُحوَّل المال تلقائياً.">Quand un membre a besoin d'aide, le groupe vote.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="features-section">
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <div class="section-tag" style="background: rgba(110,231,168,0.15); color: var(--brand-light);" data-fr="Fonctionnalités" data-en="Features" data-ar="المميزات">Fonctionnalités</div>
+    <h2 class="section-title" style="color: var(--white);" data-fr="Tout ce dont vous<br>avez besoin." data-en="Everything you<br>need." data-ar="كل ما<br>تحتاجه.">Tout ce dont vous<br>avez besoin.</h2>
+    <p class="section-sub" style="color: rgba(255,255,255,0.6); margin-bottom: 48px;" data-fr="Une plateforme complète pour gérer votre solidarité communautaire." data-en="A complete platform to manage your community solidarity." data-ar="منصة متكاملة لإدارة تضامنك المجتمعي.">Une plateforme complète pour gérer votre solidarité communautaire.</p>
+
+    <div class="features-grid">
+      <div class="feature-item">
+        <span class="feature-icon">🤝</span>
+        <div class="feature-title" data-fr="Groupes de solidarité" data-en="Solidarity groups" data-ar="مجموعات التضامن">Groupes de solidarité</div>
+        <div class="feature-desc" data-fr="Système de vote démocratique pour aider les membres dans le besoin." data-en="Democratic voting system to help members in need." data-ar="نظام تصويت ديمقراطي لمساعدة الأعضاء المحتاجين.">Système de vote démocratique pour aider les membres dans le besoin.</div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">🏗️</span>
+        <div class="feature-title" data-fr="Projets collectifs" data-en="Collective projects" data-ar="المشاريع الجماعية">Projets collectifs</div>
+        <div class="feature-desc" data-fr="Collecte de fonds avec objectif pour construire mosquées, écoles, centres." data-en="Fundraising with target to build mosques, schools, centers." data-ar="جمع التبرعات لبناء المساجد والمدارس والمراكز.">Collecte de fonds avec objectif pour construire mosquées, écoles.</div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">💰</span>
+        <div class="feature-title" data-fr="Wave & Orange Money" data-en="Wave & Orange Money" data-ar="ويف وأورانج موني">Wave & Orange Money</div>
+        <div class="feature-desc" data-fr="Paiements via les solutions mobiles les plus utilisées en Afrique de l'Ouest." data-en="Payments via the most used mobile solutions in West Africa." data-ar="الدفع عبر حلول الهاتف المحمول الأكثر استخداماً في غرب أفريقيا.">Paiements via les solutions mobiles les plus utilisées.</div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">🔥</span>
+        <div class="feature-title" data-fr="Streak & Récompenses" data-en="Streak & Rewards" data-ar="السلاسل والمكافآت">Streak & Récompenses</div>
+        <div class="feature-desc" data-fr="Maintenez votre habitude de cotisation et gagnez des TRG chaque jour." data-en="Maintain your contribution habit and earn TRG every day." data-ar="حافظ على عادة المساهمة واكسب TRG كل يوم.">Maintenez votre habitude de cotisation et gagnez des TRG.</div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">🌟</span>
+        <div class="feature-title" data-fr="Score de confiance" data-en="Trust score" data-ar="درجة الثقة">Score de confiance</div>
+        <div class="feature-desc" data-fr="Un score transparent basé sur vos cotisations et participation communautaire." data-en="A transparent score based on your contributions and community participation." data-ar="درجة شفافة مبنية على مساهماتك ومشاركتك المجتمعية.">Score transparent basé sur vos cotisations.</div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">🔒</span>
+        <div class="feature-title" data-fr="Vérification KYC" data-en="KYC Verification" data-ar="التحقق من الهوية">Vérification KYC</div>
+        <div class="feature-desc" data-fr="Vérification d'identité (CNI) pour sécuriser les retraits et transactions." data-en="Identity verification (ID) to secure withdrawals and transactions." data-ar="التحقق من الهوية لتأمين عمليات السحب والمعاملات.">Vérification d'identité pour sécuriser les transactions.</div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">📊</span>
+        <div class="feature-title" data-fr="Tableau de bord" data-en="Dashboard" data-ar="لوحة التحكم">Tableau de bord</div>
+        <div class="feature-desc" data-fr="Suivez vos cotisations, cagnotte, streak et votes en temps réel." data-en="Track your contributions, pot, streak and votes in real time." data-ar="تتبع مساهماتك وصندوقك وسلاسلك وتصويتاتك في الوقت الفعلي.">Suivez vos cotisations en temps réel.</div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">🌍</span>
+        <div class="feature-title" data-fr="Multi-langues" data-en="Multi-language" data-ar="متعدد اللغات">Multi-langues</div>
+        <div class="feature-desc" data-fr="Interface disponible en Français, Anglais et Arabe (RTL)." data-en="Interface available in French, English and Arabic (RTL)." data-ar="الواجهة متاحة بالفرنسية والإنجليزية والعربية.">Interface en Français, Anglais et Arabe (RTL).</div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">🪙</span>
+        <div class="feature-title" data-fr="Teranga Coin" data-en="Teranga Coin" data-ar="تيرانجا كوين">Teranga Coin</div>
+        <div class="feature-desc" data-fr="Gagnez des TRG à chaque action et échangez-les dans l'écosystème One Africa." data-en="Earn TRG with every action and exchange them in the One Africa ecosystem." data-ar="اكسب TRG مع كل إجراء وتبادلها في منظومة One Africa.">Gagnez des TRG et échangez dans l'écosystème One Africa.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTRIES -->
+<section id="countries" class="countries-section">
+  <div style="max-width: 900px; margin: 0 auto;">
+    <div class="section-tag" data-fr="Disponibilité" data-en="Availability" data-ar="التوفر">Disponibilité</div>
+    <h2 class="section-title" data-fr="6 pays,<br>une communauté." data-en="6 countries,<br>one community." data-ar="6 دول،<br>مجتمع واحد.">6 pays,<br>une communauté.</h2>
+    <p class="section-sub" style="margin: 0 auto 48px;" data-fr="Solidarity est disponible dans 6 pays avec support des devises et méthodes de paiement locales." data-en="Solidarity is available in 6 countries with local currency and payment method support." data-ar="سوليداريتي متاحة في 6 دول مع دعم العملات وطرق الدفع المحلية.">Solidarity est disponible dans 6 pays d'Afrique de l'Ouest.</p>
+
+    <div class="countries-grid">
+      <div class="country-pill"><span class="country-flag">🇸🇳</span> Sénégal · FCFA</div>
+      <div class="country-pill"><span class="country-flag">🇬🇲</span> Gambia · GMD</div>
+      <div class="country-pill"><span class="country-flag">🇨🇮</span> Côte d'Ivoire · FCFA</div>
+      <div class="country-pill"><span class="country-flag">🇳🇬</span> Nigeria · NGN</div>
+      <div class="country-pill"><span class="country-flag">🇬🇭</span> Ghana · GHS</div>
+      <div class="country-pill"><span class="country-flag">🇲🇷</span> Mauritanie · MRU</div>
+    </div>
+
+    <div style="background: var(--brand); border-radius: var(--radius); padding: 32px; display: flex; gap: 32px; align-items: center; flex-wrap: wrap;">
+      <div style="flex: 1; min-width: 240px;">
+        <div style="color: rgba(255,255,255,0.7); font-size: 13px; margin-bottom: 8px;" data-fr="Prochainement" data-en="Coming soon" data-ar="قريباً">Prochainement</div>
+        <div style="color: var(--white); font-size: 20px; font-weight: 700;">🇬🇳 Guinée · 🇲🇱 Mali · 🇧🇯 Bénin</div>
+      </div>
+      <a href="#download" class="btn-primary" data-fr="Rejoindre la liste d'attente" data-en="Join the waitlist" data-ar="انضم لقائمة الانتظار">Rejoindre la liste d'attente</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRG -->
+<section id="trg" class="trg-section">
+  <div style="max-width: 900px; margin: 0 auto;">
+    <div class="section-tag" style="background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.9);">Teranga Coin · TRG</div>
+    <h2 class="section-title" data-fr="Votre fidélité<br>récompensée." data-en="Your loyalty<br>rewarded." data-ar="ولاؤك<br>مكافأ.">Votre fidélité<br>récompensée.</h2>
+    <p class="section-sub" data-fr="Gagnez des TRG à chaque action dans l'écosystème One Africa." data-en="Earn TRG with every action in the One Africa ecosystem." data-ar="اكسب TRG مع كل إجراء في منظومة One Africa.">Gagnez des TRG à chaque action dans l'écosystème One Africa.</p>
+
+    <div class="trg-cards">
+      <div class="trg-card"><span class="trg-card-emoji">💚</span><div class="trg-card-amount">+35 TRG</div><div class="trg-card-label" data-fr="Cotisation mensuelle" data-en="Monthly contribution" data-ar="المساهمة الشهرية">Cotisation mensuelle</div></div>
+      <div class="trg-card"><span class="trg-card-emoji">🔥</span><div class="trg-card-amount">+10 TRG</div><div class="trg-card-label" data-fr="Streak 7 jours" data-en="7-day streak" data-ar="سلسلة 7 أيام">Streak 7 jours</div></div>
+      <div class="trg-card"><span class="trg-card-emoji">🗳️</span><div class="trg-card-amount">+5 TRG</div><div class="trg-card-label" data-fr="Participation votes" data-en="Vote participation" data-ar="المشاركة في التصويت">Participation votes</div></div>
+      <div class="trg-card"><span class="trg-card-emoji">✅</span><div class="trg-card-amount">+50 TRG</div><div class="trg-card-label" data-fr="Demande approuvée" data-en="Approved request" data-ar="طلب موافق عليه">Demande approuvée</div></div>
+      <div class="trg-card"><span class="trg-card-emoji">🏗️</span><div class="trg-card-amount">+100 TRG</div><div class="trg-card-label" data-fr="Projet complété" data-en="Completed project" data-ar="مشروع مكتمل">Projet complété</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <div class="section-tag" data-fr="Témoignages" data-en="Testimonials" data-ar="الشهادات">Témoignages</div>
+    <h2 class="section-title" data-fr="Ce que disent<br>nos membres." data-en="What our<br>members say." data-ar="ما يقوله<br>أعضاؤنا.">Ce que disent<br>nos membres.</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text" data-fr='"Grâce à Solidarity, notre groupe a pu aider Aminata pour ses frais médicaux en moins de 48h."' data-en='"Thanks to Solidarity, our group was able to help Aminata with her medical expenses in less than 48 hours."' data-ar='"بفضل سوليداريتي، تمكنت مجموعتنا من مساعدة أمينتا في نفقاتها الطبية في أقل من 48 ساعة."'>"Grâce à Solidarity, notre groupe a pu aider Aminata pour ses frais médicaux en moins de 48h."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">M</div>
+          <div><div class="testimonial-name">Mamadou Diallo</div><div class="testimonial-role">Dakar, Sénégal</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text" data-fr='"Notre mosquée a collecté 5 millions FCFA en 8 mois grâce au mode projet. Tout est transparent."' data-en='"Our mosque raised 5 million FCFA in 8 months thanks to project mode. Everything is transparent."' data-ar='"جمعت مسجدنا 5 ملايين فرنك أفريقي في 8 أشهر بفضل وضع المشروع. كل شيء شفاف."'>"Notre mosquée a collecté 5 millions FCFA en 8 mois grâce au mode projet."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">I</div>
+          <div><div class="testimonial-name">Imam Ibrahima</div><div class="testimonial-role">Thiès, Sénégal</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text" data-fr='"Le système de vote est juste et démocratique. Personne ne peut abuser. C\'est vraiment la solidarité moderne."' data-en='"The voting system is fair and democratic. No one can abuse it. This is truly modern solidarity."' data-ar='"نظام التصويت عادل وديمقراطي. لا يستطيع أحد إساءة استخدامه. هذا هو التضامن الحديث حقاً."'>"Le système de vote est juste et démocratique. C'est vraiment la solidarité moderne."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">F</div>
+          <div><div class="testimonial-name">Fatou Camara</div><div class="testimonial-role">Banjul, Gambia</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section id="download" class="download-section">
+  <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+    <div class="section-tag" data-fr="Télécharger" data-en="Download" data-ar="تحميل">Télécharger</div>
+    <h2 class="section-title" data-fr="Prêt à rejoindre<br>la communauté ?" data-en="Ready to join<br>the community?" data-ar="مستعد للانضمام<br>للمجتمع؟">Prêt à rejoindre<br>la communauté ?</h2>
+    <p class="section-sub" style="margin: 0 auto 40px;" data-fr="Disponible sur iOS et Android. Gratuit à télécharger." data-en="Available on iOS and Android. Free to download." data-ar="متاح على iOS وأندرويد. مجاني للتحميل.">Disponible sur iOS et Android. Gratuit à télécharger.</p>
+
+    <div class="download-btns">
+      <a href="#" class="store-btn">
+        <span class="store-btn-icon">🍎</span>
+        <div>
+          <div class="store-btn-sub" data-fr="Télécharger sur" data-en="Download on" data-ar="تحميل من">Télécharger sur</div>
+          <div class="store-btn-label">App Store</div>
+        </div>
+      </a>
+      <a href="https://expo.dev/accounts/cherifba/projects/solidarity-mobile/builds/10485212-b1f4-40ce-abfb-ff89c59e8c50" target="_blank" class="store-btn">
+        <span class="store-btn-icon">🤖</span>
+        <div>
+          <div class="store-btn-sub" data-fr="Disponible sur" data-en="Available on" data-ar="متاح على">Disponible sur</div>
+          <div class="store-btn-label">Google Play</div>
+        </div>
+      </a>
+    </div>
+
+    <p style="font-size: 13px; color: var(--text-muted);" data-fr="🔒 Vos données sont sécurisées · Aucune publicité · 100% africain" data-en="🔒 Your data is secure · No ads · 100% African" data-ar="🔒 بياناتك آمنة · بدون إعلانات · 100% أفريقي">🔒 Vos données sont sécurisées · Aucune publicité · 100% africain</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <div class="footer-logo-icon">🌿</div>
+          <span class="footer-logo-text">Solidarity</span>
+        </div>
+        <p class="footer-desc" data-fr="La plateforme de solidarité communautaire pour l'Afrique de l'Ouest. Powered by One Africa Group." data-en="The community solidarity platform for West Africa. Powered by One Africa Group." data-ar="منصة التضامن المجتمعي لغرب أفريقيا. مدعومة من One Africa Group.">La plateforme de solidarité communautaire pour l'Afrique de l'Ouest.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-fr="Produit" data-en="Product" data-ar="المنتج">Produit</h4>
+        <ul>
+          <li><a href="#how" data-fr="Comment ça marche" data-en="How it works" data-ar="كيف يعمل">Comment ça marche</a></li>
+          <li><a href="#features" data-fr="Fonctionnalités" data-en="Features" data-ar="المميزات">Fonctionnalités</a></li>
+          <li><a href="#trg" data-fr="Teranga Coin" data-en="Teranga Coin" data-ar="تيرانجا كوين">Teranga Coin</a></li>
+          <li><a href="#download" data-fr="Télécharger" data-en="Download" data-ar="تحميل">Télécharger</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-fr="One Africa" data-en="One Africa" data-ar="ون أفريكا">One Africa</h4>
+        <ul>
+          <li><a href="#">Marketplace</a></li>
+          <li><a href="#">Jaango</a></li>
+          <li><a href="#">Social</a></li>
+          <li><a href="#" data-fr="À propos" data-en="About" data-ar="حول">À propos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-fr="Support" data-en="Support" data-ar="الدعم">Support</h4>
+        <ul>
+          <li><a href="mailto:support@one-africa.com">support@one-africa.com</a></li>
+          <li><a href="#" data-fr="FAQ" data-en="FAQ" data-ar="الأسئلة الشائعة">FAQ</a></li>
+          <li><a href="#" data-fr="Confidentialité" data-en="Privacy" data-ar="الخصوصية">Confidentialité</a></li>
+          <li><a href="#" data-fr="CGU" data-en="Terms" data-ar="الشروط">CGU</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Solidarity · One Africa Group</span>
+      <span class="footer-one-africa">🌍 <span data-fr="Made in Africa, for Africa" data-en="Made in Africa, for Africa" data-ar="صنع في أفريقيا، لأفريقيا">Made in Africa, for Africa</span></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const translations = {
+  fr: { dir: 'ltr', lang: 'fr' },
+  en: { dir: 'ltr', lang: 'en' },
+  ar: { dir: 'rtl', lang: 'ar' }
+};
+
+function setLang(lang) {
+  const t = translations[lang];
+  document.documentElement.lang = t.lang;
+  document.documentElement.dir = t.dir;
+  document.body.classList.toggle('arabic', lang === 'ar');
+
+  // Update all lang buttons
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+  });
+
+  // Update all translatable elements
+  document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+    const val = el.getAttribute('data-' + lang);
+    if (el.tagName === 'A') {
+      el.textContent = val;
+    } else if (el.innerHTML !== val) {
+      el.innerHTML = val;
+    }
+  });
+
+  // Store preference
+  localStorage.setItem('solidarity_lang', lang);
+}
+
+// Auto-detect language
+const savedLang = localStorage.getItem('solidarity_lang');
+const browserLang = navigator.language?.substring(0, 2);
+const defaultLang = savedLang || (browserLang === 'ar' ? 'ar' : browserLang === 'en' ? 'en' : 'fr');
+setLang(defaultLang);
+</script>
+
+</body>
+</html>
