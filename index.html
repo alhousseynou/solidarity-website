@@ -226,6 +226,21 @@
   .trg-card-amount { font-size: 24px; font-weight: 800; color: var(--white); }
   .trg-card-label { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 4px; }
 
+  /* ── ENTERPRISE ── */
+  .enterprise-section { background: linear-gradient(135deg, #0d3d26 0%, #1D6A4A 55%, #15502f 100%); position: relative; overflow: hidden; }
+  .enterprise-section::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 85% 20%, rgba(212,160,23,0.18) 0%, transparent 45%); }
+  .enterprise-section .section-tag { background: rgba(212,160,23,0.18); color: var(--gold); }
+  .enterprise-section .section-title { color: var(--white); }
+  .enterprise-section .section-sub { color: rgba(255,255,255,0.65); }
+  .enterprise-grid { position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; margin-bottom: 44px; }
+  .enterprise-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 26px; transition: transform 0.3s, background 0.3s; }
+  .enterprise-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.1); }
+  .enterprise-card-icon { font-size: 30px; margin-bottom: 12px; display: block; }
+  .enterprise-card-title { font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+  .enterprise-card-desc { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.7; }
+  .enterprise-cta-box { position: relative; background: rgba(212,160,23,0.12); border: 1px solid rgba(212,160,23,0.3); border-radius: var(--radius); padding: 28px 32px; display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+  .enterprise-cta-box .btn-primary { background: var(--gold); box-shadow: 0 8px 24px rgba(212,160,23,0.35); }
+
   /* ── TESTIMONIALS ── */
   .testimonials-section { background: var(--white); }
   .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
@@ -297,6 +312,7 @@
     <li><a href="#features" data-fr="Fonctionnalités" data-en="Features" data-ar="المميزات">Fonctionnalités</a></li>
     <li><a href="#countries" data-fr="Pays" data-en="Countries" data-ar="الدول">Pays</a></li>
     <li><a href="#trg" data-fr="Teranga Coin" data-en="Teranga Coin" data-ar="تيرانجا كوين">Teranga Coin</a></li>
+    <li><a href="#enterprise" data-fr="Enterprise" data-en="Enterprise" data-ar="إنتربرايز">Enterprise</a></li>
     <li><a href="#download" class="nav-cta" data-fr="Télécharger" data-en="Download" data-ar="تحميل">Télécharger</a></li>
   </ul>
 </nav>
@@ -507,6 +523,56 @@
   </div>
 </section>
 
+<!-- ENTERPRISE -->
+<section id="enterprise" class="enterprise-section">
+  <div style="max-width: 1100px; margin: 0 auto; position: relative;">
+    <div class="section-tag" data-fr="Nouveau · Solidarity Enterprise" data-en="New · Solidarity Enterprise" data-ar="جديد · Solidarity Enterprise">Nouveau · Solidarity Enterprise</div>
+    <h2 class="section-title" data-fr="Votre activité,<br>comptabilisée." data-en="Your business,<br>accounted for." data-ar="نشاطك،<br>محسوب.">Votre activité,<br>comptabilisée.</h2>
+    <p class="section-sub" data-fr="Taxi, boutique, atelier, vente ambulante… Solidarity Enterprise aide les entrepreneurs individuels à suivre leurs recettes et dépenses, se faire connaître et accéder au financement." data-en="Taxi, shop, workshop, street vending… Solidarity Enterprise helps individual entrepreneurs track income and expenses, build a reputation, and access financing." data-ar="تاكسي، متجر، ورشة، بيع متجول… يساعد Solidarity Enterprise رواد الأعمال الأفراد على تتبع مداخيلهم ومصاريفهم وبناء سمعتهم والحصول على التمويل.">Taxi, boutique, atelier, vente ambulante… suivez vos recettes et dépenses.</p>
+
+    <div class="enterprise-grid">
+      <div class="enterprise-card">
+        <span class="enterprise-card-icon">📒</span>
+        <div class="enterprise-card-title" data-fr="Comptabilité simple" data-en="Simple bookkeeping" data-ar="محاسبة بسيطة">Comptabilité simple</div>
+        <div class="enterprise-card-desc" data-fr="Enregistrez chaque recette et dépense en quelques secondes, avec reçu à code QR." data-en="Record every income and expense in seconds, with a QR-code receipt." data-ar="سجّل كل مدخول ومصروف في ثوانٍ، مع إيصال برمز QR.">Enregistrez chaque recette et dépense avec reçu à code QR.</div>
+      </div>
+      <div class="enterprise-card">
+        <span class="enterprise-card-icon">🌟</span>
+        <div class="enterprise-card-title" data-fr="Score de confiance" data-en="Trust score" data-ar="درجة الثقة">Score de confiance</div>
+        <div class="enterprise-card-desc" data-fr="Un score basé sur la régularité de votre comptabilité, partageable avec une institution de microfinance." data-en="A score based on how regularly you keep your books, shareable with a microfinance partner." data-ar="درجة مبنية على انتظام محاسبتك، قابلة للمشاركة مع مؤسسة تمويل أصغر.">Un score partageable avec une institution de microfinance.</div>
+      </div>
+      <div class="enterprise-card">
+        <span class="enterprise-card-icon">🪪</span>
+        <div class="enterprise-card-title" data-fr="Carte professionnelle" data-en="Business card" data-ar="البطاقة المهنية">Carte professionnelle</div>
+        <div class="enterprise-card-desc" data-fr="Une carte scannable pour vos clients, fournisseurs ou partenaires financiers." data-en="A scannable card for your customers, suppliers or financing partners." data-ar="بطاقة قابلة للمسح لعملائك ومورديك وشركائك الماليين.">Une carte scannable pour vos clients et partenaires.</div>
+      </div>
+      <div class="enterprise-card">
+        <span class="enterprise-card-icon">🎁</span>
+        <div class="enterprise-card-title" data-fr="Fidélité clients" data-en="Client loyalty" data-ar="ولاء العملاء">Fidélité clients</div>
+        <div class="enterprise-card-desc" data-fr="Un programme de fidélité pour récompenser vos meilleurs clients." data-en="A loyalty program to reward your best customers." data-ar="برنامج ولاء لمكافأة أفضل عملائك.">Récompensez vos meilleurs clients automatiquement.</div>
+      </div>
+      <div class="enterprise-card">
+        <span class="enterprise-card-icon">👥</span>
+        <div class="enterprise-card-title" data-fr="Comptes employés" data-en="Staff accounts" data-ar="حسابات الموظفين">Comptes employés</div>
+        <div class="enterprise-card-desc" data-fr="Donnez à vos employés ou apprentis un accès limité pour enregistrer les ventes." data-en="Give employees or apprentices limited access to record sales." data-ar="امنح موظفيك أو متدربيك وصولاً محدوداً لتسجيل المبيعات.">Un accès limité pour enregistrer les ventes.</div>
+      </div>
+      <div class="enterprise-card">
+        <span class="enterprise-card-icon">📄</span>
+        <div class="enterprise-card-title" data-fr="Documents pro" data-en="Business documents" data-ar="وثائق النشاط">Documents pro</div>
+        <div class="enterprise-card-desc" data-fr="Gardez patente, assurance, carte grise au même endroit, avec alerte avant expiration." data-en="Keep your licence, insurance, registration in one place, with an expiry alert." data-ar="احفظ رخصتك وتأمينك ووثائقك في مكان واحد مع تنبيه قبل الانتهاء.">Gardez vos documents professionnels au même endroit.</div>
+      </div>
+    </div>
+
+    <div class="enterprise-cta-box">
+      <div style="flex: 1; min-width: 240px;">
+        <div style="color: var(--gold); font-size: 13px; font-weight: 700; margin-bottom: 6px;" data-fr="7 jours d'essai gratuit" data-en="7-day free trial" data-ar="تجربة مجانية 7 أيام">7 jours d'essai gratuit</div>
+        <div style="color: var(--white); font-size: 18px; font-weight: 700;" data-fr="Lancez votre comptabilité dès aujourd'hui." data-en="Start your bookkeeping today." data-ar="ابدأ محاسبتك اليوم.">Lancez votre comptabilité dès aujourd'hui.</div>
+      </div>
+      <a href="#download" class="btn-primary" data-fr="Créer mon entreprise" data-en="Create my business" data-ar="إنشاء نشاطي">Créer mon entreprise</a>
+    </div>
+  </div>
+</section>
+
 <!-- TESTIMONIALS -->
 <section class="testimonials-section">
   <div style="max-width: 1100px; margin: 0 auto;">
@@ -586,6 +652,7 @@
           <li><a href="#how" data-fr="Comment ça marche" data-en="How it works" data-ar="كيف يعمل">Comment ça marche</a></li>
           <li><a href="#features" data-fr="Fonctionnalités" data-en="Features" data-ar="المميزات">Fonctionnalités</a></li>
           <li><a href="#trg" data-fr="Teranga Coin" data-en="Teranga Coin" data-ar="تيرانجا كوين">Teranga Coin</a></li>
+          <li><a href="#enterprise" data-fr="Solidarity Enterprise" data-en="Solidarity Enterprise" data-ar="Solidarity Enterprise">Solidarity Enterprise</a></li>
           <li><a href="#download" data-fr="Télécharger" data-en="Download" data-ar="تحميل">Télécharger</a></li>
         </ul>
       </div>
