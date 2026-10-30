@@ -1,724 +1,654 @@
-<!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<!doctype html>
+<html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Solidarity — Ensemble on bâtit | One Africa Group</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Solidarity by One Africa</title>
+<meta name="description" content="Solidarity : gérez votre association, votre groupe ou votre communauté depuis votre téléphone. Membres, cotisations, caisse, bureau, événements et épargne commune.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlNvbGlkYXJpdHkgYnkgT25lIEFmcmljYSI+PHJlY3Qgd2lkdGg9IjEyMCIgaGVpZ2h0PSIxMjAiIHJ4PSIyNiIgZmlsbD0iI0ZGRkZGRiIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDkgOSkgc2NhbGUoMC44NSkiPjxwYXRoIGQ9Ik01Mi41MCAyOS45MiBBMzEgMzEgMCAwIDEgNjcuNTAgMjkuOTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0Q0QTUzNyIgc3Ryb2tlLXdpZHRoPSI4LjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjYwLjAwIiBjeT0iMTYuMDAiIHI9IjYuNiIgZmlsbD0iI0Q0QTUzNyIvPjxwYXRoIGQ9Ik03My41OSAzMi4xNCBBMzEgMzEgMCAwIDEgODUuMDggNDEuNzgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBGNzY2RSIgc3Ryb2tlLXdpZHRoPSI4LjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxjaXJjbGUgY3g9Ijg4LjI4IiBjeT0iMjYuMjkiIHI9IjYuNiIgZmlsbD0iIzBGNzY2RSIvPjxwYXRoIGQ9Ik04OC4zMiA0Ny4zOSBBMzEgMzEgMCAwIDEgOTAuOTIgNjIuMTYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBGNzY2RSIgc3Ryb2tlLXdpZHRoPSI4LjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjEwMy4zMyIgY3k9IjUyLjM2IiByPSI2LjYiIGZpbGw9IiMwRjc2NkUiLz48cGF0aCBkPSJNODkuODAgNjguNTQgQTMxIDMxIDAgMCAxIDgyLjMwIDgxLjUzIiBmaWxsPSJub25lIiBzdHJva2U9IiMwRjc2NkUiIHN0cm9rZS13aWR0aD0iOC41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48Y2lyY2xlIGN4PSI5OC4xMSIgY3k9IjgyLjAwIiByPSI2LjYiIGZpbGw9IiMwRjc2NkUiLz48cGF0aCBkPSJNNzcuMzMgODUuNzAgQTMxIDMxIDAgMCAxIDYzLjI0IDkwLjgzIiBmaWxsPSJub25lIiBzdHJva2U9IiMwRjc2NkUiIHN0cm9rZS13aWR0aD0iOC41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48Y2lyY2xlIGN4PSI3NS4wNSIgY3k9IjEwMS4zNSIgcj0iNi42IiBmaWxsPSIjMEY3NjZFIi8+PHBhdGggZD0iTTU2Ljc2IDkwLjgzIEEzMSAzMSAwIDAgMSA0Mi42NyA4NS43MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMEY3NjZFIiBzdHJva2Utd2lkdGg9IjguNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGNpcmNsZSBjeD0iNDQuOTUiIGN5PSIxMDEuMzUiIHI9IjYuNiIgZmlsbD0iIzBGNzY2RSIvPjxwYXRoIGQ9Ik0zNy43MCA4MS41MyBBMzEgMzEgMCAwIDEgMzAuMjAgNjguNTQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBGNzY2RSIgc3Ryb2tlLXdpZHRoPSI4LjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjIxLjg5IiBjeT0iODIuMDAiIHI9IjYuNiIgZmlsbD0iIzBGNzY2RSIvPjxwYXRoIGQ9Ik0yOS4wOCA2Mi4xNiBBMzEgMzEgMCAwIDEgMzEuNjggNDcuMzkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBGNzY2RSIgc3Ryb2tlLXdpZHRoPSI4LjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjE2LjY3IiBjeT0iNTIuMzYiIHI9IjYuNiIgZmlsbD0iIzBGNzY2RSIvPjxwYXRoIGQ9Ik0zNC45MiA0MS43OCBBMzEgMzEgMCAwIDEgNDYuNDEgMzIuMTQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBGNzY2RSIgc3Ryb2tlLXdpZHRoPSI4LjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjMxLjcyIiBjeT0iMjYuMjkiIHI9IjYuNiIgZmlsbD0iIzBGNzY2RSIvPjxwYXRoIGQ9Ik03OSw1OC4xTDc4LjQsNTkuN0w3OC40LDYwLjRMNzkuMyw2MC45TDc5LjMsNjEuMkw3OSw2Mkw3OSw2Mi40TDc4LjksNjNMNzkuNCw2My44TDc5LjksNjUuMUw4MC40LDY1LjRMODAuNiw2Nkw4MC42LDY3LjNMODAuNyw2OC41TDgwLjgsNzAuNUw4MSw3MS4yTDgwLjYsNzIuMUw4MC4xLDczLjFMNzkuMyw3My45TDc4LjEsNzQuNEw3Ni43LDc1LjFMNzUuMiw3Ni41TDc0LjcsNzYuOEw3My44LDc3LjhMNzMuMyw3OC4xTDczLjIsNzkuMUw3My44LDgwLjFMNzQsODAuOUw3NCw4MS4zTDc0LjMsODEuM0w3NC4yLDgyLjZMNzQsODMuM0w3NC4zLDgzLjVMNzQuMSw4NC4xTDczLjYsODQuNkw3Mi41LDg1LjFMNzEsODUuOUw3MC40LDg2LjRMNzAuNSw4N0w3MC45LDg3LjFMNzAuNyw4Ny45TDcwLjQsODguOUw3MC4zLDkwLjFMNjkuOSw5MC44TDY5LjEsOTEuNUw2OC44LDkxLjdMNjguMyw5Mi41TDY3LjksOTMuM0w2Ny4yLDk0LjNMNjUuNyw5NS45TDY0LjgsOTYuOEw2My44LDk3LjVMNjIuNSw5OC4xTDYxLjgsOTguMkw2MS42LDk4LjZMNjAuOSw5OC40TDYwLjIsOTguN0w1OC44LDk4LjRMNTgsOTguNkw1Ny41LDk4LjVMNTYuMiw5OS4xTDU1LjEsOTkuNEw1NC4zLDEwMEw1My43LDEwMEw1My4xLDk5LjRMNTIuNyw5OS40TDUyLjIsOTguN0w1Mi4xLDk4LjlMNTEuOSw5OC41TDUxLjksOTcuNkw1MS41LDk2LjZMNTEuOSw5Ni4zTDUxLjksOTUuMUw1MSw5My43TDUwLjQsOTIuNEw1MC40LDkyLjRMNDkuNSw5MC41TDQ4LjUsODkuNEw0OCw4OC40TDQ3LjcsODdMNDcuNCw4NS45TDQ3LDgzLjdMNDYuOSw4Mkw0Ni44LDgxLjNMNDYuMyw4MC43TDQ1LjYsNzkuNkw0NC45LDc3LjlMNDQuNyw3Ny4xTDQzLjYsNzUuN0w0My41LDc0LjdMNDMuNCw3My44TDQzLjYsNzIuN0w0NCw3MS40TDQ0LjEsNzAuOUw0NC41LDY5LjdMNDQuOCw2OS4xTDQ1LjYsNjguM0w0Niw2Ny43TDQ2LjEsNjYuN0w0Niw2NS45TDQ1LjcsNjUuNUw0NS4zLDY0LjdMNDUsNjMuOUw0NS4xLDYzLjZMNDUuNSw2My4xTDQ1LjEsNjEuOUw0NC44LDYxTDQ0LjIsNjAuMkw0NC4zLDU5LjlMNDQuMSw1OS41TDQzLjgsNTguNUw0Mi43LDU3LjJMNDEuNCw1NS45TDQwLjUsNTQuOEwzOS43LDUzLjVMMzkuOCw1M0w0MC4xLDUyLjZMNDAuNCw1MS43TDQwLjYsNTAuN0w0MC40LDUwLjVMNDAuOCw0OS4xTDQxLDQ4LjFMNDAuNSw0Ny4yTDM5LjksNDdMMzkuNyw0Ni40TDM5LjMsNDYuMkwzOS40LDQ1LjlMMzgsNDYuM0wzNy41LDQ2LjNMMzcsNDYuNUwzNiw0Ni41TDM1LjMsNDUuN0wzNC45LDQ0LjhMMzQsNDMuOUwzMyw0My45TDMxLjksNDMuOUwzMC44LDQ0LjFMMjkuNyw0NC40TDI3LjcsNDUuMUwyNyw0NS42TDI1LjgsNDUuOUwyNC43LDQ1LjZMMjQuMSw0NS42TDIzLjIsNDUuM0wyMi40LDQ1LjNMMjAuOSw0NS42TDIwLDQ1LjlMMTguNyw0Ni40TDE4LjQsNDYuNEwxOC4xLDQ2LjRMMTYuOCw0NS44TDE1LjYsNDQuOEwxNC41LDQ0LjFMMTMuNiw0My4yTDEzLjMsNDMuMUwxMi4zLDQyLjZMMTEuNyw0MS45TDExLjQsNDEuNUwxMS4zLDQwLjVMMTAuNywzOS43TDEwLjIsMzkuMkw5LjksMzlMOS42LDM4LjhMOS40LDM4LjJMOS4yLDM3LjlMOC45LDM3LjdMOC4yLDM3LjFMNy42LDM3TDcuMywzNi43TDcuMywzNi41TDYuOSwzNi4yTDYuOSwzNS45TDYuNiwzNC45TDYuOCwzNC4zTDYuMywzMy4zTDUuNiwzMi44TDYuMiwzMi42TDYuOCwzMS42TDcuMSwzMC45TDcsMzAuMkw3LjQsMjkuNUw3LjUsMjguM0w3LjQsMjYuOUw3LjIsMjYuMkw3LjQsMjUuNUw3LDI0LjlMNi40LDI0LjNMNi40LDIzLjdMNi41LDIzLjFMNywyMi43TDcuNCwyMkw3LjMsMjEuNUw3LjgsMjAuNUw4LjUsMTkuNkw4LjksMTkuNEw5LjMsMTguNUw5LjMsMTcuOEw5LjcsMTYuOUwxMC42LDE2LjRMMTEuNCwxNC45TDExLjUsMTQuOUwxMi4xLDE0LjNMMTMuMywxNC4xTDE0LjMsMTMuMUwxNSwxMi43TDE2LDExLjVMMTUuNyw5LjZMMTYuMiw4LjNMMTYuNCw3LjVMMTcuMiw2LjVMMTguNSw1LjhMMTkuNSw1LjJMMjAuMywzLjVMMjAuNywyLjZMMjEuNywyLjZMMjIuNSwzLjJMMjMuNywzLjFMMjUsMy41TDI1LjYsMy41TDI2LjgsMi42TDI4LjIsMi40TDI5LDEuN0wzMC4zLDEuMkwzMi41LDAuOUwzNC42LDAuOEwzNS4yLDFMMzYuNSwwLjRMMzcuOCwwLjRMMzguNCwwLjhMMzkuMiwwLjdMNDAuNywwTDQxLjYsMC4yTDQxLjUsMUw0Mi42LDAuNEw0Mi43LDAuN0w0Mi4xLDEuNUw0MiwyLjNMNDIuNSwyLjdMNDIuMyw0TDQxLjUsNC44TDQxLjcsNS43TDQyLjQsNS43TDQyLjcsNi40TDQzLjIsNi43TDQ0LjcsNy4yTDQ1LjMsNy4xTDQ2LjMsNy4zTDQ4LjEsOEw0OC43LDkuM0w0OS44LDkuNkw1MS42LDEwLjNMNTMsMTFMNTMuNiwxMC42TDU0LjMsOS45TDU0LDguOEw1NC40LDhMNTUuMyw3LjNMNTYuMiw3LjFMNTcuOSw3LjRMNTguNCw4LjFMNTguOCw4LjFMNTkuMyw4LjRMNjAuNSw4LjZMNjAuOSw5LjFMNjIuNiw5TDYzLjgsOS40TDY1LjEsOS45TDY1LjcsMTAuMUw2Ni43LDkuNkw2Ny4yLDkuMkw2OC40LDkuMUw2OS4zLDkuM0w2OS42LDEwTDY5LjksOS41TDcxLDkuOUw3MiwxMEw3Mi42LDkuNkw3My4zLDExLjhMNzMuNCwxMi4yTDczLjEsMTIuN0w3Mi44LDEzLjlMNzIuNSwxNC42TDcyLjIsMTQuOUw3MS43LDE0LjRMNzEuMSwxMy44TDcwLjIsMTEuNkw3MC4xLDExLjhMNzAuNiwxMy4zTDcxLjQsMTQuOEw3Mi40LDE3LjFMNzIuOSwxNy44TDczLjMsMTguNkw3NC40LDIwLjJMNzQuMiwyMC41TDc0LjIsMjEuNEw3NS43LDIyLjZMNzYsMjIuOUw3Ni40LDI0LjNMNzYuMSwyNC41TDc2LjMsMjUuOUw3Ni43LDI3LjZMNzcuMiwyNy45TDc3LjksMjguNEw3OC43LDMwTDc5LDMxLjJMNzkuOCwzMS45TDgxLjUsMzMuMUw4Mi4yLDMzLjlMODIuOSwzNC42TDgzLjMsMzUuMUw4NCwzNS41TDg0LjMsMzUuOUw4NC4yLDM2LjVMODMuNSwzNi44TDg0LjEsMzcuMUw4NC41LDM3LjRMODQuNywzNy45TDg1LjMsMzguNUw4NS45LDM4LjVMODcuMiwzOC4xTDg4LjYsMzhMODkuNywzNy42TDkwLjMsMzcuNUw5MC44LDM3LjJMOTEuNSwzNy4yTDkyLDM3LjJMOTIuNSwzN0w5My4yLDM2LjhMOTMuOCwzNi40TDk0LjMsMzYuNEw5NC40LDM2LjhMOTQuMiwzNy41TDk0LjIsMzguMkw5NCwzOC43TDkzLjYsNDAuMUw5Myw0MS42TDkyLjIsNDMuMkw5MS4xLDQ1LjFMOTAsNDYuNkw4OC41LDQ4LjNMODcuMiw0OS40TDg1LjIsNTAuN0w4NCw1MS42TDgyLjYsNTMuMkw4Mi4zLDUzLjlMODIsNTQuMkw4MS4xLDU0LjdMODAuOCw1NS4yTDgwLjMsNTUuM0w4MC4xLDU2LjNMNzkuNyw1Ni44TDc5LjUsNTcuNlpNOTIuMyw2OC4yTDkyLjYsNjguOEw5Myw2OS43TDkzLjIsNzEuM0w5My41LDcxLjlMOTMuNCw3Mi41TDkzLjIsNzIuOUw5Mi43LDcyLjJMOTIuNSw3Mi42TDkyLjcsNzMuNUw5Mi42LDc0LjFMOTIuMyw3NC40TDkyLjIsNzUuNkw5MS43LDc3LjJMOTEsNzkuMUw5MC4yLDgxLjdMODkuNyw4My42TDg5LjIsODUuM0w4OC4xLDg1LjZMODcsODYuMkw4Ni4yLDg1LjhMODUuMiw4NS4zTDg0LjksODQuNkw4NC44LDgzLjNMODQuMyw4Mi4yTDg0LjIsODEuMkw4NC40LDgwLjJMODUsODBMODUsNzkuNUw4NS42LDc4LjVMODUuOCw3Ny42TDg1LjUsNzYuOUw4NS4yLDc2LjFMODUuMSw3NC44TDg1LjYsNzQuMUw4NS43LDczLjJMODYuNCw3My4yTDg3LjEsNzIuOUw4Ny42LDcyLjdMODguMSw3Mi42TDg4LjksNzEuOUw4OS45LDcxLjFMOTAuMyw3MC40TDkwLjEsNjkuOEw5MC43LDcwTDkxLjQsNjkuMUw5MS40LDY4LjNMOTEuOSw2Ny43WiIgZmlsbD0iIzE0MTQxNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAuMDAgNDAuMDApIHNjYWxlKDAuNCkiLz48L2c+PC9zdmc+">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;600;700&display=swap">
 <style>
-  :root {
-    --brand: #1D6A4A;
-    --brand-dark: #0d3d26;
-    --brand-light: #6EE7A8;
-    --gold: #d4a017;
-    --white: #ffffff;
-    --off-white: #f7f9f7;
-    --text: #111;
-    --text-muted: #666;
-    --radius: 20px;
+/* Layout: one calm column of bands; the hero pairs the promise with a live member card, the one bold object on the page. */
+:root {
+  --bg: #F4F8F7;
+  --surface: #FFFFFF;
+  --ink: #10302E;
+  --muted: #4A6663;
+  --line: #D6E6E2;
+  --teal: #0F766E;
+  --teal-deep: #0E3B3A;
+  --teal-soft: #DDF0EC;
+  --gold: #D4A537;
+  --on-teal: #FFFFFF;
+  --good: #1E6B3E;
+  --font-display: 'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif;
+  --font-ar: 'Noto Sans Arabic', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --radius: 18px;
+  --wrap: 1120px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0B1F1E; --surface: #12302E; --ink: #E8F3F1; --muted: #A7C4C0; --line: #234A47;
+    --teal: #2BA59A; --teal-deep: #0E3B3A; --teal-soft: #173F3C; --gold: #E2B653; --on-teal: #06201F; --good: #7FD3A0;
+    color-scheme: dark;
   }
+}
+:root[data-theme="dark"] {
+  --bg: #0B1F1E; --surface: #12302E; --ink: #E8F3F1; --muted: #A7C4C0; --line: #234A47;
+  --teal: #2BA59A; --teal-deep: #0E3B3A; --teal-soft: #173F3C; --gold: #E2B653; --on-teal: #06201F; --good: #7FD3A0;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; }
+html[lang="ar"] body { font-family: var(--font-ar); }
+a { color: var(--teal); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 8px; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.15; }
+html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3 { font-family: var(--font-ar); line-height: 1.35; }
+p { margin: 0; }
+.eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); }
+html[lang="ar"] .eyebrow { letter-spacing: 0; }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+/* Header */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; gap: 20px; padding-block: 14px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-weight: 800; font-size: 19px; }
+.brand-mark { width: 40px; height: 40px; display: block; }
+.brand-mark svg { display: block; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .brand-mark path[fill="#141414"] { fill: #FFFFFF; } }
+:root[data-theme="dark"] .brand-mark path[fill="#141414"] { fill: #FFFFFF; }
+.brand-name { display: flex; flex-direction: column; line-height: 1.05; }
+.brand-name small { font-size: 11px; font-weight: 600; color: var(--teal); letter-spacing: 0.02em; }
+nav.links { display: flex; gap: 18px; flex: 1; flex-wrap: wrap; }
+nav.links a { color: var(--muted); text-decoration: none; font-size: 15px; font-weight: 600; }
+nav.links a:hover { color: var(--ink); }
+.langs { display: flex; gap: 6px; }
+.langs button { font: inherit; font-size: 13px; font-weight: 700; color: var(--ink); background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; cursor: pointer; min-height: 36px; }
+.langs button[aria-pressed="true"] { background: var(--teal); border-color: var(--teal); color: var(--on-teal); }
+@media (max-width: 760px) { nav.links { display: none; } .top .wrap { justify-content: space-between; } }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--off-white);
-    color: var(--text);
-    overflow-x: hidden;
-    transition: direction 0.3s;
-  }
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font: inherit; font-weight: 700; font-size: 16px; text-decoration: none; border-radius: 14px; padding: 14px 22px; min-height: 48px; cursor: pointer; border: 1.5px solid transparent; }
+.btn-primary { background: var(--teal); color: var(--on-teal); }
+.btn-primary:hover { filter: brightness(1.08); }
+.btn-ghost { border-color: var(--teal); color: var(--teal); background: transparent; }
+.btn-ghost:hover { background: var(--teal-soft); }
 
-  body.arabic { font-family: 'Noto Sans Arabic', sans-serif; }
+/* Hero */
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 48px; align-items: center; padding-block: 64px 72px; }
+@media (max-width: 880px) { .hero .wrap { grid-template-columns: 1fr; padding-block: 40px 56px; } }
+.hero-copy { display: flex; flex-direction: column; gap: 22px; min-width: 0; }
+.hero h1 { font-size: clamp(38px, 6vw, 62px); font-weight: 800; letter-spacing: -0.02em; }
+.hero h1 em { font-style: normal; color: var(--teal); }
+html[lang="ar"] .hero h1 { letter-spacing: 0; }
+.hero .lead { font-size: 19px; color: var(--muted); max-width: 34em; }
+.hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-note { font-size: 14px; color: var(--muted); }
 
-  /* ── LANG SWITCHER ── */
-  .lang-switcher {
-    position: fixed;
-    top: 16px;
-    right: 48px;
-    z-index: 200;
-    display: flex;
-    gap: 6px;
-    background: rgba(0,0,0,0.3);
-    backdrop-filter: blur(8px);
-    border-radius: 50px;
-    padding: 4px;
-  }
+.stage { position: relative; display: flex; flex-direction: column; gap: 14px; align-items: stretch; max-width: 420px; width: 100%; justify-self: center; }
+.card { background: var(--teal-deep); color: #FFFFFF; border-radius: 22px; overflow: hidden; box-shadow: 0 24px 48px -20px rgba(14, 59, 58, 0.55); transform: rotate(-2deg); }
+html[dir="rtl"] .card { transform: rotate(2deg); }
+.card-head { display: flex; align-items: center; gap: 10px; padding: 16px 18px 12px; }
+.card-logo { width: 32px; height: 32px; border-radius: 9px; background: #FFFFFF; display: grid; place-items: center; flex-shrink: 0; }
+.card-org { flex: 1; min-width: 0; display: flex; flex-direction: column; line-height: 1.3; }
+.card-org b { font-size: 14px; }
+.card-org span { font-size: 11px; color: #BFD6D3; }
+.pill-ok { font-size: 11px; font-weight: 800; color: #0F3D24; background: #8FD3A8; padding: 4px 10px; border-radius: 999px; white-space: nowrap; }
+.card-band { height: 4px; background: #D4A537; }
+.card-body { display: flex; gap: 16px; padding: 18px; }
+.card-photo { width: 84px; height: 104px; border-radius: 12px; background: #1A5452; border: 2px solid #D4A537; display: grid; place-items: center; flex-shrink: 0; }
+.card-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 16px; align-content: start; min-width: 0; }
+.card-fields .name { grid-column: 1 / -1; font-size: 17px; font-weight: 800; }
+.card-fields small { display: block; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #BFD6D3; }
+.card-fields span { font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.toast { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px; display: flex; gap: 12px; align-items: center; box-shadow: 0 12px 28px -18px rgba(16, 48, 46, 0.4); margin-inline-start: 28px; }
+.toast-ico { width: 40px; height: 40px; border-radius: 12px; background: var(--teal-soft); display: grid; place-items: center; flex-shrink: 0; }
+.toast-ico svg { stroke: var(--teal); }
+.toast b { display: block; font-size: 14px; }
+.toast span { font-size: 13px; color: var(--muted); }
 
-  .lang-btn {
-    padding: 6px 14px;
-    border: none;
-    border-radius: 50px;
-    font-size: 12px;
-    font-weight: 700;
-    cursor: pointer;
-    background: transparent;
-    color: rgba(255,255,255,0.6);
-    transition: all 0.2s;
-  }
-  .lang-btn.active { background: var(--brand-light); color: var(--brand-dark); }
-  .lang-btn:hover { color: #fff; }
+/* Sections */
+section.band { padding-block: 72px; }
+section.band.alt { background: var(--surface); border-block: 1px solid var(--line); }
+.sec-head { display: flex; flex-direction: column; gap: 10px; max-width: 40em; margin-bottom: 36px; }
+.sec-head h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 800; letter-spacing: -0.01em; }
+.sec-head p { color: var(--muted); font-size: 17px; }
 
-  /* ── NAV ── */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 48px;
-    background: rgba(13, 61, 38, 0.95);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-  }
+.types { display: flex; flex-wrap: wrap; gap: 10px; }
+.types li { list-style: none; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 10px 16px; font-weight: 600; font-size: 15px; }
+section.alt .types li { background: var(--bg); }
+.types { padding: 0; margin: 0; }
+.types-note { margin-top: 18px; color: var(--muted); font-size: 15px; }
 
-  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-  .nav-logo-icon { width: 36px; height: 36px; background: var(--brand-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
-  .nav-logo-text { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--white); }
+.features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 32px; }
+@media (max-width: 880px) { .features { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .features { grid-template-columns: 1fr; } }
+.feature { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.feature .ico { width: 44px; height: 44px; border-radius: 13px; background: var(--teal-soft); display: grid; place-items: center; }
+.feature .ico svg { stroke: var(--teal); }
+.feature h3 { font-size: 19px; font-weight: 700; }
+.feature p { color: var(--muted); font-size: 15px; }
 
-  .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
-  .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--white); }
-  .nav-cta { background: var(--brand-light) !important; color: var(--brand-dark) !important; padding: 10px 22px !important; border-radius: 50px !important; font-weight: 700 !important; }
+.savings { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+@media (max-width: 880px) { .savings { grid-template-columns: 1fr; } }
+.steps { display: flex; flex-direction: column; gap: 14px; padding: 0; margin: 0; counter-reset: s; }
+.steps li { list-style: none; display: flex; gap: 14px; align-items: flex-start; counter-increment: s; }
+.steps li::before { content: counter(s); width: 32px; height: 32px; border-radius: 50%; background: var(--teal); color: var(--on-teal); font-weight: 800; font-size: 14px; display: grid; place-items: center; flex-shrink: 0; }
+.steps b { display: block; }
+.steps span { color: var(--muted); font-size: 15px; }
+.rhythm { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+section.alt .rhythm { background: var(--bg); }
+.rhythm-row { display: flex; justify-content: space-between; gap: 16px; padding: 14px 18px; border-top: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+.rhythm-row:first-of-type { border-top: 0; }
+.rhythm-row b { font-size: 17px; }
+.rhythm-row span { color: var(--muted); }
+.rhythm-foot { padding: 12px 18px; font-size: 13px; color: var(--muted); background: var(--teal-soft); }
 
-  /* ── HERO ── */
-  .hero {
-    min-height: 100vh;
-    background: var(--brand-dark);
-    display: flex; align-items: center;
-    position: relative; overflow: hidden;
-    padding: 120px 48px 80px;
-  }
+.modules { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 880px) { .modules { grid-template-columns: 1fr; } }
+.module { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; display: flex; flex-direction: column; gap: 10px; }
+.module h3 { font-size: 18px; }
+.module ul { margin: 0; padding-inline-start: 18px; color: var(--muted); font-size: 15px; display: flex; flex-direction: column; gap: 4px; }
 
-  .hero-bg {
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(29,106,74,0.4) 0%, transparent 60%),
-                radial-gradient(ellipse 50% 80% at 10% 80%, rgba(110,231,168,0.1) 0%, transparent 50%);
-  }
+.eco { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 880px) { .eco { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .eco { grid-template-columns: 1fr; } }
+.eco div { border-top: 3px solid var(--teal); padding-top: 14px; display: flex; flex-direction: column; gap: 6px; }
+.eco b { font-size: 17px; }
+.eco span { color: var(--muted); font-size: 15px; }
+.eco-note { margin-top: 28px; padding: 16px 18px; border-radius: 14px; background: var(--teal-soft); font-size: 15px; display: flex; gap: 10px; align-items: center; }
+.eco-note .oac { width: 34px; height: 34px; border-radius: 50%; background: var(--gold); color: #1B2A1A; font-weight: 800; font-size: 11px; display: grid; place-items: center; flex-shrink: 0; }
 
-  .hero-grid {
-    position: absolute; inset: 0;
-    background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
-  }
+.countries { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.country { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; }
+section.alt .country { background: var(--bg); }
+.country .flag { width: 40px; height: 30px; border-radius: 5px; object-fit: cover; box-shadow: 0 0 0 1px var(--line); margin-bottom: 8px; }
+.country b { font-size: 15px; }
+.country span { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.country.next { border-style: dashed; }
+.c-label { font-size: 14px; font-weight: 700; margin: 24px 0 10px; color: var(--muted); }
+.c-label:first-of-type { margin-top: 0; }
 
-  .hero-content { position: relative; z-index: 2; max-width: 620px; }
+.price { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: 40px; align-items: center; }
+@media (max-width: 880px) { .price { grid-template-columns: 1fr; } }
+.price-card { background: var(--surface); border: 1px solid var(--line); border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 14px; }
+.price-coin { width: 52px; height: 52px; border-radius: 50%; background: var(--gold); color: #1B2A1A; font-weight: 800; font-size: 14px; display: grid; place-items: center; }
+.price-figure { display: flex; flex-direction: column; gap: 2px; }
+.price-figure b { font-family: var(--font-display); font-size: 48px; font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; }
+.price-figure span { font-size: 17px; color: var(--muted); }
+.price-eq { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.price-list { margin: 0; padding: 14px 0 0; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; list-style: none; }
+.price-list li { padding-inline-start: 24px; position: relative; font-size: 15px; }
+.price-list li::before { content: ""; position: absolute; inset-inline-start: 2px; top: 8px; width: 12px; height: 7px; border-left: 2.5px solid var(--teal); border-bottom: 2.5px solid var(--teal); transform: rotate(-45deg); }
+.download { background: var(--teal-deep); color: #FFFFFF; border-radius: 28px; padding: 48px 32px; display: flex; flex-direction: column; gap: 18px; align-items: flex-start; }
+.download h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 800; }
+.download p { color: #CFE3E0; font-size: 17px; max-width: 34em; }
+.stores { display: flex; gap: 12px; flex-wrap: wrap; }
+.store { display: inline-flex; align-items: center; gap: 10px; background: #FFFFFF; color: #0E3B3A; text-decoration: none; border-radius: 14px; padding: 12px 18px; min-height: 52px; font-weight: 700; }
+.store-soon { opacity: 0.7; }
+.store small { display: block; font-size: 11px; font-weight: 600; color: #4A6663; }
 
-  .hero-tag {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(110,231,168,0.15); border: 1px solid rgba(110,231,168,0.3);
-    color: var(--brand-light); padding: 6px 16px; border-radius: 50px;
-    font-size: 13px; font-weight: 600; margin-bottom: 24px;
-    animation: fadeUp 0.6s ease both;
-  }
-
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(48px, 7vw, 80px); font-weight: 900;
-    color: var(--white); line-height: 1.05; margin-bottom: 24px;
-    animation: fadeUp 0.6s 0.1s ease both;
-  }
-  .hero h1 span { color: var(--brand-light); display: block; }
-
-  .hero-sub {
-    font-size: 18px; color: rgba(255,255,255,0.65); line-height: 1.7;
-    margin-bottom: 40px; max-width: 480px;
-    animation: fadeUp 0.6s 0.2s ease both;
-  }
-
-  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; animation: fadeUp 0.6s 0.3s ease both; }
-
-  .btn-primary {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: var(--brand-light); color: var(--brand-dark);
-    padding: 16px 32px; border-radius: 50px; font-weight: 700; font-size: 15px;
-    text-decoration: none; transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 8px 24px rgba(110,231,168,0.3);
-  }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(110,231,168,0.4); }
-
-  .btn-secondary {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(255,255,255,0.1); color: var(--white);
-    padding: 16px 32px; border-radius: 50px; font-weight: 600; font-size: 15px;
-    text-decoration: none; border: 1px solid rgba(255,255,255,0.2); transition: background 0.2s;
-  }
-  .btn-secondary:hover { background: rgba(255,255,255,0.15); }
-
-  .hero-phone { position: absolute; right: 8%; bottom: 0; width: 340px; animation: fadeUp 0.8s 0.4s ease both; }
-
-  .phone-mock {
-    width: 280px; background: #0f1f15; border-radius: 40px; padding: 16px;
-    border: 2px solid rgba(255,255,255,0.1);
-    box-shadow: 0 40px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
-    margin: 0 auto;
-  }
-
-  .phone-screen { background: linear-gradient(160deg, #0d3d26, #1D6A4A); border-radius: 28px; overflow: hidden; padding: 20px 16px; min-height: 560px; }
-  .phone-topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
-  .phone-greeting { color: rgba(255,255,255,0.6); font-size: 11px; }
-  .phone-name { color: #fff; font-size: 16px; font-weight: 800; }
-  .phone-avatar { width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 12px; }
-  .phone-card { background: linear-gradient(135deg, #061f12, #1D6A4A); border-radius: 18px; padding: 16px; margin-bottom: 12px; }
-  .phone-card-label { color: rgba(255,255,255,0.6); font-size: 10px; margin-bottom: 4px; }
-  .phone-card-amount { color: #fff; font-size: 28px; font-weight: 800; }
-  .phone-card-sub { color: rgba(255,255,255,0.5); font-size: 10px; margin-top: 4px; }
-  .phone-stats { display: flex; gap: 8px; margin-bottom: 12px; }
-  .phone-stat { flex: 1; background: rgba(255,255,255,0.08); border-radius: 12px; padding: 10px 8px; text-align: center; }
-  .phone-stat-val { color: #6EE7A8; font-size: 16px; font-weight: 800; }
-  .phone-stat-label { color: rgba(255,255,255,0.5); font-size: 9px; margin-top: 2px; }
-  .phone-group { background: rgba(255,255,255,0.08); border-radius: 12px; padding: 10px 12px; display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-  .phone-group-icon { width: 32px; height: 32px; border-radius: 10px; background: rgba(110,231,168,0.2); display: flex; align-items: center; justify-content: center; font-size: 14px; }
-  .phone-group-name { color: #fff; font-size: 12px; font-weight: 700; }
-  .phone-group-meta { color: rgba(255,255,255,0.4); font-size: 10px; }
-  .phone-group-amount { color: #6EE7A8; font-size: 12px; font-weight: 800; margin-left: auto; }
-  .phone-cta { background: #6EE7A8; border-radius: 12px; padding: 12px; text-align: center; color: #0d3d26; font-weight: 800; font-size: 12px; margin-top: 8px; }
-
-  /* ── STATS BAR ── */
-  .stats-bar { background: var(--brand); padding: 32px 48px; display: flex; justify-content: center; gap: 80px; flex-wrap: wrap; }
-  .stats-bar-item { text-align: center; }
-  .stats-bar-num { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 900; color: var(--white); display: block; }
-  .stats-bar-label { color: rgba(255,255,255,0.6); font-size: 13px; font-weight: 500; }
-
-  /* ── SECTIONS ── */
-  section { padding: 100px 48px; }
-  .section-tag { display: inline-block; background: rgba(29,106,74,0.1); color: var(--brand); padding: 6px 16px; border-radius: 50px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; }
-  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(36px, 5vw, 56px); font-weight: 900; line-height: 1.1; margin-bottom: 16px; color: var(--brand-dark); }
-  .section-sub { font-size: 18px; color: var(--text-muted); line-height: 1.7; max-width: 560px; margin-bottom: 60px; }
-
-  /* ── HOW ── */
-  .how-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
-  .how-card { background: var(--white); border-radius: var(--radius); padding: 32px; border: 1px solid rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; position: relative; overflow: hidden; }
-  .how-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--brand); }
-  .how-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(0,0,0,0.1); }
-  .how-num { width: 40px; height: 40px; border-radius: 12px; background: rgba(29,106,74,0.1); color: var(--brand); font-weight: 800; font-size: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
-  .how-emoji { font-size: 32px; margin-bottom: 12px; display: block; }
-  .how-title { font-size: 18px; font-weight: 700; color: var(--brand-dark); margin-bottom: 10px; }
-  .how-desc { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
-
-  /* ── FEATURES ── */
-  .features-section { background: var(--brand-dark); }
-  .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.08); border-radius: var(--radius); overflow: hidden; }
-  .feature-item { background: rgba(255,255,255,0.04); padding: 36px 28px; transition: background 0.3s; }
-  .feature-item:hover { background: rgba(255,255,255,0.08); }
-  .feature-icon { font-size: 36px; margin-bottom: 14px; display: block; }
-  .feature-title { font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
-  .feature-desc { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.7; }
-
-  /* ── COUNTRIES ── */
-  .countries-section { background: var(--white); text-align: center; }
-  .countries-grid { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
-  .country-pill { display: flex; align-items: center; gap: 10px; background: var(--off-white); border: 1.5px solid rgba(0,0,0,0.08); border-radius: 50px; padding: 12px 20px; font-size: 14px; font-weight: 600; color: var(--brand-dark); transition: border-color 0.2s, transform 0.2s; }
-  .country-pill:hover { border-color: var(--brand); transform: scale(1.04); }
-  .country-flag { font-size: 24px; }
-
-  /* ── TRG ── */
-  .trg-section { background: linear-gradient(135deg, #7a5c0d, #d4a017); color: white; text-align: center; }
-  .trg-section .section-title { color: var(--white); }
-  .trg-section .section-sub { color: rgba(255,255,255,0.75); margin: 0 auto 48px; }
-  .trg-cards { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-  .trg-card { background: rgba(255,255,255,0.1); border-radius: 18px; padding: 24px 28px; text-align: center; border: 1px solid rgba(255,255,255,0.2); min-width: 160px; transition: transform 0.2s; }
-  .trg-card:hover { transform: translateY(-4px); }
-  .trg-card-emoji { font-size: 36px; margin-bottom: 12px; display: block; }
-  .trg-card-amount { font-size: 24px; font-weight: 800; color: var(--white); }
-  .trg-card-label { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 4px; }
-
-  /* ── ENTERPRISE ── */
-  .enterprise-section { background: linear-gradient(135deg, #0d3d26 0%, #1D6A4A 55%, #15502f 100%); position: relative; overflow: hidden; }
-  .enterprise-section::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 85% 20%, rgba(212,160,23,0.18) 0%, transparent 45%); }
-  .enterprise-section .section-tag { background: rgba(212,160,23,0.18); color: var(--gold); }
-  .enterprise-section .section-title { color: var(--white); }
-  .enterprise-section .section-sub { color: rgba(255,255,255,0.65); }
-  .enterprise-grid { position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; margin-bottom: 44px; }
-  .enterprise-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 26px; transition: transform 0.3s, background 0.3s; }
-  .enterprise-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.1); }
-  .enterprise-card-icon { font-size: 30px; margin-bottom: 12px; display: block; }
-  .enterprise-card-title { font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
-  .enterprise-card-desc { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.7; }
-  .enterprise-cta-box { position: relative; background: rgba(212,160,23,0.12); border: 1px solid rgba(212,160,23,0.3); border-radius: var(--radius); padding: 28px 32px; display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
-  .enterprise-cta-box .btn-primary { background: var(--gold); box-shadow: 0 8px 24px rgba(212,160,23,0.35); }
-
-  /* ── TESTIMONIALS ── */
-  .testimonials-section { background: var(--white); }
-  .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-  .testimonial-card { background: var(--off-white); border-radius: var(--radius); padding: 28px; border: 1px solid rgba(0,0,0,0.06); }
-  .testimonial-stars { color: var(--gold); font-size: 14px; margin-bottom: 12px; }
-  .testimonial-text { font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-bottom: 16px; font-style: italic; }
-  .testimonial-author { display: flex; align-items: center; gap: 12px; }
-  .testimonial-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--brand); display: flex; align-items: center; justify-content: center; color: var(--white); font-weight: 800; }
-  .testimonial-name { font-weight: 700; font-size: 14px; }
-  .testimonial-role { font-size: 12px; color: var(--text-muted); }
-
-  /* ── DOWNLOAD ── */
-  .download-section { background: var(--off-white); text-align: center; }
-  .download-btns { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; }
-  .store-btn { display: flex; align-items: center; gap: 12px; background: var(--brand-dark); color: var(--white); padding: 14px 28px; border-radius: 14px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
-  .store-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
-  .store-btn-icon { font-size: 32px; }
-  .store-btn-sub { font-size: 10px; color: rgba(255,255,255,0.6); }
-  .store-btn-label { font-size: 16px; font-weight: 700; }
-
-  /* ── FOOTER ── */
-  footer { background: var(--brand-dark); padding: 60px 48px 32px; color: rgba(255,255,255,0.6); }
-  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-  .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
-  .footer-logo-icon { width: 36px; height: 36px; background: rgba(110,231,168,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
-  .footer-logo-text { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--white); }
-  .footer-desc { font-size: 14px; line-height: 1.7; max-width: 280px; }
-  .footer-col h4 { color: var(--white); font-size: 14px; font-weight: 700; margin-bottom: 16px; }
-  .footer-col ul { list-style: none; }
-  .footer-col ul li { margin-bottom: 10px; }
-  .footer-col ul li a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: color 0.2s; }
-  .footer-col ul li a:hover { color: var(--white); }
-  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
-  .footer-one-africa { color: var(--brand-light); font-weight: 600; }
-
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-
-  @media (max-width: 900px) {
-    nav { padding: 14px 20px; }
-    .nav-links { display: none; }
-    .lang-switcher { right: 20px; }
-    .hero { padding: 100px 20px 60px; }
-    .hero-phone { display: none; }
-    section { padding: 60px 20px; }
-    .stats-bar { padding: 24px 20px; gap: 40px; }
-    .features-grid { grid-template-columns: 1fr; }
-    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-    .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
-  }
+footer.foot { padding-block: 40px; border-top: 1px solid var(--line); margin-top: 72px; }
+.foot .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; font-size: 14px; color: var(--muted); }
+.foot nav { display: flex; flex-wrap: wrap; gap: 16px; }
+.foot a { color: var(--muted); text-decoration: none; }
+.foot a:hover { color: var(--ink); }
+.contact { user-select: all; }
 </style>
 </head>
 <body>
 
-<!-- LANGUAGE SWITCHER -->
-<div class="lang-switcher">
-  <button class="lang-btn active" onclick="setLang('fr')">FR</button>
-  <button class="lang-btn" onclick="setLang('en')">EN</button>
-  <button class="lang-btn" onclick="setLang('ar')">AR</button>
-</div>
-
-<!-- NAV -->
-<nav>
-  <a href="#" class="nav-logo">
-    <div class="nav-logo-icon">🌿</div>
-    <span class="nav-logo-text">Solidarity</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#how" data-fr="Comment ça marche" data-en="How it works" data-ar="كيف يعمل">Comment ça marche</a></li>
-    <li><a href="#features" data-fr="Fonctionnalités" data-en="Features" data-ar="المميزات">Fonctionnalités</a></li>
-    <li><a href="#countries" data-fr="Pays" data-en="Countries" data-ar="الدول">Pays</a></li>
-    <li><a href="#trg" data-fr="Teranga Coin" data-en="Teranga Coin" data-ar="تيرانجا كوين">Teranga Coin</a></li>
-    <li><a href="#enterprise" data-fr="Enterprise" data-en="Enterprise" data-ar="إنتربرايز">Enterprise</a></li>
-    <li><a href="#download" class="nav-cta" data-fr="Télécharger" data-en="Download" data-ar="تحميل">Télécharger</a></li>
-  </ul>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
-  <div class="hero-content">
-    <div class="hero-tag">🌍 <span data-fr="Disponible en Afrique de l'Ouest" data-en="Available in West Africa" data-ar="متاح في غرب أفريقيا">Disponible en Afrique de l'Ouest</span></div>
-    <h1 data-fr="Ensemble,<span>on bâtit.</span>" data-en="Together,<span>we build.</span>" data-ar="معاً،<span>نبني.</span>">Ensemble,<span>on bâtit.</span></h1>
-    <p class="hero-sub" data-fr="Solidarity est la plateforme de solidarité communautaire pour l'Afrique de l'Ouest. Cotisez, votez, aidez — ensemble, construisons un avenir meilleur." data-en="Solidarity is the community solidarity platform for West Africa. Contribute, vote, help — together, let's build a better future." data-ar="سوليداريتي هي منصة التضامن المجتمعي لغرب أفريقيا. ساهم، صوّت، ساعد — معاً نبني مستقبلاً أفضل.">Solidarity est la plateforme de solidarité communautaire pour l'Afrique de l'Ouest. Cotisez, votez, aidez — ensemble, construisons un avenir meilleur.</p>
-    <div class="hero-actions">
-      <a href="#download" class="btn-primary">📱 <span data-fr="Télécharger l'app" data-en="Download the app" data-ar="تحميل التطبيق">Télécharger l'app</span></a>
-      <a href="#how" class="btn-secondary"><span data-fr="Comment ça marche →" data-en="How it works →" data-ar="كيف يعمل ←">Comment ça marche →</span></a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Solidarity by One Africa">
+      <span class="brand-mark"><svg viewBox="0 0 120 120" width="40" height="40" aria-hidden="true"><path d="M52.50 29.92 A31 31 0 0 1 67.50 29.92" fill="none" stroke="#D4A537" stroke-width="8.5" stroke-linecap="round"/><circle cx="60.00" cy="16.00" r="6.6" fill="#D4A537"/><path d="M73.59 32.14 A31 31 0 0 1 85.08 41.78" fill="none" stroke="#0F766E" stroke-width="8.5" stroke-linecap="round"/><circle cx="88.28" cy="26.29" r="6.6" fill="#0F766E"/><path d="M88.32 47.39 A31 31 0 0 1 90.92 62.16" fill="none" stroke="#0F766E" stroke-width="8.5" stroke-linecap="round"/><circle cx="103.33" cy="52.36" r="6.6" fill="#0F766E"/><path d="M89.80 68.54 A31 31 0 0 1 82.30 81.53" fill="none" stroke="#0F766E" stroke-width="8.5" stroke-linecap="round"/><circle cx="98.11" cy="82.00" r="6.6" fill="#0F766E"/><path d="M77.33 85.70 A31 31 0 0 1 63.24 90.83" fill="none" stroke="#0F766E" stroke-width="8.5" stroke-linecap="round"/><circle cx="75.05" cy="101.35" r="6.6" fill="#0F766E"/><path d="M56.76 90.83 A31 31 0 0 1 42.67 85.70" fill="none" stroke="#0F766E" stroke-width="8.5" stroke-linecap="round"/><circle cx="44.95" cy="101.35" r="6.6" fill="#0F766E"/><path d="M37.70 81.53 A31 31 0 0 1 30.20 68.54" fill="none" stroke="#0F766E" stroke-width="8.5" stroke-linecap="round"/><circle cx="21.89" cy="82.00" r="6.6" fill="#0F766E"/><path d="M29.08 62.16 A31 31 0 0 1 31.68 47.39" fill="none" stroke="#0F766E" stroke-width="8.5" stroke-linecap="round"/><circle cx="16.67" cy="52.36" r="6.6" fill="#0F766E"/><path d="M34.92 41.78 A31 31 0 0 1 46.41 32.14" fill="none" stroke="#0F766E" stroke-width="8.5" stroke-linecap="round"/><circle cx="31.72" cy="26.29" r="6.6" fill="#0F766E"/><path d="M79,58.1L78.4,59.7L78.4,60.4L79.3,60.9L79.3,61.2L79,62L79,62.4L78.9,63L79.4,63.8L79.9,65.1L80.4,65.4L80.6,66L80.6,67.3L80.7,68.5L80.8,70.5L81,71.2L80.6,72.1L80.1,73.1L79.3,73.9L78.1,74.4L76.7,75.1L75.2,76.5L74.7,76.8L73.8,77.8L73.3,78.1L73.2,79.1L73.8,80.1L74,80.9L74,81.3L74.3,81.3L74.2,82.6L74,83.3L74.3,83.5L74.1,84.1L73.6,84.6L72.5,85.1L71,85.9L70.4,86.4L70.5,87L70.9,87.1L70.7,87.9L70.4,88.9L70.3,90.1L69.9,90.8L69.1,91.5L68.8,91.7L68.3,92.5L67.9,93.3L67.2,94.3L65.7,95.9L64.8,96.8L63.8,97.5L62.5,98.1L61.8,98.2L61.6,98.6L60.9,98.4L60.2,98.7L58.8,98.4L58,98.6L57.5,98.5L56.2,99.1L55.1,99.4L54.3,100L53.7,100L53.1,99.4L52.7,99.4L52.2,98.7L52.1,98.9L51.9,98.5L51.9,97.6L51.5,96.6L51.9,96.3L51.9,95.1L51,93.7L50.4,92.4L50.4,92.4L49.5,90.5L48.5,89.4L48,88.4L47.7,87L47.4,85.9L47,83.7L46.9,82L46.8,81.3L46.3,80.7L45.6,79.6L44.9,77.9L44.7,77.1L43.6,75.7L43.5,74.7L43.4,73.8L43.6,72.7L44,71.4L44.1,70.9L44.5,69.7L44.8,69.1L45.6,68.3L46,67.7L46.1,66.7L46,65.9L45.7,65.5L45.3,64.7L45,63.9L45.1,63.6L45.5,63.1L45.1,61.9L44.8,61L44.2,60.2L44.3,59.9L44.1,59.5L43.8,58.5L42.7,57.2L41.4,55.9L40.5,54.8L39.7,53.5L39.8,53L40.1,52.6L40.4,51.7L40.6,50.7L40.4,50.5L40.8,49.1L41,48.1L40.5,47.2L39.9,47L39.7,46.4L39.3,46.2L39.4,45.9L38,46.3L37.5,46.3L37,46.5L36,46.5L35.3,45.7L34.9,44.8L34,43.9L33,43.9L31.9,43.9L30.8,44.1L29.7,44.4L27.7,45.1L27,45.6L25.8,45.9L24.7,45.6L24.1,45.6L23.2,45.3L22.4,45.3L20.9,45.6L20,45.9L18.7,46.4L18.4,46.4L18.1,46.4L16.8,45.8L15.6,44.8L14.5,44.1L13.6,43.2L13.3,43.1L12.3,42.6L11.7,41.9L11.4,41.5L11.3,40.5L10.7,39.7L10.2,39.2L9.9,39L9.6,38.8L9.4,38.2L9.2,37.9L8.9,37.7L8.2,37.1L7.6,37L7.3,36.7L7.3,36.5L6.9,36.2L6.9,35.9L6.6,34.9L6.8,34.3L6.3,33.3L5.6,32.8L6.2,32.6L6.8,31.6L7.1,30.9L7,30.2L7.4,29.5L7.5,28.3L7.4,26.9L7.2,26.2L7.4,25.5L7,24.9L6.4,24.3L6.4,23.7L6.5,23.1L7,22.7L7.4,22L7.3,21.5L7.8,20.5L8.5,19.6L8.9,19.4L9.3,18.5L9.3,17.8L9.7,16.9L10.6,16.4L11.4,14.9L11.5,14.9L12.1,14.3L13.3,14.1L14.3,13.1L15,12.7L16,11.5L15.7,9.6L16.2,8.3L16.4,7.5L17.2,6.5L18.5,5.8L19.5,5.2L20.3,3.5L20.7,2.6L21.7,2.6L22.5,3.2L23.7,3.1L25,3.5L25.6,3.5L26.8,2.6L28.2,2.4L29,1.7L30.3,1.2L32.5,0.9L34.6,0.8L35.2,1L36.5,0.4L37.8,0.4L38.4,0.8L39.2,0.7L40.7,0L41.6,0.2L41.5,1L42.6,0.4L42.7,0.7L42.1,1.5L42,2.3L42.5,2.7L42.3,4L41.5,4.8L41.7,5.7L42.4,5.7L42.7,6.4L43.2,6.7L44.7,7.2L45.3,7.1L46.3,7.3L48.1,8L48.7,9.3L49.8,9.6L51.6,10.3L53,11L53.6,10.6L54.3,9.9L54,8.8L54.4,8L55.3,7.3L56.2,7.1L57.9,7.4L58.4,8.1L58.8,8.1L59.3,8.4L60.5,8.6L60.9,9.1L62.6,9L63.8,9.4L65.1,9.9L65.7,10.1L66.7,9.6L67.2,9.2L68.4,9.1L69.3,9.3L69.6,10L69.9,9.5L71,9.9L72,10L72.6,9.6L73.3,11.8L73.4,12.2L73.1,12.7L72.8,13.9L72.5,14.6L72.2,14.9L71.7,14.4L71.1,13.8L70.2,11.6L70.1,11.8L70.6,13.3L71.4,14.8L72.4,17.1L72.9,17.8L73.3,18.6L74.4,20.2L74.2,20.5L74.2,21.4L75.7,22.6L76,22.9L76.4,24.3L76.1,24.5L76.3,25.9L76.7,27.6L77.2,27.9L77.9,28.4L78.7,30L79,31.2L79.8,31.9L81.5,33.1L82.2,33.9L82.9,34.6L83.3,35.1L84,35.5L84.3,35.9L84.2,36.5L83.5,36.8L84.1,37.1L84.5,37.4L84.7,37.9L85.3,38.5L85.9,38.5L87.2,38.1L88.6,38L89.7,37.6L90.3,37.5L90.8,37.2L91.5,37.2L92,37.2L92.5,37L93.2,36.8L93.8,36.4L94.3,36.4L94.4,36.8L94.2,37.5L94.2,38.2L94,38.7L93.6,40.1L93,41.6L92.2,43.2L91.1,45.1L90,46.6L88.5,48.3L87.2,49.4L85.2,50.7L84,51.6L82.6,53.2L82.3,53.9L82,54.2L81.1,54.7L80.8,55.2L80.3,55.3L80.1,56.3L79.7,56.8L79.5,57.6ZM92.3,68.2L92.6,68.8L93,69.7L93.2,71.3L93.5,71.9L93.4,72.5L93.2,72.9L92.7,72.2L92.5,72.6L92.7,73.5L92.6,74.1L92.3,74.4L92.2,75.6L91.7,77.2L91,79.1L90.2,81.7L89.7,83.6L89.2,85.3L88.1,85.6L87,86.2L86.2,85.8L85.2,85.3L84.9,84.6L84.8,83.3L84.3,82.2L84.2,81.2L84.4,80.2L85,80L85,79.5L85.6,78.5L85.8,77.6L85.5,76.9L85.2,76.1L85.1,74.8L85.6,74.1L85.7,73.2L86.4,73.2L87.1,72.9L87.6,72.7L88.1,72.6L88.9,71.9L89.9,71.1L90.3,70.4L90.1,69.8L90.7,70L91.4,69.1L91.4,68.3L91.9,67.7Z" fill="#141414" transform="translate(40.00 40.00) scale(0.4)"/></svg></span>
+      <span class="brand-name">Solidarity<small>by One Africa</small></span>
+    </a>
+    <nav class="links" aria-label="Menu">
+      <a href="#pour-qui" data-i18n="nav_who">Pour qui</a>
+      <a href="#fonctions" data-i18n="nav_features">Fonctionnalités</a>
+      <a href="#epargne" data-i18n="nav_savings">Épargne</a>
+      <a href="#pays" data-i18n="nav_countries">Pays</a>
+      <a href="#entreprise" data-i18n="nav_biz">Entreprise</a>
+      <a href="#telecharger" data-i18n="nav_download">Télécharger</a>
+    </nav>
+    <div class="langs" role="group" aria-label="Langue">
+      <button type="button" id="lang-fr" data-lang="fr" aria-pressed="true">FR</button>
+      <button type="button" id="lang-en" data-lang="en" aria-pressed="false">EN</button>
+      <button type="button" id="lang-ar" data-lang="ar" aria-pressed="false">عربي</button>
     </div>
   </div>
+</header>
 
-  <div class="hero-phone">
-    <div class="phone-mock">
-      <div class="phone-screen">
-        <div class="phone-topbar">
-          <div>
-            <div class="phone-greeting">Bonjour 👋</div>
-            <div class="phone-name">Aliou Diallo</div>
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="eyebrow" data-i18n="hero_eyebrow">Pour toutes les organisations, partout en Afrique</span>
+        <h1 data-i18n-html="hero_title">Votre organisation, <em>bien tenue.</em></h1>
+        <p class="lead" data-i18n="hero_lead">Association, groupe religieux, coopérative, groupement ou club : gérez vos membres, vos cotisations, votre caisse et vos événements depuis votre téléphone. Tout est clair pour le bureau comme pour chaque membre.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#telecharger" data-i18n="cta_download">Télécharger l'app</a>
+          <a class="btn btn-ghost" href="#fonctions" data-i18n="cta_how">Voir ce qu'elle fait</a>
+        </div>
+        <p class="hero-note" data-i18n="hero_note">Téléchargement gratuit. Connectez-vous aussi avec votre compte One Africa ou Jaango.</p>
+      </div>
+      <div class="stage" aria-hidden="true">
+        <div class="card">
+          <div class="card-head">
+            <span class="card-logo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 4l9 6.5"/><path d="M5 9.5V20h14V9.5"/></svg></span>
+            <span class="card-org"><b data-i18n="card_org">Votre organisation</b><span data-i18n="card_sub">Carte de membre · Solidarity</span></span>
+            <span class="pill-ok" data-i18n="card_ok">À jour</span>
           </div>
-          <div class="phone-avatar">A</div>
+          <div class="card-band"></div>
+          <div class="card-body">
+            <span class="card-photo"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#BFD6D3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span>
+            <div class="card-fields">
+              <span class="name" data-i18n="card_name">Nom du membre</span>
+              <div><small data-i18n="card_no">N° membre</small><span>ORG-0001</span></div>
+              <div><small data-i18n="card_role">Rôle</small><span data-i18n="card_role_v">Trésorier</span></div>
+              <div><small data-i18n="card_section">Section</small><span data-i18n="card_section_v">Centre</span></div>
+              <div><small data-i18n="card_since">Depuis</small><span>2026</span></div>
+            </div>
+          </div>
         </div>
-        <div class="phone-card">
-          <div class="phone-card-label">Ma cagnotte totale</div>
-          <div class="phone-card-amount">18 200 <span style="font-size:14px;opacity:0.6">FCFA</span></div>
-          <div class="phone-card-sub">Ce mois: 3 000 FCFA · 🔥 47 jours</div>
-        </div>
-        <div class="phone-stats">
-          <div class="phone-stat"><div class="phone-stat-val">3</div><div class="phone-stat-label">Groupes</div></div>
-          <div class="phone-stat"><div class="phone-stat-val">47</div><div class="phone-stat-label">Membres</div></div>
-          <div class="phone-stat"><div class="phone-stat-val" style="color:#d4a017">24.5</div><div class="phone-stat-label">TRG 🪙</div></div>
-        </div>
-        <div class="phone-group">
-          <div class="phone-group-icon">🕌</div>
-          <div><div class="phone-group-name">Mosquée Médina</div><div class="phone-group-meta">24 membres</div></div>
-          <div class="phone-group-amount">72 000</div>
-        </div>
-        <div class="phone-group">
-          <div class="phone-group-icon">👨‍👩‍👧‍👦</div>
-          <div><div class="phone-group-name">Famille Diallo</div><div class="phone-group-meta">12 membres</div></div>
-          <div class="phone-group-amount">33 600</div>
-        </div>
-        <div class="phone-cta">💚 Cotiser maintenant</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STATS BAR -->
-<div class="stats-bar">
-  <div class="stats-bar-item">
-    <span class="stats-bar-num">6</span>
-    <span class="stats-bar-label" data-fr="Pays couverts" data-en="Countries covered" data-ar="الدول المشمولة">Pays couverts</span>
-  </div>
-  <div class="stats-bar-item">
-    <span class="stats-bar-num">100%</span>
-    <span class="stats-bar-label" data-fr="Transparent" data-en="Transparent" data-ar="شفاف">Transparent</span>
-  </div>
-  <div class="stats-bar-item">
-    <span class="stats-bar-num">6%</span>
-    <span class="stats-bar-label" data-fr="Commission seulement" data-en="Commission only" data-ar="عمولة فقط">Commission seulement</span>
-  </div>
-  <div class="stats-bar-item">
-    <span class="stats-bar-num">∞</span>
-    <span class="stats-bar-label" data-fr="Solidarité" data-en="Solidarity" data-ar="تضامن">Solidarité</span>
-  </div>
-</div>
-
-<!-- HOW IT WORKS -->
-<section id="how" style="background: var(--off-white);">
-  <div style="max-width: 1100px; margin: 0 auto;">
-    <div class="section-tag" data-fr="Comment ça marche" data-en="How it works" data-ar="كيف يعمل">Comment ça marche</div>
-    <h2 class="section-title" data-fr="Simple comme<br>bonjour." data-en="Simple as<br>hello." data-ar="بسيط<br>جداً.">Simple comme<br>bonjour.</h2>
-    <p class="section-sub" data-fr="En 4 étapes, rejoignez une communauté solidaire et commencez à construire ensemble." data-en="In 4 steps, join a solidarity community and start building together." data-ar="في 4 خطوات، انضم إلى مجتمع متضامن وابدأ البناء معاً.">En 4 étapes, rejoignez une communauté solidaire et commencez à construire ensemble.</p>
-
-    <div class="how-grid">
-      <div class="how-card">
-        <span class="how-emoji">📱</span>
-        <div class="how-num">01</div>
-        <div class="how-title" data-fr="Inscrivez-vous" data-en="Sign up" data-ar="سجّل">Inscrivez-vous</div>
-        <div class="how-desc" data-fr="Créez votre compte avec votre numéro de téléphone. Vérifiez votre identité et choisissez votre pays." data-en="Create your account with your phone number. Verify your identity and choose your country." data-ar="أنشئ حسابك برقم هاتفك. تحقق من هويتك واختر بلدك.">Créez votre compte avec votre numéro de téléphone.</div>
-      </div>
-      <div class="how-card">
-        <span class="how-emoji">👥</span>
-        <div class="how-num">02</div>
-        <div class="how-title" data-fr="Rejoignez un groupe" data-en="Join a group" data-ar="انضم لمجموعة">Rejoignez un groupe</div>
-        <div class="how-desc" data-fr="Créez ou rejoignez un groupe (famille, mosquée, quartier) avec un code d'invitation." data-en="Create or join a group (family, mosque, neighborhood) with an invitation code." data-ar="أنشئ مجموعة أو انضم إليها بكود دعوة.">Créez ou rejoignez un groupe avec un code d'invitation.</div>
-      </div>
-      <div class="how-card">
-        <span class="how-emoji">💚</span>
-        <div class="how-num">03</div>
-        <div class="how-title" data-fr="Cotisez ensemble" data-en="Contribute together" data-ar="ساهموا معاً">Cotisez ensemble</div>
-        <div class="how-desc" data-fr="Choisissez votre plan et payez via Wave ou Orange Money." data-en="Choose your plan and pay via Wave or Orange Money." data-ar="اختر خطتك وادفع عبر Wave أو Orange Money.">Choisissez votre plan et payez via Wave ou Orange Money.</div>
-      </div>
-      <div class="how-card">
-        <span class="how-emoji">🗳️</span>
-        <div class="how-num">04</div>
-        <div class="how-title" data-fr="Votez et aidez" data-en="Vote and help" data-ar="صوّتوا وساعدوا">Votez et aidez</div>
-        <div class="how-desc" data-fr="Quand un membre a besoin d'aide, le groupe vote. La majorité décide. L'argent est versé automatiquement." data-en="When a member needs help, the group votes. Majority decides. Money is sent automatically." data-ar="عندما يحتاج عضو للمساعدة، تصوت المجموعة. يقرر الأغلبية. يُحوَّل المال تلقائياً.">Quand un membre a besoin d'aide, le groupe vote.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURES -->
-<section id="features" class="features-section">
-  <div style="max-width: 1100px; margin: 0 auto;">
-    <div class="section-tag" style="background: rgba(110,231,168,0.15); color: var(--brand-light);" data-fr="Fonctionnalités" data-en="Features" data-ar="المميزات">Fonctionnalités</div>
-    <h2 class="section-title" style="color: var(--white);" data-fr="Tout ce dont vous<br>avez besoin." data-en="Everything you<br>need." data-ar="كل ما<br>تحتاجه.">Tout ce dont vous<br>avez besoin.</h2>
-    <p class="section-sub" style="color: rgba(255,255,255,0.6); margin-bottom: 48px;" data-fr="Une plateforme complète pour gérer votre solidarité communautaire." data-en="A complete platform to manage your community solidarity." data-ar="منصة متكاملة لإدارة تضامنك المجتمعي.">Une plateforme complète pour gérer votre solidarité communautaire.</p>
-
-    <div class="features-grid">
-      <div class="feature-item">
-        <span class="feature-icon">🤝</span>
-        <div class="feature-title" data-fr="Groupes de solidarité" data-en="Solidarity groups" data-ar="مجموعات التضامن">Groupes de solidarité</div>
-        <div class="feature-desc" data-fr="Système de vote démocratique pour aider les membres dans le besoin." data-en="Democratic voting system to help members in need." data-ar="نظام تصويت ديمقراطي لمساعدة الأعضاء المحتاجين.">Système de vote démocratique pour aider les membres dans le besoin.</div>
-      </div>
-      <div class="feature-item">
-        <span class="feature-icon">🏗️</span>
-        <div class="feature-title" data-fr="Projets collectifs" data-en="Collective projects" data-ar="المشاريع الجماعية">Projets collectifs</div>
-        <div class="feature-desc" data-fr="Collecte de fonds avec objectif pour construire mosquées, écoles, centres." data-en="Fundraising with target to build mosques, schools, centers." data-ar="جمع التبرعات لبناء المساجد والمدارس والمراكز.">Collecte de fonds avec objectif pour construire mosquées, écoles.</div>
-      </div>
-      <div class="feature-item">
-        <span class="feature-icon">💰</span>
-        <div class="feature-title" data-fr="Wave & Orange Money" data-en="Wave & Orange Money" data-ar="ويف وأورانج موني">Wave & Orange Money</div>
-        <div class="feature-desc" data-fr="Paiements via les solutions mobiles les plus utilisées en Afrique de l'Ouest." data-en="Payments via the most used mobile solutions in West Africa." data-ar="الدفع عبر حلول الهاتف المحمول الأكثر استخداماً في غرب أفريقيا.">Paiements via les solutions mobiles les plus utilisées.</div>
-      </div>
-      <div class="feature-item">
-        <span class="feature-icon">🔥</span>
-        <div class="feature-title" data-fr="Streak & Récompenses" data-en="Streak & Rewards" data-ar="السلاسل والمكافآت">Streak & Récompenses</div>
-        <div class="feature-desc" data-fr="Maintenez votre habitude de cotisation et gagnez des TRG chaque jour." data-en="Maintain your contribution habit and earn TRG every day." data-ar="حافظ على عادة المساهمة واكسب TRG كل يوم.">Maintenez votre habitude de cotisation et gagnez des TRG.</div>
-      </div>
-      <div class="feature-item">
-        <span class="feature-icon">🌟</span>
-        <div class="feature-title" data-fr="Score de confiance" data-en="Trust score" data-ar="درجة الثقة">Score de confiance</div>
-        <div class="feature-desc" data-fr="Un score transparent basé sur vos cotisations et participation communautaire." data-en="A transparent score based on your contributions and community participation." data-ar="درجة شفافة مبنية على مساهماتك ومشاركتك المجتمعية.">Score transparent basé sur vos cotisations.</div>
-      </div>
-      <div class="feature-item">
-        <span class="feature-icon">🔒</span>
-        <div class="feature-title" data-fr="Vérification KYC" data-en="KYC Verification" data-ar="التحقق من الهوية">Vérification KYC</div>
-        <div class="feature-desc" data-fr="Vérification d'identité (CNI) pour sécuriser les retraits et transactions." data-en="Identity verification (ID) to secure withdrawals and transactions." data-ar="التحقق من الهوية لتأمين عمليات السحب والمعاملات.">Vérification d'identité pour sécuriser les transactions.</div>
-      </div>
-      <div class="feature-item">
-        <span class="feature-icon">📊</span>
-        <div class="feature-title" data-fr="Tableau de bord" data-en="Dashboard" data-ar="لوحة التحكم">Tableau de bord</div>
-        <div class="feature-desc" data-fr="Suivez vos cotisations, cagnotte, streak et votes en temps réel." data-en="Track your contributions, pot, streak and votes in real time." data-ar="تتبع مساهماتك وصندوقك وسلاسلك وتصويتاتك في الوقت الفعلي.">Suivez vos cotisations en temps réel.</div>
-      </div>
-      <div class="feature-item">
-        <span class="feature-icon">🌍</span>
-        <div class="feature-title" data-fr="Multi-langues" data-en="Multi-language" data-ar="متعدد اللغات">Multi-langues</div>
-        <div class="feature-desc" data-fr="Interface disponible en Français, Anglais et Arabe (RTL)." data-en="Interface available in French, English and Arabic (RTL)." data-ar="الواجهة متاحة بالفرنسية والإنجليزية والعربية.">Interface en Français, Anglais et Arabe (RTL).</div>
-      </div>
-      <div class="feature-item">
-        <span class="feature-icon">🪙</span>
-        <div class="feature-title" data-fr="Teranga Coin" data-en="Teranga Coin" data-ar="تيرانجا كوين">Teranga Coin</div>
-        <div class="feature-desc" data-fr="Gagnez des TRG à chaque action et échangez-les dans l'écosystème One Africa." data-en="Earn TRG with every action and exchange them in the One Africa ecosystem." data-ar="اكسب TRG مع كل إجراء وتبادلها في منظومة One Africa.">Gagnez des TRG et échangez dans l'écosystème One Africa.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COUNTRIES -->
-<section id="countries" class="countries-section">
-  <div style="max-width: 900px; margin: 0 auto;">
-    <div class="section-tag" data-fr="Disponibilité" data-en="Availability" data-ar="التوفر">Disponibilité</div>
-    <h2 class="section-title" data-fr="6 pays,<br>une communauté." data-en="6 countries,<br>one community." data-ar="6 دول،<br>مجتمع واحد.">6 pays,<br>une communauté.</h2>
-    <p class="section-sub" style="margin: 0 auto 48px;" data-fr="Solidarity est disponible dans 6 pays avec support des devises et méthodes de paiement locales." data-en="Solidarity is available in 6 countries with local currency and payment method support." data-ar="سوليداريتي متاحة في 6 دول مع دعم العملات وطرق الدفع المحلية.">Solidarity est disponible dans 6 pays d'Afrique de l'Ouest.</p>
-
-    <div class="countries-grid">
-      <div class="country-pill"><span class="country-flag">🇸🇳</span> Sénégal · FCFA</div>
-      <div class="country-pill"><span class="country-flag">🇬🇲</span> Gambia · GMD</div>
-      <div class="country-pill"><span class="country-flag">🇨🇮</span> Côte d'Ivoire · FCFA</div>
-      <div class="country-pill"><span class="country-flag">🇳🇬</span> Nigeria · NGN</div>
-      <div class="country-pill"><span class="country-flag">🇬🇭</span> Ghana · GHS</div>
-      <div class="country-pill"><span class="country-flag">🇲🇷</span> Mauritanie · MRU</div>
-    </div>
-
-    <div style="background: var(--brand); border-radius: var(--radius); padding: 32px; display: flex; gap: 32px; align-items: center; flex-wrap: wrap;">
-      <div style="flex: 1; min-width: 240px;">
-        <div style="color: rgba(255,255,255,0.7); font-size: 13px; margin-bottom: 8px;" data-fr="Prochainement" data-en="Coming soon" data-ar="قريباً">Prochainement</div>
-        <div style="color: var(--white); font-size: 20px; font-weight: 700;">🇬🇳 Guinée · 🇲🇱 Mali · 🇧🇯 Bénin</div>
-      </div>
-      <a href="#download" class="btn-primary" data-fr="Rejoindre la liste d'attente" data-en="Join the waitlist" data-ar="انضم لقائمة الانتظار">Rejoindre la liste d'attente</a>
-    </div>
-  </div>
-</section>
-
-<!-- TRG -->
-<section id="trg" class="trg-section">
-  <div style="max-width: 900px; margin: 0 auto;">
-    <div class="section-tag" style="background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.9);">Teranga Coin · TRG</div>
-    <h2 class="section-title" data-fr="Votre fidélité<br>récompensée." data-en="Your loyalty<br>rewarded." data-ar="ولاؤك<br>مكافأ.">Votre fidélité<br>récompensée.</h2>
-    <p class="section-sub" data-fr="Gagnez des TRG à chaque action dans l'écosystème One Africa." data-en="Earn TRG with every action in the One Africa ecosystem." data-ar="اكسب TRG مع كل إجراء في منظومة One Africa.">Gagnez des TRG à chaque action dans l'écosystème One Africa.</p>
-
-    <div class="trg-cards">
-      <div class="trg-card"><span class="trg-card-emoji">💚</span><div class="trg-card-amount">+35 TRG</div><div class="trg-card-label" data-fr="Cotisation mensuelle" data-en="Monthly contribution" data-ar="المساهمة الشهرية">Cotisation mensuelle</div></div>
-      <div class="trg-card"><span class="trg-card-emoji">🔥</span><div class="trg-card-amount">+10 TRG</div><div class="trg-card-label" data-fr="Streak 7 jours" data-en="7-day streak" data-ar="سلسلة 7 أيام">Streak 7 jours</div></div>
-      <div class="trg-card"><span class="trg-card-emoji">🗳️</span><div class="trg-card-amount">+5 TRG</div><div class="trg-card-label" data-fr="Participation votes" data-en="Vote participation" data-ar="المشاركة في التصويت">Participation votes</div></div>
-      <div class="trg-card"><span class="trg-card-emoji">✅</span><div class="trg-card-amount">+50 TRG</div><div class="trg-card-label" data-fr="Demande approuvée" data-en="Approved request" data-ar="طلب موافق عليه">Demande approuvée</div></div>
-      <div class="trg-card"><span class="trg-card-emoji">🏗️</span><div class="trg-card-amount">+100 TRG</div><div class="trg-card-label" data-fr="Projet complété" data-en="Completed project" data-ar="مشروع مكتمل">Projet complété</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ENTERPRISE -->
-<section id="enterprise" class="enterprise-section">
-  <div style="max-width: 1100px; margin: 0 auto; position: relative;">
-    <div class="section-tag" data-fr="Nouveau · Solidarity Enterprise" data-en="New · Solidarity Enterprise" data-ar="جديد · Solidarity Enterprise">Nouveau · Solidarity Enterprise</div>
-    <h2 class="section-title" data-fr="Votre activité,<br>comptabilisée." data-en="Your business,<br>accounted for." data-ar="نشاطك،<br>محسوب.">Votre activité,<br>comptabilisée.</h2>
-    <p class="section-sub" data-fr="Taxi, boutique, atelier, vente ambulante… Solidarity Enterprise aide les entrepreneurs individuels à suivre leurs recettes et dépenses, se faire connaître et accéder au financement." data-en="Taxi, shop, workshop, street vending… Solidarity Enterprise helps individual entrepreneurs track income and expenses, build a reputation, and access financing." data-ar="تاكسي، متجر، ورشة، بيع متجول… يساعد Solidarity Enterprise رواد الأعمال الأفراد على تتبع مداخيلهم ومصاريفهم وبناء سمعتهم والحصول على التمويل.">Taxi, boutique, atelier, vente ambulante… suivez vos recettes et dépenses.</p>
-
-    <div class="enterprise-grid">
-      <div class="enterprise-card">
-        <span class="enterprise-card-icon">📒</span>
-        <div class="enterprise-card-title" data-fr="Comptabilité simple" data-en="Simple bookkeeping" data-ar="محاسبة بسيطة">Comptabilité simple</div>
-        <div class="enterprise-card-desc" data-fr="Enregistrez chaque recette et dépense en quelques secondes, avec reçu à code QR." data-en="Record every income and expense in seconds, with a QR-code receipt." data-ar="سجّل كل مدخول ومصروف في ثوانٍ، مع إيصال برمز QR.">Enregistrez chaque recette et dépense avec reçu à code QR.</div>
-      </div>
-      <div class="enterprise-card">
-        <span class="enterprise-card-icon">🌟</span>
-        <div class="enterprise-card-title" data-fr="Score de confiance" data-en="Trust score" data-ar="درجة الثقة">Score de confiance</div>
-        <div class="enterprise-card-desc" data-fr="Un score basé sur la régularité de votre comptabilité, partageable avec une institution de microfinance." data-en="A score based on how regularly you keep your books, shareable with a microfinance partner." data-ar="درجة مبنية على انتظام محاسبتك، قابلة للمشاركة مع مؤسسة تمويل أصغر.">Un score partageable avec une institution de microfinance.</div>
-      </div>
-      <div class="enterprise-card">
-        <span class="enterprise-card-icon">🪪</span>
-        <div class="enterprise-card-title" data-fr="Carte professionnelle" data-en="Business card" data-ar="البطاقة المهنية">Carte professionnelle</div>
-        <div class="enterprise-card-desc" data-fr="Une carte scannable pour vos clients, fournisseurs ou partenaires financiers." data-en="A scannable card for your customers, suppliers or financing partners." data-ar="بطاقة قابلة للمسح لعملائك ومورديك وشركائك الماليين.">Une carte scannable pour vos clients et partenaires.</div>
-      </div>
-      <div class="enterprise-card">
-        <span class="enterprise-card-icon">🎁</span>
-        <div class="enterprise-card-title" data-fr="Fidélité clients" data-en="Client loyalty" data-ar="ولاء العملاء">Fidélité clients</div>
-        <div class="enterprise-card-desc" data-fr="Un programme de fidélité pour récompenser vos meilleurs clients." data-en="A loyalty program to reward your best customers." data-ar="برنامج ولاء لمكافأة أفضل عملائك.">Récompensez vos meilleurs clients automatiquement.</div>
-      </div>
-      <div class="enterprise-card">
-        <span class="enterprise-card-icon">👥</span>
-        <div class="enterprise-card-title" data-fr="Comptes employés" data-en="Staff accounts" data-ar="حسابات الموظفين">Comptes employés</div>
-        <div class="enterprise-card-desc" data-fr="Donnez à vos employés ou apprentis un accès limité pour enregistrer les ventes." data-en="Give employees or apprentices limited access to record sales." data-ar="امنح موظفيك أو متدربيك وصولاً محدوداً لتسجيل المبيعات.">Un accès limité pour enregistrer les ventes.</div>
-      </div>
-      <div class="enterprise-card">
-        <span class="enterprise-card-icon">📄</span>
-        <div class="enterprise-card-title" data-fr="Documents pro" data-en="Business documents" data-ar="وثائق النشاط">Documents pro</div>
-        <div class="enterprise-card-desc" data-fr="Gardez patente, assurance, carte grise au même endroit, avec alerte avant expiration." data-en="Keep your licence, insurance, registration in one place, with an expiry alert." data-ar="احفظ رخصتك وتأمينك ووثائقك في مكان واحد مع تنبيه قبل الانتهاء.">Gardez vos documents professionnels au même endroit.</div>
-      </div>
-    </div>
-
-    <div class="enterprise-cta-box">
-      <div style="flex: 1; min-width: 240px;">
-        <div style="color: var(--gold); font-size: 13px; font-weight: 700; margin-bottom: 6px;" data-fr="10 jours d'essai gratuit" data-en="10-day free trial" data-ar="تجربة مجانية 10 أيام">10 jours d'essai gratuit</div>
-        <div style="color: var(--white); font-size: 18px; font-weight: 700;" data-fr="Lancez votre comptabilité dès aujourd'hui." data-en="Start your bookkeeping today." data-ar="ابدأ محاسبتك اليوم.">Lancez votre comptabilité dès aujourd'hui.</div>
-      </div>
-      <a href="#download" class="btn-primary" data-fr="Créer mon entreprise" data-en="Create my business" data-ar="إنشاء نشاطي">Créer mon entreprise</a>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonials-section">
-  <div style="max-width: 1100px; margin: 0 auto;">
-    <div class="section-tag" data-fr="Témoignages" data-en="Testimonials" data-ar="الشهادات">Témoignages</div>
-    <h2 class="section-title" data-fr="Ce que disent<br>nos membres." data-en="What our<br>members say." data-ar="ما يقوله<br>أعضاؤنا.">Ce que disent<br>nos membres.</h2>
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text" data-fr='"Grâce à Solidarity, notre groupe a pu aider Aminata pour ses frais médicaux en moins de 48h."' data-en='"Thanks to Solidarity, our group was able to help Aminata with her medical expenses in less than 48 hours."' data-ar='"بفضل سوليداريتي، تمكنت مجموعتنا من مساعدة أمينتا في نفقاتها الطبية في أقل من 48 ساعة."'>"Grâce à Solidarity, notre groupe a pu aider Aminata pour ses frais médicaux en moins de 48h."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">M</div>
-          <div><div class="testimonial-name">Mamadou Diallo</div><div class="testimonial-role">Dakar, Sénégal</div></div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text" data-fr='"Notre mosquée a collecté 5 millions FCFA en 8 mois grâce au mode projet. Tout est transparent."' data-en='"Our mosque raised 5 million FCFA in 8 months thanks to project mode. Everything is transparent."' data-ar='"جمعت مسجدنا 5 ملايين فرنك أفريقي في 8 أشهر بفضل وضع المشروع. كل شيء شفاف."'>"Notre mosquée a collecté 5 millions FCFA en 8 mois grâce au mode projet."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">I</div>
-          <div><div class="testimonial-name">Imam Ibrahima</div><div class="testimonial-role">Thiès, Sénégal</div></div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text" data-fr='"Le système de vote est juste et démocratique. Personne ne peut abuser. C\'est vraiment la solidarité moderne."' data-en='"The voting system is fair and democratic. No one can abuse it. This is truly modern solidarity."' data-ar='"نظام التصويت عادل وديمقراطي. لا يستطيع أحد إساءة استخدامه. هذا هو التضامن الحديث حقاً."'>"Le système de vote est juste et démocratique. C'est vraiment la solidarité moderne."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">F</div>
-          <div><div class="testimonial-name">Fatou Camara</div><div class="testimonial-role">Banjul, Gambia</div></div>
+        <div class="toast">
+          <span class="toast-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span>
+          <div><b data-i18n="toast_t">Cotisation reçue</b><span data-i18n="toast_s">Reçu envoyé au membre et sur WhatsApp</span></div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- DOWNLOAD -->
-<section id="download" class="download-section">
-  <div style="max-width: 700px; margin: 0 auto; text-align: center;">
-    <div class="section-tag" data-fr="Télécharger" data-en="Download" data-ar="تحميل">Télécharger</div>
-    <h2 class="section-title" data-fr="Prêt à rejoindre<br>la communauté ?" data-en="Ready to join<br>the community?" data-ar="مستعد للانضمام<br>للمجتمع؟">Prêt à rejoindre<br>la communauté ?</h2>
-    <p class="section-sub" style="margin: 0 auto 40px;" data-fr="Disponible sur iOS et Android. Gratuit à télécharger." data-en="Available on iOS and Android. Free to download." data-ar="متاح على iOS وأندرويد. مجاني للتحميل.">Disponible sur iOS et Android. Gratuit à télécharger.</p>
-
-    <div class="download-btns">
-      <a href="#" class="store-btn">
-        <span class="store-btn-icon">🍎</span>
-        <div>
-          <div class="store-btn-sub" data-fr="Télécharger sur" data-en="Download on" data-ar="تحميل من">Télécharger sur</div>
-          <div class="store-btn-label">App Store</div>
-        </div>
-      </a>
-      <a href="https://expo.dev/accounts/cherifba/projects/solidarity-mobile/builds/10485212-b1f4-40ce-abfb-ff89c59e8c50" target="_blank" class="store-btn">
-        <span class="store-btn-icon">🤖</span>
-        <div>
-          <div class="store-btn-sub" data-fr="Disponible sur" data-en="Available on" data-ar="متاح على">Disponible sur</div>
-          <div class="store-btn-label">Google Play</div>
-        </div>
-      </a>
+  <section class="band alt" id="pour-qui">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow" data-i18n="who_eyebrow">Pour qui</span>
+        <h2 data-i18n="who_title">Une app pour toutes les façons de s'organiser</h2>
+        <p data-i18n="who_lead">Chaque organisation choisit son type. L'app prend alors ses mots, ses rôles et ses outils. Ouverte à tous, quels que soient la religion, la culture ou le pays.</p>
+      </div>
+      <ul class="types">
+        <li data-i18n="t1">Associations</li>
+        <li data-i18n="t2">Groupes religieux et spirituels</li>
+        <li data-i18n="t3">Coopératives</li>
+        <li data-i18n="t4">GIE et entreprises collectives</li>
+        <li data-i18n="t5">Groupements professionnels</li>
+        <li data-i18n="t6">Groupes de femmes</li>
+        <li data-i18n="t7">Clubs sportifs et culturels</li>
+        <li data-i18n="t8">Mutuelles</li>
+        <li data-i18n="t9">Amicales et anciens</li>
+        <li data-i18n="t10">Associations de parents d'élèves</li>
+        <li data-i18n="t11">Syndicats</li>
+        <li data-i18n="t12">Diaspora et ressortissants</li>
+      </ul>
+      <p class="types-note" data-i18n="types_note">Dahira, paroisse, comité de mosquée, chorale, chama, susu : chacun garde ses propres mots et son propre calendrier.</p>
     </div>
+  </section>
 
-    <p style="font-size: 13px; color: var(--text-muted);" data-fr="🔒 Vos données sont sécurisées · Aucune publicité · 100% africain" data-en="🔒 Your data is secure · No ads · 100% African" data-ar="🔒 بياناتك آمنة · بدون إعلانات · 100% أفريقي">🔒 Vos données sont sécurisées · Aucune publicité · 100% africain</p>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div style="max-width: 1100px; margin: 0 auto;">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-logo">
-          <div class="footer-logo-icon">🌿</div>
-          <span class="footer-logo-text">Solidarity</span>
+  <section class="band" id="fonctions">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow" data-i18n="feat_eyebrow">Fonctionnalités</span>
+        <h2 data-i18n="feat_title">Tout ce dont le bureau a besoin, rien de compliqué</h2>
+        <p data-i18n="feat_lead">Des mots simples et des écrans clairs, pour que chaque membre s'y retrouve, même sans être à l'aise avec le téléphone.</p>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M6 16c.6-1.3 1.7-2 3-2s2.4.7 3 2"/><path d="M15 10h3M15 13h3"/></svg></span>
+          <h3 data-i18n="f1_t">Membres et carte de membre</h3>
+          <p data-i18n="f1_p">Fiche de chaque membre avec photo. Carte virtuelle avec QR code, imprimable et partageable sur WhatsApp.</p>
         </div>
-        <p class="footer-desc" data-fr="La plateforme de solidarité communautaire pour l'Afrique de l'Ouest. Powered by One Africa Group." data-en="The community solidarity platform for West Africa. Powered by One Africa Group." data-ar="منصة التضامن المجتمعي لغرب أفريقيا. مدعومة من One Africa Group.">La plateforme de solidarité communautaire pour l'Afrique de l'Ouest.</p>
-      </div>
-      <div class="footer-col">
-        <h4 data-fr="Produit" data-en="Product" data-ar="المنتج">Produit</h4>
-        <ul>
-          <li><a href="#how" data-fr="Comment ça marche" data-en="How it works" data-ar="كيف يعمل">Comment ça marche</a></li>
-          <li><a href="#features" data-fr="Fonctionnalités" data-en="Features" data-ar="المميزات">Fonctionnalités</a></li>
-          <li><a href="#trg" data-fr="Teranga Coin" data-en="Teranga Coin" data-ar="تيرانجا كوين">Teranga Coin</a></li>
-          <li><a href="#enterprise" data-fr="Solidarity Enterprise" data-en="Solidarity Enterprise" data-ar="Solidarity Enterprise">Solidarity Enterprise</a></li>
-          <li><a href="#download" data-fr="Télécharger" data-en="Download" data-ar="تحميل">Télécharger</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4 data-fr="One Africa" data-en="One Africa" data-ar="ون أفريكا">One Africa</h4>
-        <ul>
-          <li><a href="#">Marketplace</a></li>
-          <li><a href="#">Jaango</a></li>
-          <li><a href="#">Social</a></li>
-          <li><a href="#" data-fr="À propos" data-en="About" data-ar="حول">À propos</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4 data-fr="Support" data-en="Support" data-ar="الدعم">Support</h4>
-        <ul>
-          <li><a href="mailto:support@one-africa.com">support@one-africa.com</a></li>
-          <li><a href="#" data-fr="FAQ" data-en="FAQ" data-ar="الأسئلة الشائعة">FAQ</a></li>
-          <li><a href="#" data-fr="Confidentialité" data-en="Privacy" data-ar="الخصوصية">Confidentialité</a></li>
-          <li><a href="#" data-fr="CGU" data-en="Terms" data-ar="الشروط">CGU</a></li>
-        </ul>
+        <div class="feature">
+          <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/></svg></span>
+          <h3 data-i18n="f2_t">Cotisations en temps réel</h3>
+          <p data-i18n="f2_p">Paiement par mobile money ou en OAC, reçu immédiat, rappels automatiques. Le bureau voit qui est à jour.</p>
+        </div>
+        <div class="feature">
+          <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+          <h3 data-i18n="f3_t">Caisse transparente</h3>
+          <p data-i18n="f3_p">Entrées et dépenses avec justificatifs, solde en direct, double validation des grosses dépenses, rapport prêt pour l'assemblée.</p>
+        </div>
+        <div class="feature">
+          <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="17" r="2.5"/><circle cx="19" cy="17" r="2.5"/><path d="M12 7.5v4M12 11.5 6.5 15M12 11.5l5.5 3.5"/></svg></span>
+          <h3 data-i18n="f4_t">Bureau, commissions et rôles</h3>
+          <p data-i18n="f4_p">Président, trésorier, secrétaire, commissions : chacun a ses accès. Les rôles se renomment selon vos habitudes.</p>
+        </div>
+        <div class="feature">
+          <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></span>
+          <h3 data-i18n="f5_t">Réunions et votes</h3>
+          <p data-i18n="f5_p">Convocations, présence par QR code, procès-verbaux et votes en ligne, un membre une voix.</p>
+        </div>
+        <div class="feature">
+          <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span>
+          <h3 data-i18n="f6_t">Événements et foires</h3>
+          <p data-i18n="f6_p">Inscriptions, billets avec QR code, annonce publique sur One Africa et vente sur le Marketplace.</p>
+        </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 Solidarity · One Africa Group</span>
-      <span class="footer-one-africa">🌍 <span data-fr="Made in Africa, for Africa" data-en="Made in Africa, for Africa" data-ar="صنع في أفريقيا، لأفريقيا">Made in Africa, for Africa</span></span>
+  </section>
+
+  <section class="band alt" id="epargne">
+    <div class="wrap savings">
+      <div style="display: flex; flex-direction: column; gap: 22px; min-width: 0">
+        <div class="sec-head" style="margin-bottom: 0">
+          <span class="eyebrow" data-i18n="sav_eyebrow">Toujours là</span>
+          <h2 data-i18n="sav_title">L'épargne commune du groupe</h2>
+          <p data-i18n="sav_lead">Le fonds solidaire du début reste au cœur de l'app. Chaque groupe peut épargner ensemble pour les urgences et les projets communs.</p>
+        </div>
+        <ol class="steps">
+          <li><div><b data-i18n="s1_t">Chacun cotise à son rythme</b><span data-i18n="s1_p">Par jour, par semaine, par mois ou une fois par an.</span></div></li>
+          <li><div><b data-i18n="s2_t">Le fonds grandit sous vos yeux</b><span data-i18n="s2_p">Solde, paiements et retards visibles en temps réel.</span></div></li>
+          <li><div><b data-i18n="s3_t">Le groupe vote pour utiliser l'argent</b><span data-i18n="s3_p">Urgence ou projet : la majorité décide, les fonds sont débloqués vite.</span></div></li>
+        </ol>
+      </div>
+      <div class="rhythm" aria-label="Exemples de rythmes">
+        <div class="rhythm-row"><b data-i18n="r1">100 F par jour</b><span data-i18n="r1s">≈ 36 500 F par an</span></div>
+        <div class="rhythm-row"><b data-i18n="r2">700 F par semaine</b><span data-i18n="r2s">≈ 36 400 F par an</span></div>
+        <div class="rhythm-row"><b data-i18n="r3">3 000 F par mois</b><span data-i18n="r3s">36 000 F par an</span></div>
+        <div class="rhythm-row"><b data-i18n="r4">36 500 F en une fois</b><span data-i18n="r4s">par an</span></div>
+        <div class="rhythm-foot" data-i18n="r_foot">Exemples en FCFA. Chaque groupe fixe ses propres montants, dans sa monnaie.</div>
+      </div>
     </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow" data-i18n="mod_eyebrow">Modules selon votre activité</span>
+        <h2 data-i18n="mod_title">Des outils en plus pour votre métier</h2>
+        <p data-i18n="mod_lead">Le socle est le même pour tous. Chaque type d'organisation ajoute ce qui lui est propre.</p>
+      </div>
+      <div class="modules">
+        <div class="module">
+          <h3 data-i18n="m1_t">Éleveurs et agriculteurs</h3>
+          <ul><li data-i18n="m1_a">Recensement du cheptel ou des parcelles</li><li data-i18n="m1_b">Suivi sanitaire et visites</li><li data-i18n="m1_c">Foires et ventes groupées</li></ul>
+        </div>
+        <div class="module">
+          <h3 data-i18n="m2_t">Groupes religieux et spirituels</h3>
+          <ul><li data-i18n="m2_a">Calendrier choisi par le groupe</li><li data-i18n="m2_b">Collectes dédiées, à part des cotisations</li><li data-i18n="m2_c">Organisation des déplacements</li></ul>
+        </div>
+        <div class="module">
+          <h3 data-i18n="m3_t">Coopératives, GIE et groupes de femmes</h3>
+          <ul><li data-i18n="m3_a">Parts sociales et répartition</li><li data-i18n="m3_b">Prêts internes avec échéancier</li><li data-i18n="m3_c">Tontine reliée à Jaango</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow" data-i18n="eco_eyebrow">Écosystème One Africa</span>
+        <h2 data-i18n="eco_title">Un seul compte, connecté à tout</h2>
+        <p data-i18n="eco_lead">Solidarity fait partie de One Africa. Vos informations ne sont saisies qu'une fois.</p>
+      </div>
+      <div class="eco">
+        <div><b>One Africa</b><span data-i18n="e1">Page de votre organisation, annonces et événements ouverts à tous.</span></div>
+        <div><b>Marketplace</b><span data-i18n="e2">Boutiques des membres pour vendre leurs produits.</span></div>
+        <div><b>Jaango</b><span data-i18n="e3">Tontines et financement des groupes de femmes.</span></div>
+        <div><b>WhatsApp</b><span data-i18n="e4">Reçus, rappels, invitations et cartes de membre.</span></div>
+      </div>
+      <p class="eco-note"><span class="oac">OAC</span><span data-i18n="eco_oac">Votre solde OAC est le même partout dans One Africa. Vous seul pouvez le voir.</span></p>
+    </div>
+  </section>
+
+  <section class="band" id="pays">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow" data-i18n="c_eyebrow">Pays et langues</span>
+        <h2 data-i18n="c_title">Panafricain, et ouvert à tous</h2>
+        <p data-i18n="c_lead">Chaque pays a sa monnaie et ses moyens de paiement. L'app parle français, anglais et arabe, et d'autres langues arrivent.</p>
+      </div>
+      <p class="c-label" data-i18n="c_now">Disponible</p>
+      <div class="countries">
+        <div class="country"><img class="flag" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJmbGFnLWljb25zLXNuIiB2aWV3Qm94PSIwIDAgNjQwIDQ4MCI+CiAgPGcgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2Utd2lkdGg9IjFwdCI+CiAgICA8cGF0aCBmaWxsPSIjMGI3MjI2IiBkPSJNMCAwaDIxMy4zdjQ4MEgweiIvPgogICAgPHBhdGggZmlsbD0iI2ZmMCIgZD0iTTIxMy4zIDBoMjEzLjN2NDgwSDIxMy4zeiIvPgogICAgPHBhdGggZmlsbD0iI2JjMDAwMCIgZD0iTTQyNi42IDBINjQwdjQ4MEg0MjYuNnoiLz4KICA8L2c+CiAgPHBhdGggZmlsbD0iIzBiNzIyNiIgZD0iTTM0MiAyMTguOGg3MS44bC01Ni42IDQzLjYgMjAuNyA2OS4zLTU2LjYtNDMuNi01Ni42IDQxLjYgMjAuNy02Ny4zLTU2LjYtNDMuNmg2OS44bDIyLjctNzEuM3oiLz4KPC9zdmc+Cg==" alt="" width="40" height="30"><b data-i18n="sn">Sénégal</b><span>FCFA</span></div>
+        <div class="country"><img class="flag" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJmbGFnLWljb25zLWdtIiB2aWV3Qm94PSIwIDAgNjQwIDQ4MCI+CiAgPGRlZnM+CiAgICA8Y2xpcFBhdGggaWQ9ImdtLWEiPgogICAgICA8cGF0aCBmaWxsLW9wYWNpdHk9Ii43IiBkPSJNMC00OGg2NDB2NDgwSDB6Ii8+CiAgICA8L2NsaXBQYXRoPgogIDwvZGVmcz4KICA8ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS13aWR0aD0iMXB0IiBjbGlwLXBhdGg9InVybCgjZ20tYSkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgNDgpIj4KICAgIDxwYXRoIGZpbGw9InJlZCIgZD0iTTAtMTI4aDY0MFY4NS4zSDB6Ii8+CiAgICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCA4NS4zaDY0MFYxMjFIMHoiLz4KICAgIDxwYXRoIGZpbGw9IiMwMDkiIGQ9Ik0wIDEyMC45aDY0MFYyNjNIMHoiLz4KICAgIDxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0wIDI2My4xaDY0MHYzNS42SDB6Ii8+CiAgICA8cGF0aCBmaWxsPSIjMDkwIiBkPSJNMCAyOTguN2g2NDBWNTEySDB6Ii8+CiAgPC9nPgo8L3N2Zz4K" alt="" width="40" height="30"><b data-i18n="gm">Gambie</b><span>GMD</span></div>
+        <div class="country"><img class="flag" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJmbGFnLWljb25zLW1yIiB2aWV3Qm94PSIwIDAgNjQwIDQ4MCI+CiAgPHBhdGggZmlsbD0iI2NkMmEzZSIgZD0iTTAgMGg2NDB2NDgwSDB6Ii8+CiAgPHBhdGggZmlsbD0iIzAwNjIzMyIgZD0iTTAgNzJoNjQwdjMzNkgweiIvPgogIDxwYXRoIGZpbGw9IiNmZmM0MDAiIGQ9Ik00NzAgMTU0LjZhMTUwIDE1MCAwIDAgMS0zMDAgMCAxNTQuOSAxNTQuOSAwIDAgMC01IDM5LjIgMTU1IDE1NSAwIDEgMCAzMTAgMCAxNTQuNCAxNTQuNCAwIDAgMC01LTM5LjIiIGNsYXNzPSJtci1zdDEiLz4KICA8cGF0aCBmaWxsPSIjZmZjNDAwIiBkPSJtMzIwIDkzLjgtMTMuNSA0MS41SDI2M2wzNS4zIDI1LjYtMTMuNSA0MS40IDM1LjMtMjUuNiAzNS4zIDI1LjYtMTMuNS00MS40IDM1LjMtMjUuNmgtNDMuNnoiLz4KPC9zdmc+Cg==" alt="" width="40" height="30"><b data-i18n="mr">Mauritanie</b><span>MRU</span></div>
+        <div class="country"><img class="flag" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJmbGFnLWljb25zLWdoIiB2aWV3Qm94PSIwIDAgNjQwIDQ4MCI+CiAgPHBhdGggZmlsbD0iIzAwNmIzZiIgZD0iTTAgMGg2NDB2NDgwSDB6Ii8+CiAgPHBhdGggZmlsbD0iI2ZjZDExNiIgZD0iTTAgMGg2NDB2MzIwSDB6Ii8+CiAgPHBhdGggZmlsbD0iI2NlMTEyNiIgZD0iTTAgMGg2NDB2MTYwSDB6Ii8+CiAgPHBhdGggZmlsbD0iIzAwMDAwMSIgZD0ibTMyMCAxNjAgNTIgMTYwLTEzNi4xLTk4LjlINDA0TDI2OCAzMjB6Ii8+Cjwvc3ZnPgo=" alt="" width="40" height="30"><b data-i18n="gh">Ghana</b><span>GHS</span></div>
+        <div class="country"><img class="flag" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJmbGFnLWljb25zLWNpIiB2aWV3Qm94PSIwIDAgNjQwIDQ4MCI+CiAgPGcgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgIDxwYXRoIGZpbGw9IiMwMGNkMDAiIGQ9Ik00MjYuOCAwSDY0MHY0ODBINDI2Ljh6Ii8+CiAgICA8cGF0aCBmaWxsPSIjZmY5YTAwIiBkPSJNMCAwaDIxMi45djQ4MEgweiIvPgogICAgPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTIxMi45IDBoMjE0djQ4MGgtMjE0eiIvPgogIDwvZz4KPC9zdmc+Cg==" alt="" width="40" height="30"><b data-i18n="ci">Côte d'Ivoire</b><span>FCFA</span></div>
+        <div class="country"><img class="flag" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJmbGFnLWljb25zLW5nIiB2aWV3Qm94PSIwIDAgNjQwIDQ4MCI+CiAgPGcgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2Utd2lkdGg9IjFwdCI+CiAgICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAwaDY0MHY0ODBIMHoiLz4KICAgIDxwYXRoIGZpbGw9IiMwMDg3NTMiIGQ9Ik00MjYuNiAwSDY0MHY0ODBINDI2LjZ6TTAgMGgyMTMuM3Y0ODBIMHoiLz4KICA8L2c+Cjwvc3ZnPgo=" alt="" width="40" height="30"><b data-i18n="ng">Nigeria</b><span>NGN</span></div>
+      </div>
+      <p class="c-label" data-i18n="c_next">Prochaines étapes</p>
+      <div class="countries">
+        <div class="country next"><img class="flag" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBpZD0iZmxhZy1pY29ucy1rZSIgdmlld0JveD0iMCAwIDY0MCA0ODAiPgogIDxkZWZzPgogICAgPHBhdGggaWQ9ImtlLWEiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgZD0ibS0yOC42IDQ3LjUgMS44IDEgNDYuNy04MWMyLjctLjYgNC4yLTMuMiA1LjctNS44IDEtMS44IDUtOC43IDYuNy0xNy43YTU4IDU4IDAgMCAwLTExLjkgMTQuN2MtMS41IDIuNi0zIDUuMi0yLjMgNy45eiIvPgogIDwvZGVmcz4KICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAwaDY0MHY0ODBIMHoiLz4KICA8cGF0aCBmaWxsPSIjMDAwMDAxIiBkPSJNMCAwaDY0MHYxNDRIMHoiLz4KICA8cGF0aCBmaWxsPSIjMDYwIiBkPSJNMCAzMzZoNjQwdjE0NEgweiIvPgogIDxnIGlkPSJrZS1iIiB0cmFuc2Zvcm09Im1hdHJpeCgzIDAgMCAzIDMyMCAyNDApIj4KICAgIDx1c2UgeGxpbms6aHJlZj0iI2tlLWEiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHN0cm9rZT0iIzAwMCIvPgogICAgPHVzZSB4bGluazpocmVmPSIja2UtYSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2ZmZiIvPgogIDwvZz4KICA8dXNlIHhsaW5rOmhyZWY9IiNrZS1iIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB0cmFuc2Zvcm09Im1hdHJpeCgtMSAwIDAgMSA2NDAgMCkiLz4KICA8cGF0aCBmaWxsPSIjYjAwIiBkPSJNNjQwLjUgMTY4SDM3N2MtOS0yNC0zOS03Mi01Ny03MnMtNDggNDgtNTcgNzJILS4ydjE0NEgyNjNjOSAyNCAzOSA3MiA1NyA3MnM0OC00OCA1Ny03MmgyNjMuNXoiLz4KICA8cGF0aCBpZD0ia2UtYyIgZD0iTTM3NyAzMTJjOS0yNCAxNS00OCAxNS03MnMtNi00OC0xNS03MmMtOSAyNC0xNSA0OC0xNSA3MnM2IDQ4IDE1IDcyIi8+CiAgPHVzZSB4bGluazpocmVmPSIja2UtYyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdHJhbnNmb3JtPSJtYXRyaXgoLTEgMCAwIDEgNjQwIDApIi8+CiAgPGcgZmlsbD0iI2ZmZiIgdHJhbnNmb3JtPSJtYXRyaXgoMyAwIDAgMyAzMjAgMjQwKSI+CiAgICA8ZWxsaXBzZSByeD0iNCIgcnk9IjYiLz4KICAgIDxwYXRoIGlkPSJrZS1kIiBkPSJNMSA1LjhzNCA4IDQgMjEtNCAyMS00IDIxeiIvPgogICAgPHVzZSB4bGluazpocmVmPSIja2UtZCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdHJhbnNmb3JtPSJzY2FsZSgtMSkiLz4KICAgIDx1c2UgeGxpbms6aHJlZj0iI2tlLWQiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHRyYW5zZm9ybT0ic2NhbGUoLTEgMSkiLz4KICAgIDx1c2UgeGxpbms6aHJlZj0iI2tlLWQiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHRyYW5zZm9ybT0ic2NhbGUoMSAtMSkiLz4KICA8L2c+Cjwvc3ZnPgo=" alt="" width="40" height="30"><b data-i18n="ke">Kenya</b><span>KES</span></div>
+        <div class="country next"><img class="flag" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJmbGFnLWljb25zLXVnIiB2aWV3Qm94PSIwIDAgNjQwIDQ4MCI+CiAgPGRlZnM+CiAgICA8Y2xpcFBhdGggaWQ9InVnLWEiPgogICAgICA8cGF0aCBmaWxsLW9wYWNpdHk9Ii43IiBkPSJNLTg1LjMgMGg2ODIuNnY1MTJILTg1LjN6Ii8+CiAgICA8L2NsaXBQYXRoPgogIDwvZGVmcz4KICA8ZyBjbGlwLXBhdGg9InVybCgjdWctYSkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDgwKXNjYWxlKC45Mzc1KSI+CiAgICA8cGF0aCBmaWxsPSIjZmZlNzAwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0tMTI4IDM0MS40aDc2OHY4NS4zaC03Njh6Ii8+CiAgICA8cGF0aCBmaWxsPSIjMDAwMDAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0tMTI4IDI1Nmg3Njh2ODUuM2gtNzY4eiIvPgogICAgPHBhdGggZmlsbD0iI2RlMzkwOCIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNLTEyOCAxNzAuN2g3NjhWMjU2aC03Njh6Ii8+CiAgICA8cGF0aCBmaWxsPSIjZmZlNzAwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0tMTI4IDg1LjRoNzY4djg1LjNoLTc2OHoiLz4KICAgIDxwYXRoIGZpbGw9IiMwMDAwMDEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTS0xMjggMGg3Njh2ODUuM2gtNzY4eiIvPgogICAgPHBhdGggZmlsbD0iI2ZmZmRmZiIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9IiMwMDAiIGQ9Ik0zMzUuNyAyNTZhNzkuNyA3OS43IDAgMSAxLTE1OS40IDAgNzkuNyA3OS43IDAgMCAxIDE1OS40IDB6Ii8+CiAgICA8cGF0aCBmaWxsPSIjZGUzMTA4IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZT0iIzAwMCIgZD0ibTI0MiAxOTQuOS01LjItOS41YzItMiA1LjMtMy42IDEwLjctMy42bC0uNiAxMC41eiIvPgogICAgPHBhdGggZmlsbD0iI2ZmZTcwMCIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9IiMwMDAiIGQ9Im0yNDcgMTkyLjMuNy0xMC41czEwLjctLjYgMTYuNSA2LjRsLTUuNyA4LjJ6Ii8+CiAgICA8cGF0aCBmaWxsPSIjZGUzMTA4IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZT0iIzAwMCIgZD0ibTI1OC42IDE5Ni4zIDUuMy04LjJjMy41IDMuNyA1IDYuMyA1LjUgMTAuMy4xLjEtOC4zIDIuMS04LjMgMnoiLz4KICAgIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iLjkiIGQ9Ik0yNDQuNiAzMzEuMXM5LjktMTEuMyAyOS4xLTguOWMtMi45LTQuNy0xMi4zLTQuMS0xMi4zLTQuMXMtMi44LTIyLS42LTIzLjIgMTIgLjEgMTIgLjFjMS4yIDAgMy40LTMuNCAxLjYtNS42LTEuNy0yLjItNi44LTEwLjUtNC43LTEyLjIgMi4xLTEuNiAxMy40IDEgMTMuNCAxbC0zMi00MXMtMy4zLTE1LjUgMy4zLTIzYzcuOS02LjUgNy0xMy42IDYuOC0xMy41LTEuMS03LjItMTItMTIuMy0xOS40LTUuNy00LjMgNS4yLTEuNCA5LjItMS40IDkuMnMtMTEuNSAzLjEtMTEuOSA1LjFjLS41IDIgMTIuOS0uMyAxMi45LS4zbC0xLjMgOS4xcy0yNiAyMy42LTYgNDRsLjYtLjhzNyA4LjYgMTQuMyAxMC41YzcgNyA2LjMgNiA2LjMgNnMxLjMgMTEuMSAwIDEzLjNjLTEuNy0uNS0xOS4zLTEuMi0yMS45LS4yLTIuNC44LTExLjQuMy05LjIgMTUuMWwzLjMtNy41cy0uMyA1LjMgMS45IDcuMmMtLjQtNS42IDIuMS05LjQgMi4xLTkuNHMuNCA2LjIgMS44IDdjMS40IDEgMS40LTEwIDktOSA3LjQuOSAxMi45LjYgMTIuOS42czIuNSAyMS40IDEuNyAyMy40Yy01LjQtMS4zLTE4LjQuNS0xOS4yIDMuOCA3LjYtLjUgMTEuMS40IDExLjEuNHMtNi4xIDUuNS00LjIgOC42Ii8+CiAgICA8cGF0aCBmaWxsPSIjOWNhNjljIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZT0iIzljYTY5YyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9Ii45IiBkPSJNMjQ3LjYgMjE0LjhzLTE4LjkgMjAuOC0xMC43IDM2LjdjLjQtMi4yLjItMy42LjUtMy41LS41LS4zIDIuMyAxLjkgMi4xIDEuNSAwLTEuMi0uOC0zLjctLjgtMy43bDIuNS43LTEuNS0yLjggMy43LjRzLTEuMy0zLjQtLjktMy40bDMgLjJjLTUuNC05LjYtLjMtMTcuNiAyLjEtMjYuMnoiLz4KICAgIDxwYXRoIGZpbGw9IiM5Y2E2OWMiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjOWNhNjljIiBkPSJNMjU0LjIgMTk2LjlzMSA3LjItMyA5LjJjLS41LjUtMyAxLjMtMi42IDIuOC40IDIgMS41IDEuNiAzIDEuMiA0LjEtLjcgOC45LTkuNCAyLjYtMTMuMnoiLz4KICAgIDxwYXRoIGZpbGw9IiNmZmYiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTI0Ny4yIDIwM2ExLjUgMS41IDAgMSAxLTMgMCAxLjUgMS41IDAgMCAxIDMgMCIvPgogICAgPHBhdGggZmlsbD0iI2RlMzEwOCIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9IiMwMDAiIGQ9Ik0yNDEuMSAyMDljLTEgLjktNi4yIDYuMy0xIDguMyA1LjMtMS40IDMuOC0yLjQgNS0zLjYgMC0yLjUtMi42LTMuMS00LTQuNnoiLz4KICAgIDxwYXRoIGZpbGw9IiM5Y2E2OWMiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjOWNhNjljIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iLjkiIGQ9Ik0yNTIuNiAyNjAuNWMtLjMgMS4yLTEuNSA1LjYuMSA5IDQuNi0yIDYuNy0xLjQgOC4yLS40LTMuNy0zLTUuMi00LjMtOC4zLTguNiIvPgogICAgPHBhdGggZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIuOSIgZD0ibTI2MC40IDI4MS4xLjIgMTAuMnMzLjYuNiA1LjIgMCAwLTctNS40LTEwLjIiLz4KICAgIDxwYXRoIGZpbGw9IiM5Y2E2OWMiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjMDAwIiBkPSJNMjg2IDI4Mi40cy02LjUtMTUuOC0yMy4yLTE5LjgtMTQuNS0yMS44LTEzLjItMjIuOWMuOC0xLjUgMS4zLTMuOSA2LjEtMS42czI3IDEzLjQgMzAuMiAxNCAuNCAzMC43LjIgMzAuM3oiLz4KICAgIDxwYXRoIGZpbGw9IiNkZTMxMDgiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9Ii45IiBkPSJNMjcwLjIgMjYyLjVjLS4zLjIgMjIuMyAxMy40IDE1LjUgMjQuNyA2LjQtNC4zIDQuNC0xMS43IDQuNC0xMS43czUuMiAxMy43LTcuNiAyMC40YzEuNCAxLjIgMi4zIDEgMi4zIDFsLTIuMiAyLjFzLTEgMS43IDcuNi0yLjVjLTIuMyAxLjktMi41IDMuMy0yLjUgMy4zcy42IDEuOCA2LjItMy4xYy00LjUgNC45LTUuNSA3LjQtNS41IDcuMyAxMi4zLTEgMzktNDEtOC40LTUyLjdsMi4xIDIuMnoiLz4KICAgIDxwYXRoIGZpbGw9IiNmZmYiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iLjkiIGQ9Ik0yNzEuMiAyNTguNmMzIDIuMiA0LjEgMyA0LjUgNC0yLjgtLjYtNS4zLS40LTUuMy0uNHMtNi4xLTUuOC03LjItNi4zYy0uOCAwLTUuNi0zLTUuNi0zLTIuMy0xLjItNC41LTkuMyA0LjItN2E5MyA5MyAwIDAgMCAxMC4zIDQuNmwxMC43IDMuNCA2LjIgNi45cy0xMS01LjQtMTIuNC01LjVjMyAyLjQgNC43IDUuOCA0LjcgNS44LTMuNS0xLTYuNS0yLTEwLjEtMi41Ii8+CiAgICA8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIuOSIgZD0iTTIyOC40IDIwOS45czEwLjUtMi42IDExLjgtMi4yIi8+CiAgICA8cGF0aCBmaWxsPSIjZGUzOTA4IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0tMTI4IDQyNi43aDc2OFY1MTJoLTc2OHoiLz4KICA8L2c+Cjwvc3ZnPgo=" alt="" width="40" height="30"><b data-i18n="ug">Ouganda</b><span>UGX</span></div>
+        <div class="country next"><img class="flag" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBpZD0iZmxhZy1pY29ucy1lZyIgdmlld0JveD0iMCAwIDY0MCA0ODAiPgogIDxwYXRoIGZpbGw9IiMwMDAwMDEiIGQ9Ik0wIDMyMGg2NDB2MTYwSDB6Ii8+CiAgPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTAgMTYwaDY0MHYxNjBIMHoiLz4KICA8cGF0aCBmaWxsPSIjY2UxMTI2IiBkPSJNMCAwaDY0MHYxNjBIMHoiLz4KICA8ZyBmaWxsPSIjZmZmIiBzdHJva2U9IiNjMDkzMDAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00MClzY2FsZSguOCkiPgogICAgPHBhdGggc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjMiIGQ9Im00NTAuOCAzMDIuNCA2OC41IDYzLjYtNC45LTExNS41Yy0uNy0xNy41LTE1LjktMTMuNS0yNy03LjItMTEuMSA3LjItMjQgNy4yLTM3LjQgMi41LTEzLjUgNC43LTI2LjMgNC43LTM3LjQtMi41LTExLTYuMy0yNi4zLTEwLjMtMjcgNy4yTDM4MC43IDM2NnoiLz4KICAgIDxwYXRoIGlkPSJlZy1hIiBmaWxsPSIjYzA5MzAwIiBzdHJva2U9Im5vbmUiIGQ9Im0zOTMuNSAyNDYuNS00LjggMTEyLjMtOCA3LjIgNC45LTExNS41YTI0IDI0IDAgMCAxIDcuOS00bTkuNiA4LTQgOTQtOCA4LjIgNC44LTEwOC41YzEuNiAxLjYgNi4zIDUuNSA3LjIgNi4zbTguNyA3LjItMy4xIDc4LjQtNi41IDYuMyA0LTg5LjRjMS42IDEuNSA0LjggMy44IDUuNiA0LjdtOS41IDQtMy4xIDY2LjgtNi4zIDUuMSAzLjEtNzQuM2MxLjYuNyA0LjcgMi40IDYuMyAyLjRtOC44IDAtMi4zIDU1LjctNi41IDYuMyAyLjUtNjEuM2MxLjUgMCA1LjYgMCA2LjMtLjciLz4KICAgIDx1c2UgeGxpbms6aHJlZj0iI2VnLWEiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHRyYW5zZm9ybT0ibWF0cml4KC0xIDAgMCAxIDkwMCAwKSIvPgogICAgPHBhdGggZmlsbD0iI2MwOTMwMCIgc3Ryb2tlLXdpZHRoPSIxLjEiIGQ9Im00NTMuMiAzMTUgOS42IDQzLjgtMy4yIDMuMi0zLjMtMi41LTUuNC0zOSAyLjMgMzktMy4yIDQtMy4xLTQgMi4zLTM5LTUuNSAzOS0zLjMgMi41LTMuMi0zLjIgOS42LTQzLjdoNi40eiIvPgogICAgPGcgaWQ9ImVnLWIiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS4zIj4KICAgICAgPHBhdGggZmlsbD0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxLjIiIGQ9Im00MjguNSAyOTUuOC0xOS4xIDY3LjcgMjYuMyA0IDExLjEtNTAuOXoiLz4KICAgICAgPHBhdGggZD0ibTQyMi4yIDMxOSAyLjMgNS41IDEyLjQtMTEuOCIvPgogICAgICA8cGF0aCBkPSJtNDMwLjggMzA1IDIuNiAyNC4zIDcuOS0xMC40bS0zLjIgNCA0LjMgMTVtMS43LTUuNS04LjcgMTMuMm0yLjcgMTMuMi0yLjgtMTMuMi0yLjQtMTMuNC01LjkgNy45LTIuNS05LjEtOC4yIDguNCA0LjEgMTUuMiA1LjgtOS40IDMuMSA5LjYgNi05LjIiLz4KICAgICAgPHBhdGggZD0ibTQxNSAzNjIgNS4zLTcuNSAzLjQgMTEuNSA0LjgtOCAzLjEgOS42Ii8+CiAgICA8L2c+CiAgICA8dXNlIHhsaW5rOmhyZWY9IiNlZy1iIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB0cmFuc2Zvcm09Im1hdHJpeCgtMSAwIDAgMSA5MDAgMCkiLz4KICAgIDxnIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjMiPgogICAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjIuNCIgZD0iTTQ1MCAzOTMuOGMyMCAwIDM5LTEuNiA1MC4yLTQuNyA0LjctLjkgNC43LTMuMyA0LjctNi41IDQuOC0xLjYgMi40LTcuMiA1LjctNy4yLTMuNCAxLTQtNS41LTgtNC43IDAtNS42LTUuNy02LjMtMTAuNC00LjctOS41IDMuMS0yNi4zIDMuOS00Mi4yIDMuOS0xNi0uOC0zMi42LS44LTQyLjItNC00LjctMS41LTEwLjMtLjgtMTAuMyA0LjgtNC0uOC00LjcgNS42LTggNC43IDMuMyAwIC44IDUuNyA1LjYgNy4yIDAgMy4yIDAgNS42IDQuOCA2LjUgMTEgMy4xIDMwLjIgNC43IDUwLjEgNC43Ii8+CiAgICAgIDxwYXRoIGQ9Ik00MjIuOSAzNjMuNWM2LjQuOSAxMy42IDEuNiAxOS4yLjkgMy4yIDAgNS41IDUuNS0uOSA2LjMtNS41LjctMTQuMyAwLTE5LS44YTIzMSAyMzEgMCAwIDEtMTguNC00Yy01LjYtMi40LTEuNi03IDEuNi02LjRhMTA1LjMgMTA1LjMgMCAwIDAgMTcuNSA0bTU0LjIgMGMtNi40LjktMTMuNiAxLjYtMTkgLjktMy40IDAtNS43IDUuNS43IDYuMyA1LjYuNyAxNC4zIDAgMTktLjggNC0uOCAxMi44LTIuMyAxOC40LTQgNS42LTIuNCAxLjYtNy0xLjYtNi40YTEwNS4yIDEwNS4yIDAgMCAxLTE3LjUgNCIvPgogICAgICA8cGF0aCBkPSJNNDAzIDM2MC40Yy00LjgtLjktNyA0LjctNS41IDcuOS43LTEuNiA0LTEuNiA0LjctMy4yLjktMi40LS43LTIuNC45LTQuN3ptMTkuMiAxNC43YzAtMy4yIDMuMS0yLjggMy4xLTYgMC0xLjUtLjgtNC0yLjQtNGEzLjQgMy40IDAgMCAwLTMuMiAzLjJjLS43IDMuMSAyLjUgMy42IDIuNSA2LjhtMjIuNy05LjFjNC43IDAgNC4yIDYuMyAyIDkuNSAwLTIuMy00LTMuMi00LTQuOCAwLTIuNCAzLjYtMi40IDItNC43bTUyLTUuNmM0LjktLjkgNy4yIDQuNyA1LjYgNy45LS43LTEuNi00LTEuNi00LjctMy4yLS45LTIuNC43LTIuNC0uOS00LjdNNDc4IDM3NWMwLTMuMi0zLjItMi44LTMuMi02IDAtMS41LjgtNCAyLjQtNGEzLjQgMy40IDAgMCAxIDMuMiAzLjJjLjcgMy4xLTIuNSAzLjYtMi41IDYuOHptLTIzLTljLTQuNyAwLTQuMiA2LjMtMiA5LjUgMC0yLjMgNC0zLjIgNC00LjggMC0yLjQtMy42LTIuNC0yLTQuNyIvPgogICAgICA8cGF0aCBzdHJva2Utd2lkdGg9Ii45IiBkPSJNNDA0LjcgMzYyYzEuNiAwIDQgLjcgNC43IDEuNnptNy45IDIuNGMuOCAwIDQgLjcgNS41IDEuNnptMjguNiAzLjJjLTEuNSAwLTQuNyAwLTUuNS43bDUuNS0uOHptLTguNyAwYy0uOS0uOS00LS45LTUuNiAwem02Mi44LTUuNmE4IDggMCAwIDAtNC43IDEuNnptLTcuOCAyLjRjLTEgMC00IC43LTUuNiAxLjZ6bS0yOC43IDMuMmMxLjUgMCA0LjcgMCA1LjYuN2wtNS42LS44em04LjcgMGMuOS0uOSA0LS45IDUuNiAweiIvPgogICAgICA8ZyBmaWxsPSIjYzA5MzAwIiBzdHJva2U9Im5vbmUiPgogICAgICAgIDxwYXRoIGQ9Ik00MDMuMyAzNzQuNmMtLjUtLjEtLjgtLjYtLjYtMSAuMS0uNy42LTEgMS0uOC40IDAgLjkuNi45LjhsLS40LjctLjIuMWMwIC4yLS40LjItLjcuMm01NSAzLjljLS4yIDAtLjYtLjUtLjYtLjcgMC0uNC42LTEgMS0xbC44LjRjLjMuMy4zLjktLjEgMS4yLS4yLjItLjguMi0xLjEgMHptLjMgMi41Yy0uNC0uMi0uNS0uNC0uNi0uOCAwLS41IDAtLjYuNS0uOWwuNC0uMi40LjJjLjQuMi43LjQuNy44IDAgLjMtLjMuNi0uNy44LS4zLjItLjQuMi0uNyAweiIvPgogICAgICAgIDxwYXRoIGQ9Ik00MDcuOCAzNzBjLS40IDAtLjkuNC0xLjIuNi0uNi4xLTEuNC41LTIgMC0uNi0uMS0xLjQgMC0xLjUuOC4xLjcgMSAxIDEuNi42LjQtLjUgMS41LS45IDEuNyAwLS41LjgtLjQgMS43LS44IDIuNCAwIC41LS4zLjktLjUgMS4zLS41IDAtMSAwLTEuNC4zYTIgMiAwIDAgMC0xLjYuOGMtLjQuNi0uOCAxLjItLjkgMiAuMS42IDEgLjggMS42LjlsMiAuNiAzLjIuOWMxLjYuNSAzLjIuNyA0LjggMS4xbC41LjFjLjcuMiAxLS41IDEtMWwxLTMuNmMuMi0uNS41LTEuNS0uNC0xLjMtLjUuMy0xIC44LTEuNi44LS45IDAtLjQgMSAwIDEuMyAwIC42LS4yIDEuMy0uNSAxLjgtLjYuMy0xLjIgMC0xLjgtLjItLjUgMC0xLjctLjMtMS4yLTFsLjUtMS44Yy4zLS42LjMtMS4zLjUtMi0uNC0uNy0xIC4zLTEuNS40LS40LjItMS42LjMtMSAxIC42LjQuMiAxLjEgMCAxLjcgMCAuNy0uOCAxLTEuNC43LS42IDAtMS41LS41LTEtMS4xbC41LTEuOC43LTJjMC0uNy4zLTEuMi42LTEuOCAwLS43LjUtMS4zLjUtMiAwLS4zLS4yLS40LS40LS40em0tMy43IDcuM2EuMy4zIDAgMCAxIC4zIDBjLjIuMi4yLjQgMCAuNmwtLjMuMmMtLjUgMC0uNi0uMS0uNi0uMyAwLS4xIDAtLjIuMy0uM2ExLjQgMS40IDAgMCAxIC40LS4yem0tMSA1Yy0uNS0uNC0uNC0uNy4zLTEuMy40LS4yLjUtLjIuOS4xLjYuNS42LjggMCAxLjMtLjIuMi0uMy4yLS41LjItLjMgMC0uNCAwLS43LS4yem0zIDFhLjkuOSAwIDAgMS0uNi0xLjFjLjItLjQuMy0uNS45LS41LjcgMCAuOC4xLjkuNyAwIC40IDAgLjUtLjMuN2ExIDEgMCAwIDEtLjguMnptODkuMiAwYy0uMi0uMS0uMy0uMi0uMy0uNSAwLS40LjItLjcuOC0uOS42LS4zIDEtLjMgMS4yLjIuMy42LjMuOC0uMSAxLjItLjIuMy0uMy4zLS44LjNzLS42IDAtLjgtLjJ6bS04NSAxLjJjLS40IDAtLjYtLjQtLjYtLjggMC0uMyAwLS40LjItLjZsLjYtLjIuNi4xYy41LjQuNi44LjMgMS4yLS4zLjQtLjYuNC0xLjIuM3ptMjEuOCAxLS4yLS4zYzAtLjYgMC0xLjEuMi0xLjcuMS0uNSAwLTEgLjItMS41bC40LTIuOGMwLS41IDAtMSAuMi0xLjQuMS0uOCAwLTEuNS4yLTIuMiAwLS4zLjMtMSAuNi0uNi40LjYuOSAxIDEuNCAxLjUuNC4zIDAgLjctLjMuOC0uNC4xLS41LjYtLjUgMWwtLjIgMS4yYzAgLjcgMCAxLjMtLjIgMmwtLjEgMS44LS4yIDEuMmMwIC40IDAgLjktLjQgMS4xLS4zLjItLjguMi0xLS4xem0yOS43LTkuOC0xLjMgMS4yYy0uNi41LjUuNy42IDEuMS4yLjYuMiAxLjIuMiAxLjguMi42LjMgMS4xLjIgMS43IDAgLjctLjguNS0xLjIuOS0uNS4yLS43LjctMSAxYTQuMiA0LjIgMCAwIDAtLjQgMS42YzAgLjUtLjMgMSAwIDEuNGwuMS4yaC41bDEuNS0uMWMxLjItLjIgMi41LS4yIDMuNy0uM2wyLjItLjJjLjYuMS45LS41LjktMS0uNC0uNy0uMS0xLjQtLjQtMi0uMi0uOC0uMS0xLjUtLjItMi4yIDAtLjYtLjctLjgtMS0uNC0uNC40LTEgLjUtMS4yLjktLjMuNi42LjYuOCAxbC4xIDEuNWMuMS42LS41LjYtMSAuNy0uNS4yLTEuMi4zLTEuNS0uMy0uMi0uNS0uMi0xLS4yLTEuNSAwLTEtLjMtMS44LS4zLTIuNyAwLTEtLjMtMi4xLS4zLTMuMiAwLS41LS4xLTEuMi0uOC0xLjFtLS42IDguMmguM3YuOGwtLjMuMWEzLjMgMy4zIDAgMCAxLS40LjEgMi41IDIuNSAwIDAgMS0uMiAwYy0uMi0uMi0uMi0uNS4xLS44em0tMzAtOS4yYy0uMyAwLS44LjctMS4yLjYtLjkuMS0uOCAxLS4xIDEuM3YuOGMuMS44LS40IDEuNS0uMyAyLjMgMCAuOC0uMyAxLjctLjMgMi42LS4zLjktLjMgMS44LS40IDIuNy0uMS44LS43LjUtMS4yLjN2LTFjLjEtLjktLjUtMS4xLTEuMi0xLjItLjcgMC0xLS41LS44LTEuMS4zLS40IDEtLjMgMS41LS4zIDEgLjIuOS0xLjEuNC0xLjYtLjQtLjYtMS4yLTEtMS40LTEuNiAwLS44LS41LTEuNy0xLjItMi4xLTEuMS0uMS0yIC44LTIuMyAxLjgtLjUgMC0xIC4yLTEuNC40LS43LjItMS43IDEuNC0uNyAxLjkuNS4xIDIuMi41IDEuNCAxLjItLjQuOC0xLjIuOC0xLjkuNi0uNyAwLTEuNS0uNC0xLjUtMS4yLS4xLS44LS4xLTEuNi0uNC0yLjMtLjItLjgtMS4xLS42LTEuMi4yLS43LjUtLjYgMS40LS4xIDIgLjMuNyAwIDEuNi0uMyAyLjItLjIgMS0xLjIgMS0xLjkgMS4yLS4zLjItMS42IDAtMS4xLjdhNCA0IDAgMCAwIDIuNC4zYy44IDAgMS41LS43IDItMS40LjUtLjUgMS40LS4yIDIuMi0uMi43IDAgMS41LjUgMi4zLjEuMi0uNSAxLjItMS41IDEuNS0uNSAwIC45LjcgMS4zIDEuNSAxLjIuOSAwIC41LjYuNSAxLjIgMCAuOS43IDEuNCAxLjUgMS44aC44Yy43LS4zIDEuNS0uNiAxLjgtMS40LjMtLjcuMy0xLjUuNS0yLjIuMi0xLjEuNC0yLjMuNC0zLjQuMy0xIC4yLTIuMS40LTMuMmwuMy0yLjNjMC0uNS0uMi0uNS0uNS0uNG0tNi43IDQuMWMuMSAwIC4yLjIuMi41IDAgLjQuMi43LjUuOHYuM2wtLjguMmMtLjUgMC0uOS0uMi0xLjItLjVsLS4yLS4yLjMtLjIuNS0uNWMuMy0uMy41LS40LjctLjRtNjYtNy45YTguNCA4LjQgMCAwIDAtMS43LjNjLTEgMC0xLjUgMS0uNSAxLjYuNiAxLjUgMS41LS40IDIuNS0uMiAxLjQuMiAxLjUgMS44IDEuOCAzIDAgMS4xLjQgMi4yLjcgMy4zIDEgMS4xLS43IDEuOC0xLjQgMS0uNi0uNy0yLTEuNS0yLjctLjYtLjkuNC0xIDEuNi0xLjcgMi0xLjIuMy0xLjMtMS4yLTItMS44LS42LS45LTEuNy0xLTIuNi0xLjItLjQtLjktLjItMi40LTEtMy0uOC4zLTIuMiAxLjctMSAyLjQgMSAxLS41IDEuNC0xIDItLjguOS0xIDItMSAzLTEuMy43LTEuNS0uOC0xLjctMS43IDAtMS4xLTEtLjgtMS43LS40LTEgLjQtMS40IDEuMy0yIDJ2MmMuMi45IDEuMi41IDEuOC40IDEtLjQgMS40LjcuNiAxLjMtLjYuNi0yLjIuMy0yIDEuNGgxLjZjMS0uMyAyLjItMS4xIDIuMy0yLjMuMi0xIDEuNy0uOSAyLjUtMS4xIDEtLjMgMi4zLS40IDIuNiAxIC43LjcgMi4yIDEuNSAzIC41YTIuNCAyLjQgMCAwIDAgMS4xLTIuM2MtLjEtLjggMS4zLS44IDEuNy0uMy41LjggMi4xLjYgMi45IDAgLjgtLjUgMS0xLjYgMi4yLTEuNmw1LjQtMS41YzEuNC0uMy0uMi0xLjItLjYtMS44LTEtLjUtMiAxLjctMy4yLjYtMS0uNy0uOS0yLTEuMi0zLjEtLjMtMS40LS4yLTMtMS4yLTQtLjYtLjctMS42LS45LTIuNS0uOW0tNi44IDkuNWMuMSAwIC4zIDAgLjUuMi40LjIuNy42LjcgMSAwIC4yIDAgLjItLjMuM2wtLjUuMmMtLjIgMC0uNy0uMy0uNy0uNXYtLjRjLS4yLS40LS4yLS40IDAtLjZ6bTYuNS40Yy40IDAgLjYgMCAuOC4zLjEuNCAwIC42LS40LjhsLS41LjItLjQtLjNjLS4yLS4xLS4zLS4yLS4zLS40IDAtLjMuNC0uNi44LS43em0tOSAwYy4yIDAgLjMgMCAuNC4yLjIuMi4zLjMuMy42di42YzAgLjMgMCAuMi0uNi4ycy0uNyAwLS43LS42YzAtLjQgMC0uNS4zLS43LjEtLjIuMy0uMi40LS4yem0tNS40IDEuNWEuNi42IDAgMCAxIC40LjRjMCAuMyAwIC41LS4yLjYtLjMuMS0uOC4yLTEgMGEuNi42IDAgMCAxIDAtLjFjLS4yLS4xLS4yLS4yIDAtLjN2LS4xbC4yLS4zYS41LjUgMCAwIDEgLjYtLjJtOS4yIDEuMi41LjF2LjZoLTEuMmwtLjEtLjJjMC0uMiAwLS4zLjItLjR6bS0xNy4xIDQuOGMtLjEgMC0uMy0uMS0uMS0uMi4xLS4zLjUtLjQuOC0uNmEzLjQgMy40IDAgMCAwIDEuNC0xYzAtLjQuNC0uNi40LTFsLS4xLTEuNGExLjggMS44IDAgMCAwLS44LTFjLS4zLS4xLS43LS4yLS44LS42IDAtLjMuMy0uNi40LS45bC42LTEuMmMuMy0uMy43IDAgLjguMmwuNSAxYy4zLjMuNS42LjYgMSAuMi40LjQuNy40IDFsLjIgMS4zYzAgLjUgMCAxLjEtLjIgMS42bC0uNi44Yy0uMy4zLS42LjYtMSAuNy0uMy4xLS41LjQtLjkuNEg0Njh6bS02LjkuNGMtLjItLjItLjMtLjMtLjMtLjZzMC0uMy4zLS42Yy40LS40LjYtLjQgMS40IDAgLjcuNCAxIC40IDEgLjEuMS0uMi41LS41IDEtLjVhLjguOCAwIDAgMSAuNS4yYy4yLjIuMy4zLjMuNyAwIC41IDAgLjUtLjMuOC0uMy4yLS4zLjItLjcuMmEuOS45IDAgMCAxLS44LS42YzAtLjIgMC0uMy0uMi0uMWwtLjIuMWMtLjIgMC0uNi4zLS44LjVsLS41LjFjLS40IDAtLjQgMC0uNy0uM20tMTkuOC04LjljLS43IDAtMS40LjYtMS41IDEuMy4yLjcuOCAxLjUuNCAyLjIuMyAxLS44IDEuNC0xLjUuOS0uNC0xLS42LTItMS4zLTMtLjgtLjItMS4xIDEuMS0xLjcgMS42LjMuNyAxLjEgMS40IDEuMiAyLjMuMiAxLS40IDItMS4xIDIuNC0uNy43LTEuNy41LTIuNS42LTEgLjYuNy44IDEuMi44IDEgLjEgMi4xIDAgMy0uOC43LS4zLjYtMS43IDEuNS0xLjhsNC44LjNjLjguMiAyLjEtLjEgMi43LjUgMCAxIDEgMS44IDEuOSAyLjIuNS4yIDEtLjUgMS41LS42IDEtLjMuNy0xLjUgMS4zLTJoNWMuMiAwIC4zLS41LjYtLjdsLS4yLTEuOWMtLjMtLjggMC0xLjgtLjUtMi41LS45LS4yLTEuNi41LTIuNC42LTEgLjQtMS43IDEuMy0xLjggMi4zLS41LjktMS40LS4yLTEtMWwtLjEtMWMtLjUtLjUtMS40LS4zLTIuMS0uNGwtMy0uMmMtMSAwLTEuOS4xLTIuNy0uMS0xIDAtMS0xLTEtMS44YTEgMSAwIDAgMC0uNy0uMm0yIDMuNyAxIC4xaDEuM2MxIC4yIDIgLjIgMyAuMi4yIDAgLjQuMi42LjR2MmMwIC4zIDAgLjctLjIuOGEuNy43IDAgMCAxLS4yLjIgMSAxIDAgMCAxLS43LS41di0xLjRhMS4zIDEuMyAwIDAgMC0uNy0uM2wtMi42LS4xLTItLjFjLS4zLS4xLS43IDAtLjktLjQtLjItLjIuMS0uNi40LS43YTIuMyAyLjMgMCAwIDEgMS0uMm0xMS4zLjNjLjEgMCAuMiAwIC4yLjNsLjIuNWMwIC4xIDAgLjItLjIuMi0uNS4yLTEgLjItMS4yIDAgMC0uMSAwLS41LjItLjZ6Ii8+CiAgICAgIDwvZz4KICAgIDwvZz4KICAgIDxwYXRoIHN0cm9rZS13aWR0aD0iMS4xIiBkPSJNNDUwIDMyNy4yYzMyLjYtMjUgMjkuOC02MS44IDI5LjgtNjEuOGwtMi41LjJjLTYuOSAwLTIzLjItNC0yNy04LjktNCA0LjUtMjAuOCA5LTI3LjYgOWwtMi41LS4zcy0yLjkgMzYuNyAyOS44IDYxLjh6Ii8+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9Ii45IiBkPSJNNDc3LjIgMjY4aC0uOGMtNi4yIDAtMjAuNi0zLjEtMjYuMi03LjktNS44IDQuNC0yMC41IDgtMjYuNiA4YTQuNyA0LjcgMCAwIDEtLjgtLjEgNzMuMSA3My4xIDAgMCAwIDIuNiAxOC43IDcxIDcxIDAgMCAwIDI0LjYgMzcuMSA3MS4yIDcxLjIgMCAwIDAgMjQuNi0zNy4yIDczLjEgNzMuMSAwIDAgMCAyLjYtMTguNnoiLz4KICAgIDxwYXRoIGZpbGw9IiNjMDkzMDAiIHN0cm9rZT0ibm9uZSIgZD0iTTQzOS40IDI2NWE2Mi4yIDYyLjIgMCAwIDEtMTYuNiAzbC4xIDQuMWE3Mi44IDcyLjggMCAwIDAgMi41IDE0LjUgNzEgNzEgMCAwIDAgMTQgMjYuOHptMjAuNiAwdjQ5LjJhNzEuMSA3MS4xIDAgMCAwIDE0LjYtMjcuNiA3MyA3MyAwIDAgMCAyLjUtMTQuNWwuMS00aC0uOGMtMy44IDAtMTAuNC0xLjItMTYuNC0zLjJ6Ii8+CiAgICA8ZyBzdHJva2Utd2lkdGg9IjEuMyI+CiAgICAgIDxwYXRoIHN0cm9rZS13aWR0aD0iMS4yIiBkPSJNNDYyLjMgMjUzYy43LjEtLjktMy41LS45LTMuNSAxLjggMS44IDguNCAyLjMgOC40IDIuMy00LTEuOC04LTE1LjEtNy41LTI1LjguNC0xMC42LTEuNS0xNC44LTMtMTYuNC0yLTItOC41LTMuOC0xMi43LTQtMi41LS4xLTIgMS44LTIgMS44LTQuNS0xLjEtOS0xLjYtMTEtLjItMS44IDEuMi0yLjIgNy41LS44IDYuNCAzLjMtMi43IDYuMi0uMiA4LjIgMi43IDEuOCAyLjUgMS43IDkuNy0uOSAxOC4yYTYwIDYwIDAgMCAxLTEwIDE3LjdjNCAwIDkuNi0zLjUgOS42LTMuNWwtMS4zIDUuNWM0LjItMiA3LjUtNS4xIDcuNS01LjFsNCA0LjJjMS4zLTEuOCA0LTQuMiA0LTQuMnMzLjMgMy41IDguNCA0eiIvPgogICAgICA8cGF0aCBmaWxsPSJub25lIiBkPSJNNDQ2LjEgMjI3LjZzLTIuMiAxNi40LTYuNCAyMW0xMC0yMS41cy0xIDE2LjctMy44IDIybTYuOS0yMS4zczAgMTguMiAxIDIxLjNtMy0yMC40cy44IDE1LjMgNC42IDIwLjgiLz4KICAgICAgPHBhdGggZmlsbD0iI2MwOTMwMCIgc3Ryb2tlLXdpZHRoPSIuMyIgZD0iTTQ0MiAyMTkuNmE4IDggMCAwIDAtMS0zLjNjLTItMy00LjktNS40LTguMi0yLjcgMCAwIDEuMS0zLjUgMy42LTMuNiAxLjgtLjEgNi4xIDEuNCA5LjkgNy44IDAgMC0yLjgtLjYtMy41IDAtMS4yIDEtLjcgMS44LS43IDEuOHoiLz4KICAgICAgPHBhdGggZmlsbD0iI2MwOTMwMCIgc3Ryb2tlLXdpZHRoPSIuMyIgZD0iTTQzMi40IDIwOS4zYy4zLTEgLjctMS44IDEuMy0yLjEgMi0xLjQgNi40LTEgMTAuOS4yIDAgMC0uNC0xLjkgMi0xLjggNC4yLjIgMTAuNiAyIDEyLjYgNGE3LjkgNy45IDAgMCAxIDEuNSAyLjRjLTEtMS40LTMuOC0xLjMtNC41LTEuMi0xIC4xLTEuNyAwLTMuMS40LS43LjItMS43LjQtMi4zLjgtLjQuNC0uOCAxLjYtMS40IDEuNi0xIDAtMS0uMi0xLjMtLjUtLjMtLjUtLjUtMS4xLS45LTEtMSAuMS0yLjgtLjctNS0yLjUtMi4zLTEuOC0zLjItMi4yLTYtMi0zIC4yLTMuOCAxLjktMy44IDEuOXoiLz4KICAgICAgPGNpcmNsZSBjeD0iNDQ4LjgiIGN5PSIyMTAuNyIgcj0iMS4yIiBzdHJva2U9Im5vbmUiLz4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPgo=" alt="" width="40" height="30"><b data-i18n="eg">Égypte</b><span>EGP</span></div>
+        <div class="country next"><img class="flag" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJmbGFnLWljb25zLXR6IiB2aWV3Qm94PSIwIDAgNjQwIDQ4MCI+CiAgPGRlZnM+CiAgICA8Y2xpcFBhdGggaWQ9InR6LWEiPgogICAgICA8cGF0aCBmaWxsLW9wYWNpdHk9Ii43IiBkPSJNMTAgMGgxNjB2MTIwSDEweiIvPgogICAgPC9jbGlwUGF0aD4KICA8L2RlZnM+CiAgPGcgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2Utd2lkdGg9IjFwdCIgY2xpcC1wYXRoPSJ1cmwoI3R6LWEpIiB0cmFuc2Zvcm09Im1hdHJpeCg0IDAgMCA0IC00MCAwKSI+CiAgICA8cGF0aCBmaWxsPSIjMDlmIiBkPSJNMCAwaDE4MHYxMjBIMHoiLz4KICAgIDxwYXRoIGZpbGw9IiMwOTAiIGQ9Ik0wIDBoMTgwTDAgMTIweiIvPgogICAgPHBhdGggZmlsbD0iIzAwMDAwMSIgZD0iTTAgMTIwaDQwbDE0MC05NVYwaC00MEwwIDk1eiIvPgogICAgPHBhdGggZmlsbD0iI2ZmMCIgZD0iTTAgOTEuNSAxMzcuMiAwaDEzLjVMMCAxMDAuNXpNMjkuMyAxMjAgMTgwIDE5LjV2OUw0Mi44IDEyMHoiLz4KICA8L2c+Cjwvc3ZnPgo=" alt="" width="40" height="30"><b data-i18n="tz">Tanzanie</b><span>TZS</span></div>
+        <div class="country next"><img class="flag" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBpZD0iZmxhZy1pY29ucy1ydyIgdmlld0JveD0iMCAwIDY0MCA0ODAiPgogIDxwYXRoIGZpbGw9IiMyMDYwM2QiIGQ9Ik0wIDBoNjQwdjQ4MEgweiIvPgogIDxwYXRoIGZpbGw9IiNmYWQyMDEiIGQ9Ik0wIDBoNjQwdjM2MEgweiIvPgogIDxwYXRoIGZpbGw9IiMwMGExZGUiIGQ9Ik0wIDBoNjQwdjI0MEgweiIvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUxMSAxMjUuNClzY2FsZSguNjY2NjcpIj4KICAgIDxnIGlkPSJydy1iIj4KICAgICAgPHBhdGggaWQ9InJ3LWEiIGZpbGw9IiNlNWJlMDEiIGQ9Ik0xMTYuMSAwIDM1LjcgNC43bDc2LjQgMjUuNC03OC44LTE2LjNMMTAwLjYgNThsLTcyLTM2LjJMODIgODIuMSAyMS45IDI4LjZsMzYuMiA3Mi00NC4zLTY3LjNMMzAgMTEyIDQuNyAzNS43IDAgMTE2LjEtMS0xeiIvPgogICAgICA8dXNlIHhsaW5rOmhyZWY9IiNydy1hIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB0cmFuc2Zvcm09InNjYWxlKDEgLTEpIi8+CiAgICA8L2c+CiAgICA8dXNlIHhsaW5rOmhyZWY9IiNydy1iIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB0cmFuc2Zvcm09InNjYWxlKC0xIDEpIi8+CiAgICA8Y2lyY2xlIHI9IjM0LjMiIGZpbGw9IiNlNWJlMDEiIHN0cm9rZT0iIzAwYTFkZSIgc3Ryb2tlLXdpZHRoPSIzLjQiLz4KICA8L2c+Cjwvc3ZnPgo=" alt="" width="40" height="30"><b data-i18n="rw">Rwanda</b><span>RWF</span></div>
+        <div class="country next"><img class="flag" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJmbGFnLWljb25zLWV0IiB2aWV3Qm94PSIwIDAgNjQwIDQ4MCI+CiAgPGRlZnM+CiAgICA8Y2xpcFBhdGggaWQ9ImV0LWEiPgogICAgICA8cGF0aCBmaWxsLW9wYWNpdHk9Ii43IiBkPSJNLTYxLjMgMGg2ODIuN3Y1MTJILTYxLjN6Ii8+CiAgICA8L2NsaXBQYXRoPgogIDwvZGVmcz4KICA8ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS13aWR0aD0iMXB0IiBjbGlwLXBhdGg9InVybCgjZXQtYSkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDU3LjUpc2NhbGUoLjk0KSI+CiAgICA8cGF0aCBmaWxsPSIjZmZjNjIxIiBkPSJNLTIzOCAzLjVIODAwdjQ5OEgtMjM4eiIvPgogICAgPHBhdGggZmlsbD0iI2VmMjExOCIgZD0iTS0yNDAgMzQyLjVINzk5LjNWNTEySC0yNDB6Ii8+CiAgICA8cGF0aCBmaWxsPSIjMjk4YzA4IiBkPSJNLTIzOCAwSDgwMHYxODBILTIzOHoiLz4KICAgIDxjaXJjbGUgY3g9IjUzNC4yIiBjeT0iMzUzIiByPSIxOTkuNyIgZmlsbD0iIzAwNmJjNiIgdHJhbnNmb3JtPSJtYXRyaXgoLjU0IDAgMCAuNTQgLTI1LjggNzQpIi8+CiAgICA8cGF0aCBmaWxsPSIjZmZjNjIxIiBkPSJtMjE0LjMgMTg4LjItNi41IDQuNSAyMy41IDMzIDYuMy00em0yOS40IDc4LTkuNy02LjggNC0xMi43LTQ4LjEuNy0xNC0xMC43IDY1LjctLjcgMTIuMi0zNi45IDYuNiAxNXptNzYuNS03MC43LTYuMy00LjgtMjQuMyAzMi40IDUuNiA0Ljd6TTI1NC44IDI0N2wzLjUtMTEuMmgxMy4zTDI1Ni40IDE5MGw2LTE2LjUgMjAuNSA2Mi40IDM4LjguNS0xMi4yIDEwLjd6bTkwLjYgNTEuMiAyLjctNy40LTM4LjMtMTMuMy0yLjggN3ptLTY5LjEtNDYuNCAxMS43LS4xIDQuMSAxMi42IDM4LjgtMjguNSAxNy42LjYtNTMuMSAzOC43IDExLjUgMzcuMi0xNC04LjR6bS0xOS44IDEwMiA3LjkuMi4zLTQwLjUtNy40LS41em0yMi04MC4zIDMuOCAxMS4xLTEwLjcgOCAzOS40IDI3LjcgNSAxNi44LTUzLjYtMzgtMzEuNSAyMi43IDMuNS0xNiA0NC0zMi4zem0tMTAzLjMgMTMgMi4zIDcuNSAzOC43LTEyLjItMi03LjJ6bTgzLjItNC05LjQgNy4xLTEwLjgtNy43LTE0LjIgNDYtMTQuNCAxMCAxOS41LTYyLjctMzEuNC0yMyAxNi4zLTEuNnoiLz4KICA8L2c+Cjwvc3ZnPgo=" alt="" width="40" height="30"><b data-i18n="et">Éthiopie</b><span>ETB</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band alt" id="entreprise">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow" data-i18n="biz_eyebrow">Nouveau</span>
+        <h2 data-i18n="biz_title">Solidarity Enterprise, pour les entrepreneurs individuels</h2>
+        <p data-i18n="biz_lead">Chauffeur, artisan, commerçant, prestataire : suivez vos ventes, vos dépenses et vos clients depuis votre téléphone, même sans organisation.</p>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+          <h3 data-i18n="biz1_t">Comptabilité simple</h3>
+          <p data-i18n="biz1_p">Chaque vente et chaque dépense enregistrée en un geste, avec reçu photo. Votre solde du jour toujours à jour.</p>
+        </div>
+        <div class="feature">
+          <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 3 6v6c0 5 3.8 9.3 9 10 5.2-.7 9-5 9-10V6z"/></svg></span>
+          <h3 data-i18n="biz2_t">Score de confiance</h3>
+          <p data-i18n="biz2_p">La régularité de votre comptabilité construit un score que vous pouvez partager avec vos partenaires de microfinance.</p>
+        </div>
+        <div class="feature">
+          <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/><path d="M6 15h4"/></svg></span>
+          <h3 data-i18n="biz3_t">Carte professionnelle scannable</h3>
+          <p data-i18n="biz3_p">Une carte avec QR code pour partager vos coordonnées et votre boutique en un instant, sur WhatsApp ou en main propre.</p>
+        </div>
+        <div class="feature">
+          <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-7"/><path d="M2 9l10-6 10 6-10 6z"/></svg></span>
+          <h3 data-i18n="biz4_t">Fidélité clients</h3>
+          <p data-i18n="biz4_p">Un carnet de clients avec rappels de paiement automatiques et un programme de fidélité simple à offrir.</p>
+        </div>
+        <div class="feature">
+          <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="17" r="2.5"/><circle cx="19" cy="17" r="2.5"/><path d="M12 7.5v4M12 11.5 6.5 15M12 11.5l5.5 3.5"/></svg></span>
+          <h3 data-i18n="biz5_t">Comptes employés</h3>
+          <p data-i18n="biz5_p">Vos employés ou apprentis enregistrent les ventes sans voir votre solde ni pouvoir retirer d'argent.</p>
+        </div>
+        <div class="feature">
+          <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span>
+          <h3 data-i18n="biz6_t">Documents professionnels</h3>
+          <p data-i18n="biz6_p">Rappels avant l'expiration de votre patente, assurance ou carte grise, pour ne jamais être pris de court.</p>
+        </div>
+      </div>
+      <div class="price" style="margin-top: 40px">
+        <div style="display: flex; flex-direction: column; gap: 14px">
+          <p class="hero-note" style="font-size: 15px" data-i18n="biz_note">Pour tous les secteurs : transport, commerce, artisanat, services, agriculture et élevage. Créez votre entreprise en quelques minutes, à titre individuel, en dehors de toute organisation.</p>
+        </div>
+        <div class="price-card">
+          <span class="price-coin">OAC</span>
+          <div class="price-figure"><b data-i18n="biz_price">20 OAC</b><span data-i18n="biz_price_sub">par mois (2 000 FCFA)</span></div>
+          <p class="price-eq" data-i18n="biz_trial">10 jours d'essai gratuit</p>
+          <ul class="price-list">
+            <li data-i18n="biz_li1">Suivi des ventes et des dépenses</li>
+            <li data-i18n="biz_li2">Carte professionnelle avec QR code</li>
+            <li data-i18n="biz_li3">Rapports prêts à partager</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="telecharger" style="padding-top: 0">
+    <div class="wrap">
+      <div class="download">
+        <h2 data-i18n="d_title">Mettez votre organisation dans votre téléphone</h2>
+        <p data-i18n="d_lead">Téléchargement gratuit sur iPhone et Android. Créez votre organisation en quelques minutes, puis invitez vos membres par un lien WhatsApp.</p>
+        <div class="stores">
+          <span class="store store-soon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E3B3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg><span><small data-i18n="d_ios_soon">Bientôt sur</small>App Store</span></span>
+          <a class="store" href="https://play.google.com/store/apps/details?id=com.oneafrica.solidarity" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0E3B3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3v18l14-9z"/></svg><span><small data-i18n="d_and_s">Disponible sur</small>Google Play</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <span>© 2026 One Africa Group · Solidarity by One Africa · Thiès, Sénégal</span>
+      <span class="contact">info@one-africa.com</span>
+    </div>
+    <nav aria-label="Pied de page">
+      <a href="#pour-qui" data-i18n="nav_who">Pour qui</a>
+      <a href="#fonctions" data-i18n="nav_features">Fonctionnalités</a>
+      <a href="#entreprise" data-i18n="nav_biz">Entreprise</a>
+      <a href="#telecharger" data-i18n="nav_download">Télécharger</a>
+      <a href="https://solidarity.jaango.org/privacy.html" data-i18n="privacy">Confidentialité</a>
+      <a href="https://solidarity.jaango.org/delete-account.html" data-i18n="delete">Supprimer mon compte</a>
+      <a href="https://solidarity.jaango.org/admin.html" data-i18n="admin" rel="nofollow">Admin</a>
+    </nav>
   </div>
 </footer>
 
 <script>
-const translations = {
-  fr: { dir: 'ltr', lang: 'fr' },
-  en: { dir: 'ltr', lang: 'en' },
-  ar: { dir: 'rtl', lang: 'ar' }
-};
-
-function setLang(lang) {
-  const t = translations[lang];
-  document.documentElement.lang = t.lang;
-  document.documentElement.dir = t.dir;
-  document.body.classList.toggle('arabic', lang === 'ar');
-
-  // Update all lang buttons
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
-  });
-
-  // Update all translatable elements
-  document.querySelectorAll('[data-' + lang + ']').forEach(el => {
-    const val = el.getAttribute('data-' + lang);
-    if (el.tagName === 'A') {
-      el.textContent = val;
-    } else if (el.innerHTML !== val) {
-      el.innerHTML = val;
+(function () {
+  var T = {
+    en: {
+      nav_who: 'Who it is for', nav_features: 'Features', nav_savings: 'Savings', nav_price: 'Pricing', nav_countries: 'Countries', nav_biz: 'Enterprise', nav_download: 'Download',
+      hero_eyebrow: 'For every organisation, across Africa',
+      hero_title: 'Your organisation, <em>well run.</em>',
+      hero_lead: 'Association, faith group, cooperative or club: manage your members, dues, funds and events from your phone. Everything is clear for the committee and for every member.',
+      cta_download: 'Download the app', cta_how: 'See what it does',
+      hero_note: 'Free download. You can also log in with your One Africa or Jaango account.',
+      card_org: 'Your organisation', card_sub: 'Member card · Solidarity', card_ok: 'Up to date', card_name: 'Member name',
+      card_no: 'Member no.', card_role: 'Role', card_role_v: 'Treasurer', card_section: 'Branch', card_section_v: 'Central', card_since: 'Since',
+      toast_t: 'Dues received', toast_s: 'Receipt sent to the member and on WhatsApp',
+      who_eyebrow: 'Who it is for', who_title: 'One app for every way people organise',
+      who_lead: 'Each organisation picks its type. The app then uses its words, roles and tools. Open to everyone, whatever their faith, culture or country.',
+      t1: 'Associations', t2: 'Faith and spiritual groups', t3: 'Cooperatives', t4: 'Collective businesses', t5: 'Trade groups', t6: "Women's groups",
+      t7: 'Sports and culture clubs', t8: 'Mutual societies', t9: 'Alumni and friendly societies', t10: 'Parent-teacher associations', t11: 'Unions', t12: 'Diaspora and home-town groups',
+      types_note: 'Dahira, parish, mosque committee, choir, chama, susu: each keeps its own words and its own calendar.',
+      feat_eyebrow: 'Features', feat_title: 'Everything the committee needs, nothing complicated',
+      feat_lead: 'Simple words and clear screens, so every member finds their way, even if they are not used to phones.',
+      f1_t: 'Members and member cards', f1_p: 'A profile with photo for every member. A virtual card with QR code, printable and shareable on WhatsApp.',
+      f2_t: 'Dues in real time', f2_p: 'Pay by mobile money or OAC, get an instant receipt and automatic reminders. The committee sees who is up to date.',
+      f3_t: 'Transparent funds', f3_p: 'Income and spending with receipts, a live balance, two approvals for large spending, and a report ready for the general meeting.',
+      f4_t: 'Committee, commissions and roles', f4_p: 'President, treasurer, secretary, commissions: each has their own access. Roles can be renamed to match your habits.',
+      f5_t: 'Meetings and votes', f5_p: 'Notices, attendance by QR code, minutes and online votes, one member one vote.',
+      f6_t: 'Events and fairs', f6_p: 'Registrations, QR tickets, a public announcement on One Africa and sales on the Marketplace.',
+      sav_eyebrow: 'Still here', sav_title: "The group's shared savings",
+      sav_lead: 'The solidarity fund we started with stays at the heart of the app. Each group can save together for emergencies and shared projects.',
+      s1_t: 'Everyone pays at their own pace', s1_p: 'Daily, weekly, monthly or once a year.',
+      s2_t: 'Watch the fund grow', s2_p: 'Balance, payments and late payers shown in real time.',
+      s3_t: 'The group votes to use the money', s3_p: 'For an emergency or a project, the majority decides and funds are released quickly.',
+      r1: '100 F a day', r1s: '≈ 36,500 F a year', r2: '700 F a week', r2s: '≈ 36,400 F a year', r3: '3,000 F a month', r3s: '36,000 F a year', r4: '36,500 F at once', r4s: 'a year',
+      r_foot: 'Examples in FCFA. Each group sets its own amounts, in its own currency.',
+      mod_eyebrow: 'Modules for your activity', mod_title: 'Extra tools for your trade', mod_lead: 'The base is the same for everyone. Each type of organisation adds what is its own.',
+      m1_t: 'Livestock and farming groups', m1_a: 'Herd or plot census', m1_b: 'Animal health and visits', m1_c: 'Fairs and group sales',
+      m2_t: 'Faith and spiritual groups', m2_a: 'A calendar chosen by the group', m2_b: 'Special collections, separate from dues', m2_c: 'Organised travel',
+      m3_t: "Cooperatives and women's groups", m3_a: 'Shares and distribution', m3_b: 'Internal loans with schedules', m3_c: 'Rotating savings linked to Jaango',
+      eco_eyebrow: 'One Africa ecosystem', eco_title: 'One account, connected to everything', eco_lead: 'Solidarity is part of One Africa. You enter your details only once.',
+      e1: "Your organisation's page, announcements and public events.", e2: "Members' shops to sell their products.", e3: "Rotating savings and financing for women's groups.", e4: 'Receipts, reminders, invitations and member cards.',
+      eco_oac: 'Your OAC balance is the same everywhere in One Africa. Only you can see it.',
+      c_eyebrow: 'Countries and languages', c_title: 'Pan-African, and open to everyone', c_lead: 'Each country has its own currency and payment methods. The app speaks French, English and Arabic, with more languages coming.',
+      c_now: 'Available', c_next: 'Coming next',
+      sn: 'Senegal', gm: 'The Gambia', mr: 'Mauritania', gh: 'Ghana', ci: "Côte d'Ivoire", ng: 'Nigeria', ke: 'Kenya', ug: 'Uganda', eg: 'Egypt', tz: 'Tanzania', rw: 'Rwanda', et: 'Ethiopia',
+      d_title: 'Put your organisation in your pocket', d_lead: 'Free download on iPhone and Android. Create your organisation in a few minutes, then invite your members with a WhatsApp link.',
+      biz_eyebrow: 'New', biz_title: 'Solidarity Enterprise, for individual entrepreneurs',
+      biz_lead: 'Driver, artisan, shopkeeper, service provider: track your sales, expenses and clients from your phone, even without an organisation.',
+      biz1_t: 'Simple bookkeeping', biz1_p: 'Record every sale and expense in one tap, with a photo receipt. Your daily balance always up to date.',
+      biz2_t: 'Trust score', biz2_p: 'Regular bookkeeping builds a score you can share with microfinance partners.',
+      biz3_t: 'Scannable business card', biz3_p: 'A card with a QR code to share your details and shop in an instant, on WhatsApp or in person.',
+      biz4_t: 'Client loyalty', biz4_p: 'A client book with automatic payment reminders and a simple loyalty program to offer.',
+      biz5_t: 'Staff accounts', biz5_p: 'Your employees or apprentices record sales without seeing your balance or being able to withdraw money.',
+      biz6_t: 'Business documents', biz6_p: 'Reminders before your licence, insurance or vehicle papers expire, so you are never caught off guard.',
+      biz_note: 'For every sector: transport, trade, crafts, services, farming and livestock. Create your business in a few minutes, as an individual, outside any organisation.',
+      biz_price: '20 OAC', biz_price_sub: 'per month (2,000 FCFA)', biz_trial: '10-day free trial',
+      biz_li1: 'Sales and expense tracking', biz_li2: 'Business card with QR code', biz_li3: 'Reports ready to share',
+      d_ios_s: 'Download on the', d_ios_soon: 'Coming soon to', d_and_s: 'Get it on', privacy: 'Privacy', delete: 'Delete my account', admin: 'Admin'
+    },
+    ar: {
+      nav_who: 'لمن', nav_features: 'المزايا', nav_savings: 'الادخار', nav_price: 'السعر', nav_countries: 'الدول', nav_biz: 'المقاولون', nav_download: 'التحميل',
+      hero_eyebrow: 'لكل المنظمات، في كل أنحاء أفريقيا',
+      hero_title: 'منظمتك، <em>بتنظيم جيد.</em>',
+      hero_lead: 'جمعية أو مجموعة دينية أو تعاونية أو نادٍ: أدِر أعضاءك واشتراكاتك وصندوقك وفعالياتك من هاتفك. كل شيء واضح للمكتب ولكل عضو.',
+      cta_download: 'حمّل التطبيق', cta_how: 'اكتشف ما يقدمه',
+      hero_note: 'تحميل مجاني. يمكنك أيضًا الدخول بحسابك في One Africa أو Jaango.',
+      card_org: 'منظمتك', card_sub: 'بطاقة عضو · Solidarity', card_ok: 'محدَّث', card_name: 'اسم العضو',
+      card_no: 'رقم العضو', card_role: 'الدور', card_role_v: 'أمين الصندوق', card_section: 'الفرع', card_section_v: 'المركز', card_since: 'منذ',
+      toast_t: 'تم استلام الاشتراك', toast_s: 'أُرسل الإيصال للعضو وعلى واتساب',
+      who_eyebrow: 'لمن', who_title: 'تطبيق واحد لكل طرق التنظيم',
+      who_lead: 'تختار كل منظمة نوعها، فيعتمد التطبيق كلماتها وأدوارها وأدواتها. مفتوح للجميع، مهما كان الدين أو الثقافة أو البلد.',
+      t1: 'الجمعيات', t2: 'المجموعات الدينية والروحية', t3: 'التعاونيات', t4: 'المشاريع الجماعية', t5: 'التجمعات المهنية', t6: 'مجموعات النساء',
+      t7: 'الأندية الرياضية والثقافية', t8: 'التعاضديات', t9: 'روابط القدامى', t10: 'جمعيات أولياء التلاميذ', t11: 'النقابات', t12: 'الجاليات وأبناء البلد',
+      types_note: 'دائرة، رعية، لجنة مسجد، جوقة، تشاما، سوسو: كلٌّ يحتفظ بكلماته وتقويمه الخاص.',
+      feat_eyebrow: 'المزايا', feat_title: 'كل ما يحتاجه المكتب، بلا تعقيد',
+      feat_lead: 'كلمات بسيطة وشاشات واضحة، ليجد كل عضو طريقه حتى لو لم يعتد على الهاتف.',
+      f1_t: 'الأعضاء وبطاقة العضو', f1_p: 'ملف لكل عضو مع صورة. بطاقة افتراضية برمز QR، قابلة للطباعة والمشاركة على واتساب.',
+      f2_t: 'الاشتراكات في الوقت الحقيقي', f2_p: 'الدفع عبر المحفظة الإلكترونية أو OAC، إيصال فوري وتذكيرات تلقائية. يرى المكتب من هو محدَّث.',
+      f3_t: 'صندوق شفاف', f3_p: 'المداخيل والمصاريف مع الإثباتات، رصيد مباشر، موافقة مزدوجة على المصاريف الكبيرة، وتقرير جاهز للجمعية العامة.',
+      f4_t: 'المكتب واللجان والأدوار', f4_p: 'الرئيس وأمين الصندوق والكاتب واللجان: لكلٍّ صلاحياته. ويمكن تغيير أسماء الأدوار حسب عاداتكم.',
+      f5_t: 'الاجتماعات والتصويت', f5_p: 'الدعوات، الحضور برمز QR، المحاضر والتصويت عبر الإنترنت، لكل عضو صوت واحد.',
+      f6_t: 'الفعاليات والمعارض', f6_p: 'التسجيلات، تذاكر برمز QR، إعلان عام على One Africa والبيع على Marketplace.',
+      sav_eyebrow: 'ما زال هنا', sav_title: 'الادخار المشترك للمجموعة',
+      sav_lead: 'يبقى صندوق التضامن الذي بدأنا به في قلب التطبيق. يمكن لكل مجموعة أن تدخر معًا للطوارئ والمشاريع المشتركة.',
+      s1_t: 'كلٌّ يساهم حسب إيقاعه', s1_p: 'يوميًا أو أسبوعيًا أو شهريًا أو مرة في السنة.',
+      s2_t: 'الصندوق يكبر أمام أعينكم', s2_p: 'الرصيد والمدفوعات والمتأخرون في الوقت الحقيقي.',
+      s3_t: 'المجموعة تصوّت لاستعمال المال', s3_p: 'لحالة طارئة أو مشروع، تقرر الأغلبية ويُفرج عن الأموال بسرعة.',
+      r1: '100 فرنك يوميًا', r1s: '≈ 36 500 فرنك سنويًا', r2: '700 فرنك أسبوعيًا', r2s: '≈ 36 400 فرنك سنويًا', r3: '3 000 فرنك شهريًا', r3s: '36 000 فرنك سنويًا', r4: '36 500 فرنك دفعة واحدة', r4s: 'سنويًا',
+      r_foot: 'أمثلة بالفرنك الأفريقي. كل مجموعة تحدد مبالغها بعملتها.',
+      mod_eyebrow: 'وحدات حسب نشاطك', mod_title: 'أدوات إضافية لمهنتك', mod_lead: 'الأساس واحد للجميع، وكل نوع من المنظمات يضيف ما يخصه.',
+      m1_t: 'المربّون والمزارعون', m1_a: 'إحصاء القطيع أو القطع الزراعية', m1_b: 'المتابعة الصحية والزيارات', m1_c: 'المعارض والبيع الجماعي',
+      m2_t: 'المجموعات الدينية والروحية', m2_a: 'تقويم تختاره المجموعة', m2_b: 'جمع تبرعات خاصة منفصلة عن الاشتراكات', m2_c: 'تنظيم الرحلات',
+      m3_t: 'التعاونيات ومجموعات النساء', m3_a: 'الحصص والتوزيع', m3_b: 'قروض داخلية بجدول سداد', m3_c: 'توتين مرتبطة بـ Jaango',
+      eco_eyebrow: 'منظومة One Africa', eco_title: 'حساب واحد متصل بكل شيء', eco_lead: 'Solidarity جزء من One Africa. تُدخل معلوماتك مرة واحدة فقط.',
+      e1: 'صفحة منظمتك وإعلاناتها وفعالياتها المفتوحة للجميع.', e2: 'متاجر الأعضاء لبيع منتجاتهم.', e3: 'التوتين وتمويل مجموعات النساء.', e4: 'الإيصالات والتذكيرات والدعوات وبطاقات العضوية.',
+      eco_oac: 'رصيدك من OAC هو نفسه في كل One Africa، وأنت وحدك من يراه.',
+      c_eyebrow: 'الدول واللغات', c_title: 'أفريقي شامل، ومفتوح للجميع', c_lead: 'لكل بلد عملته ووسائل دفعه. يتحدث التطبيق الفرنسية والإنجليزية والعربية، ولغات أخرى قادمة.',
+      c_now: 'متوفر', c_next: 'المراحل القادمة',
+      sn: 'السنغال', gm: 'غامبيا', mr: 'موريتانيا', gh: 'غانا', ci: 'كوت ديفوار', ng: 'نيجيريا', ke: 'كينيا', ug: 'أوغندا', eg: 'مصر', tz: 'تنزانيا', rw: 'رواندا', et: 'إثيوبيا',
+      d_title: 'ضع منظمتك في هاتفك', d_lead: 'التحميل مجاني على آيفون وأندرويد. أنشئ منظمتك في دقائق، ثم ادعُ أعضاءك برابط واتساب.',
+      biz_eyebrow: 'جديد', biz_title: 'Solidarity Enterprise، لأصحاب المهن الفردية',
+      biz_lead: 'سائق، حرفي، تاجر، مقدّم خدمة: تابع مبيعاتك ومصاريفك وعملاءك من هاتفك، حتى بدون منظمة.',
+      biz1_t: 'محاسبة بسيطة', biz1_p: 'سجّل كل عملية بيع ومصروف بلمسة واحدة، مع صورة الإيصال. رصيدك اليومي محدَّث دائمًا.',
+      biz2_t: 'درجة الثقة', biz2_p: 'انتظامك في المحاسبة يبني درجة ثقة يمكنك مشاركتها مع شركاء التمويل الأصغر.',
+      biz3_t: 'بطاقة مهنية قابلة للمسح', biz3_p: 'بطاقة برمز QR لمشاركة بياناتك ومتجرك فورًا، عبر واتساب أو مباشرة.',
+      biz4_t: 'ولاء العملاء', biz4_p: 'دفتر عملاء مع تذكيرات دفع تلقائية وبرنامج ولاء بسيط تقدّمه لعملائك.',
+      biz5_t: 'حسابات الموظفين', biz5_p: 'يسجّل موظفوك أو متدربوك المبيعات دون رؤية رصيدك أو إمكانية السحب.',
+      biz6_t: 'الوثائق المهنية', biz6_p: 'تذكيرات قبل انتهاء الرخصة أو التأمين أو بطاقة السيارة الرمادية حتى لا تُفاجأ.',
+      biz_note: 'لكل القطاعات: النقل، التجارة، الحرف، الخدمات، الزراعة والتربية. أنشئ مقاولتك في دقائق، بصفة فردية، خارج أي منظمة.',
+      biz_price: '20 OAC', biz_price_sub: 'شهريًا (2000 فرنك)', biz_trial: 'تجربة مجانية لمدة 10 أيام',
+      biz_li1: 'تتبع المبيعات والمصاريف', biz_li2: 'بطاقة مهنية برمز QR', biz_li3: 'تقارير جاهزة للمشاركة',
+      d_ios_s: 'حمّل من', d_ios_soon: 'قريبًا على', d_and_s: 'متوفر على', privacy: 'الخصوصية', delete: 'حذف حسابي', admin: 'الإدارة'
     }
+  };
+  var textEls = Array.prototype.slice.call(document.querySelectorAll('[data-i18n]'));
+  var htmlEls = Array.prototype.slice.call(document.querySelectorAll('[data-i18n-html]'));
+  T.fr = {};
+  textEls.forEach(function (el) { T.fr[el.getAttribute('data-i18n')] = el.textContent; });
+  htmlEls.forEach(function (el) { T.fr[el.getAttribute('data-i18n-html')] = el.innerHTML; });
+  function setLang(lang) {
+    var d = T[lang] || T.fr;
+    textEls.forEach(function (el) { var k = el.getAttribute('data-i18n'); if (d[k] != null) el.textContent = d[k]; });
+    htmlEls.forEach(function (el) { var k = el.getAttribute('data-i18n-html'); if (d[k] != null) el.innerHTML = d[k]; });
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.querySelectorAll('.langs button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === lang)); });
+    try { localStorage.setItem('solidarity-lang', lang); } catch (e) {}
+  }
+  document.querySelectorAll('.langs button').forEach(function (b) {
+    b.addEventListener('click', function () { setLang(b.getAttribute('data-lang')); });
   });
-
-  // Store preference
-  localStorage.setItem('solidarity_lang', lang);
-}
-
-// Auto-detect language
-const savedLang = localStorage.getItem('solidarity_lang');
-const browserLang = navigator.language?.substring(0, 2);
-const defaultLang = savedLang || (browserLang === 'ar' ? 'ar' : browserLang === 'en' ? 'en' : 'fr');
-setLang(defaultLang);
+  var saved = null;
+  try { saved = localStorage.getItem('solidarity-lang'); } catch (e) {}
+  if (saved && saved !== 'fr' && T[saved]) setLang(saved);
+})();
 </script>
 
 </body>
